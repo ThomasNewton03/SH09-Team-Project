@@ -14,6 +14,8 @@ public class user : MonoBehaviour{
     string username;
     string userPassword;
     int userLevel = 1;
+    Settings settings;
+    Inventory inventory;
     
 
     public user(string username, string password){
@@ -21,8 +23,32 @@ public class user : MonoBehaviour{
         this.userPassword = password;
     }
 
+    public void increaseLevel(){
+        userLevel+=1;
+    }
+
     public int getLevel(){
         return userLevel;
+    }
+
+    public Settings loadSettings(){
+        return settings;
+    }
+
+    public void setUsername(string username){
+        this.username = username;
+    }
+
+    public string getUsername(){
+        return username;
+    }
+
+    public void setPassword(string userPassword){
+        this.userPassword = userPassword;
+    }
+
+    public string getPassword(){
+        return userPassword;
     }
 
 }

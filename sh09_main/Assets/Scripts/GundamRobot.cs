@@ -5,18 +5,19 @@ public class GundamRobot : MonoBehaviour{
     string gundamName;
     string location;
     Quiz quiz;
-    bool discovered;
+    bool discovered = false;
     string information;
-    DateTime timeDiscovered;
+    DateTime timeDiscovered = DateTime.MinValue;
+    public enum DisplayType {FOUND, CLOSE, NOTFOUND};
+     DisplayType displayType = DisplayType.NOTFOUND;
+    //create coordinates for gundam- give a setter and getter
 
-    public GundamRobot(int id, string name, string location, Quiz quiz, bool discovered, string information, DateTime timeDiscovered){
+    public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
         this.id = id;
-        this.name = name;
+        this.gundamName = gundamName;
         this.location = location;
         this.quiz = quiz;
-        this.discovered = discovered;
         this.information = information;
-        this.timeDiscovered = timeDiscovered;
     }
 
     public void setId(int id){
@@ -27,12 +28,12 @@ public class GundamRobot : MonoBehaviour{
         return id;
     }
 
-    public void setName(string name){
-        this.name = name;
+    public void setGundamName(string gundamName){
+        this.gundamName = gundamName;
     }
 
-    public string getName(){
-        return name;
+    public string getGundamName(){
+        return gundamName;
     }
 
     public void setLocation(string location){
@@ -68,11 +69,40 @@ public class GundamRobot : MonoBehaviour{
     }
 
     public void setTimeDiscovered(DateTime timeDiscovered){
-        this.timeDiscovered = timeDiscovered;
+        if (!discovered){
+            this.timeDiscovered = timeDiscovered;
+        }
     }
 
     public DateTime getTimeDiscovered(){
-        return timeDiscovered;
+        if (discovered) {
+            return timeDiscovered;
+        }
+        return DateTime.MinValue;
+    }
+
+    public void setFound(){
+        this.displayType = DisplayType.FOUND;
+    }
+
+    public void setClose(){
+        this.displayType = DisplayType.CLOSE;
+    }
+
+    public void setNotFound(){
+        this.displayType = DisplayType.NOTFOUND;
+    }
+
+    public bool isFound(){
+        return displayType == DisplayType.FOUND;
+    }
+
+    public bool isNotFound(){
+        return displayType == DisplayType.NOTFOUND;
+    }
+
+    public bool isClose(){
+        return displayType == DisplayType.CLOSE;
     }
 
 }

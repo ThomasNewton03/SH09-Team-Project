@@ -1,11 +1,11 @@
 using UnityEngine;
-public class settings : MonoBehaviour{
+public class Settings : MonoBehaviour{
 
     int buttonSize;
     int fontSize;
     bool isLeftHanded;
 
-    public settings(int buttonSize, int fontSize, bool isLeftHanded) {
+    public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
         this.fontSize = fontSize;
         this.isLeftHanded = isLeftHanded;
