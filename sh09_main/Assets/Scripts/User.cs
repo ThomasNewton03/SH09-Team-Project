@@ -17,10 +17,10 @@ public class user : MonoBehaviour {
 
     public string username;
     public string userPassword;
-    public int gundamCollected = 0;
+    public int gundamCollected;
     public Settings settings;
     public Inventory inventory;
-    public TextMeshPro gundamCollectedNumber;
+    public TMP_Text gundamCollectedNumber;
     
 
     public user(string username, string password){
@@ -29,7 +29,7 @@ public class user : MonoBehaviour {
     }
 
     void Start() {
-        gundamCollectedNumber.text = gundamCollected.ToString();
+        gundamCollected = 0;
     }
 
     void Update(){

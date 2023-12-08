@@ -5337,7 +5337,7 @@ MonoBehaviour:
   gundamCollected: 0
   settings: {fileID: 1258706726}
   inventory: {fileID: 1150907223}
-  gundamCollectedNumber: {fileID: 0}
+  gundamCollectedNumber: {fileID: 925311279}
 --- !u!1 &1894564189
 GameObject:
   m_ObjectHideFlags: 0
