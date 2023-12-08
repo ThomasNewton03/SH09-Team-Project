@@ -8,6 +8,8 @@ public class Settings : MonoBehaviour {
     public int fontSize;
     public bool isLeftHanded;
 
+    public Toggle leftHandToggle;
+
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
         this.fontSize = fontSize;
