@@ -1,13 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
-public class Inventory : MonoBehaviour{
+using System.Collections;
+using UnityEngine.UI;
+public class Inventory : MonoBehaviour {
 
-    Dictionary<string, GundamRobot> inventory = new Dictionary<string, GundamRobot>();
-    int numFound;
+    public Dictionary<string, GundamRobot> inventory = new Dictionary<string, GundamRobot>();
+    public int numFound;
 
     public void setNumFound(int numFound){
         //initialise all gundam
         this.numFound = numFound;
+    }
+
+    public void setInventory(Dictionary<string, GundamRobot> inventory){
+        this.inventory = inventory;
     }
 
     public int getNumFound(){

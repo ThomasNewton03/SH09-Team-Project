@@ -1,9 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-public class Settings : MonoBehaviour{
+using UnityEngine.UI;
+public class Settings : MonoBehaviour {
 
-    int buttonSize;
-    int fontSize;
-    bool isLeftHanded;
+    public int buttonSize;
+    public int fontSize;
+    public bool isLeftHanded;
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
