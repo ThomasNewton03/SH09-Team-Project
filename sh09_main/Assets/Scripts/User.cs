@@ -21,7 +21,9 @@ public class user : MonoBehaviour {
     public Settings settings;
     public Inventory inventory;
     public TMP_Text gundamCollectedNumber;
-    
+    public TMP_Text usernameText;
+    //public InputField inputUsernameField;
+    public TMP_InputField inputUsernameField;
 
     public user(string username, string password){
         this.username = username;
@@ -30,11 +32,25 @@ public class user : MonoBehaviour {
 
     void Start() {
         gundamCollected = 0;
+        usernameText.text = username;
     }
 
     void Update(){
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
             gundamCollectedNumber.text = gundamCollected.ToString();
+        }
+        
+        usernameText.text = username;
+    
+    }
+
+    void UpdateUsername (){
+        if (inputUsernameField.text == null){
+            usernameText.text = username;
+        }
+        else {
+            username = inputUsernameField.text;
+            usernameText.text = username;
         }
     }
 
