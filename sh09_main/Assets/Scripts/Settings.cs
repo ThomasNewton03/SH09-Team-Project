@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Settings : MonoBehaviour {
 
-    public int buttonSize;
-    public int fontSize;
-    public bool isLeftHanded;
-
+    public Slider buttonSizeSlider;
+    public Slider fontSizeSlider;
     public Toggle leftHandToggle;
+
+    private float buttonSize;
+    private float fontSize;
+    private bool isLeftHanded;
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
@@ -16,21 +18,24 @@ public class Settings : MonoBehaviour {
         this.isLeftHanded = isLeftHanded;
     }
 
+    void Update(){
+        Debug.Log("button size : " + buttonSizeSlider.value);
+    }
 
     public void setButtonSize(int buttonSize){
         this.buttonSize = buttonSize;
     }
 
-    public int getButtonSize(){
-        return buttonSize;
+    public float getButtonSize(){
+        return buttonSizeSlider.value;
     }
 
     public void setFontSize(int fontSize){
         this.fontSize = fontSize;
     }
 
-    public int getFontSize(){
-        return fontSize;
+    public float getFontSize(){
+        return fontSizeSlider.value;
     }
 
     public void setIsLeftHanded(bool isLeftHanded){
