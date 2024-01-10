@@ -1,15 +1,18 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-public class GundamRobot : MonoBehaviour{
-    int id;
-    string gundamName;
-    string location;
-    Quiz quiz;
-    bool discovered = false;
-    string information;
-    DateTime timeDiscovered = DateTime.MinValue;
+using UnityEngine.UI;
+public class GundamRobot : MonoBehaviour {
+    public int id;
+    public string gundamName;
+    public string location;
+    public Quiz quiz;
+    public bool discovered = false;
+    public string information;
+    public DateTime timeDiscovered = DateTime.MinValue;
     public enum DisplayType {FOUND, CLOSE, NOTFOUND};
-     DisplayType displayType = DisplayType.NOTFOUND;
+    public DisplayType displayType = DisplayType.NOTFOUND;
     //create coordinates for gundam- give a setter and getter
 
     public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
