@@ -7,6 +7,8 @@ public class Settings : MonoBehaviour {
     public Slider buttonSizeSlider;
     public Slider fontSizeSlider;
     public Toggle leftHandToggle;
+    public GameObject leftHand;
+    public GameObject rightHand;
 
     private float buttonSize;
     private float fontSize;
@@ -20,6 +22,20 @@ public class Settings : MonoBehaviour {
 
     void Update(){
         Debug.Log("button size : " + buttonSizeSlider.value);
+    }
+
+    public void toggleLeftHanded()
+    {
+        if (leftHandToggle.isOn)
+        {
+            leftHand.SetActive(true);
+            rightHand.SetActive(false);
+        }
+        else
+        {
+            leftHand.SetActive(false);
+            rightHand.SetActive(true);
+        }
     }
 
     public void setButtonSize(int buttonSize){
