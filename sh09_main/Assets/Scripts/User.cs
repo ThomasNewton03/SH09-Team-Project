@@ -7,28 +7,57 @@ Things to create in this class:
 - Test methods for each function
 - The class should connect to inventory, settings, and game classes
 */
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class user : MonoBehaviour{
+public class user : MonoBehaviour {
 
-    string username;
-    string userPassword;
-    int userLevel = 1;
-    Settings settings;
-    Inventory inventory;
-    
+    public string username;
+    public string userPassword;
+    public int gundamCollected;
+    public Settings settings;
+    public Inventory inventory;
+    public TMP_Text gundamCollectedNumber;
+    public TMP_Text usernameText;
+    //public InputField inputUsernameField;
+    public TMP_InputField inputUsernameField;
 
     public user(string username, string password){
         this.username = username;
         this.userPassword = password;
     }
 
-    public void increaseLevel(){
-        userLevel+=1;
+    void Start() {
+        gundamCollected = 0;
+        usernameText.text = username;
     }
 
-    public int getLevel(){
-        return userLevel;
+    void Update(){
+        if (gundamCollectedNumber.text != gundamCollected.ToString()){
+            gundamCollectedNumber.text = gundamCollected.ToString();
+        }
+    }
+
+    public void UpdateUsername (){
+        if (inputUsernameField.text.Length == 0){
+            return;
+        }
+        else {
+            username = inputUsernameField.text;
+            usernameText.text = username;
+        }
+    }
+
+
+    public void increaseGundamCount(){
+        gundamCollected+=1;
+    }
+
+    public int getGundamCount(){
+        return gundamCollected;
     }
 
     public Settings loadSettings(){

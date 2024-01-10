@@ -1,9 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-public class Settings : MonoBehaviour{
+using UnityEngine.UI;
+public class Settings : MonoBehaviour {
 
-    int buttonSize;
-    int fontSize;
-    bool isLeftHanded;
+    public Slider buttonSizeSlider;
+    public Slider fontSizeSlider;
+    public Toggle leftHandToggle;
+    public GameObject menuLeftHand;
+    public GameObject menuRightHand;
+    public GameObject mapRightHand;
+    public GameObject mapLeftHand;
+
+    private float buttonSize;
+    private float fontSize;
+    private bool isLeftHanded;
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
@@ -11,21 +22,43 @@ public class Settings : MonoBehaviour{
         this.isLeftHanded = isLeftHanded;
     }
 
+    void Update(){
+        Debug.Log("button size : " + buttonSizeSlider.value);
+    }
+
+    public void toggleLeftHanded()
+    {
+        if (leftHandToggle.isOn)
+        {
+            menuLeftHand.SetActive(true);
+            menuRightHand.SetActive(false);
+            mapLeftHand.SetActive(true);
+            mapRightHand.SetActive(false);
+
+        }
+        else
+        {
+            menuLeftHand.SetActive(false);
+            menuRightHand.SetActive(true);
+            mapLeftHand.SetActive(false);
+            mapRightHand.SetActive(true);
+        }
+    }
 
     public void setButtonSize(int buttonSize){
         this.buttonSize = buttonSize;
     }
 
-    public int getButtonSize(){
-        return buttonSize;
+    public float getButtonSize(){
+        return buttonSizeSlider.value;
     }
 
     public void setFontSize(int fontSize){
         this.fontSize = fontSize;
     }
 
-    public int getFontSize(){
-        return fontSize;
+    public float getFontSize(){
+        return fontSizeSlider.value;
     }
 
     public void setIsLeftHanded(bool isLeftHanded){
