@@ -7,8 +7,10 @@ public class Settings : MonoBehaviour {
     public Slider buttonSizeSlider;
     public Slider fontSizeSlider;
     public Toggle leftHandToggle;
-    public GameObject leftHand;
-    public GameObject rightHand;
+    public GameObject menuLeftHand;
+    public GameObject menuRightHand;
+    public GameObject mapRightHand;
+    public GameObject mapLeftHand;
 
     private float buttonSize;
     private float fontSize;
@@ -28,13 +30,18 @@ public class Settings : MonoBehaviour {
     {
         if (leftHandToggle.isOn)
         {
-            leftHand.SetActive(true);
-            rightHand.SetActive(false);
+            menuLeftHand.SetActive(true);
+            menuRightHand.SetActive(false);
+            mapLeftHand.SetActive(true);
+            mapRightHand.SetActive(false);
+
         }
         else
         {
-            leftHand.SetActive(false);
-            rightHand.SetActive(true);
+            menuLeftHand.SetActive(false);
+            menuRightHand.SetActive(true);
+            mapLeftHand.SetActive(false);
+            mapRightHand.SetActive(true);
         }
     }
 

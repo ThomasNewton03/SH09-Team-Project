@@ -1751,7 +1751,7 @@ PrefabInstance:
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
@@ -1761,7 +1761,7 @@ PrefabInstance:
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
@@ -2329,7 +2329,7 @@ PrefabInstance:
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
@@ -2339,7 +2339,7 @@ PrefabInstance:
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
@@ -2598,7 +2598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &891315415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2616,7 +2616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 399, y: 812}
+  m_AnchoredPosition: {x: -399, y: 812}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891315416
@@ -3300,8 +3300,10 @@ MonoBehaviour:
   buttonSizeSlider: {fileID: 1464380459}
   fontSizeSlider: {fileID: 2039154348}
   leftHandToggle: {fileID: 34576877}
-  leftHand: {fileID: 1666203742}
-  rightHand: {fileID: 2124964422}
+  menuLeftHand: {fileID: 1666203742}
+  menuRightHand: {fileID: 2124964422}
+  mapRightHand: {fileID: 718506365}
+  mapLeftHand: {fileID: 891315414}
 --- !u!1001 &1279437154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5554,7 +5556,7 @@ PrefabInstance:
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
@@ -5564,7 +5566,7 @@ PrefabInstance:
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
         type: 3}
