@@ -39,13 +39,10 @@ public class user : MonoBehaviour {
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
             gundamCollectedNumber.text = gundamCollected.ToString();
         }
-
-        usernameText.text= username;
-    
     }
 
-    void UpdateUsername (){
-        if (inputUsernameField.text == null){
+    public void UpdateUsername (){
+        if (inputUsernameField.text.Length == 0){
             return;
         }
         else {
