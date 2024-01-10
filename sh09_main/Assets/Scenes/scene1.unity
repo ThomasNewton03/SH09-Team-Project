@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_CharacterValidation: 4
   m_RegexValue: 
   m_GlobalPointSize: 50
-  m_CharacterLimit: 20
+  m_CharacterLimit: 10
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
@@ -2751,7 +2751,7 @@ PrefabInstance:
     - target: {fileID: 1532211188290437780, guid: e1687701004dc8647918cb4917c197b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 171
       objectReference: {fileID: 0}
     - target: {fileID: 1532211188290437780, guid: e1687701004dc8647918cb4917c197b5,
         type: 3}
@@ -2777,6 +2777,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Username
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555862433316307559, guid: e1687701004dc8647918cb4917c197b5,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -350.7768
       objectReference: {fileID: 0}
     - target: {fileID: 7660909451925213827, guid: e1687701004dc8647918cb4917c197b5,
         type: 3}
