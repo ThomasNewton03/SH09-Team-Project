@@ -40,7 +40,7 @@ public class user : MonoBehaviour {
             gundamCollectedNumber.text = gundamCollected.ToString();
         }
 
-        UpdateUsername();
+        usernameText.text= username;
     
     }
 
