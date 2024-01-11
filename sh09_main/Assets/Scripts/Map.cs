@@ -19,8 +19,8 @@ public class Map : MonoBehaviour
     public resolution mapResolution = resolution.low;
     public double[] boundingBox = new double[] { 151.196023022085, -33.8777251205232, 151.216012372138, -33.8683894791246 }; //[lon(min), lat(min), lon(max), lat(max)]
 
-    private int mapWidth = 800;
-    private int mapHeight = 600;
+    private int mapWidth = 720;
+    private int mapHeight = 1280;
     private string[] styleStr = new string[] { "light-v10", "dark-v10", "streets-v11", "outdoors-v11", "satellite-v9", "satellite-streets-v11" };
     private string url = "";
     private bool mapIsLoading;

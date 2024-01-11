@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Quiz : MonoBehaviour{
+using UnityEngine.UI;
+public class Quiz : MonoBehaviour {
 
-    string question;
-    List<string> options;
-    int selectedIndex;
-    int answerIndex;
-    bool isAnswerCorrect;
+    public string question;
+    public List<string> options;
+    public int selectedIndex;
+    public int answerIndex;
+    public bool isAnswerCorrect;
 
     public Quiz(string question, List<string> options, int selectedIndex, int answerIndex, bool isAnswerCorrect){
         this.question = question;
