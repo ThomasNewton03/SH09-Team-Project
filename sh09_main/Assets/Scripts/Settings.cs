@@ -11,10 +11,16 @@ public class Settings : MonoBehaviour {
     public GameObject menuRightHand;
     public GameObject mapRightHand;
     public GameObject mapLeftHand;
+    public GameObject mapEventButton;
+    public GameObject extendedButtonsRightHand;
+    public GameObject extendedButtonsLeftHand;
+    public List<GameObject> buttonList;
 
     private float buttonSize;
     private float fontSize;
     private bool isLeftHanded;
+    private Vector3 additionScaleVector = new Vector3 (1, 1, 1);
+
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
@@ -28,23 +34,25 @@ public class Settings : MonoBehaviour {
 
     public void toggleLeftHanded()
     {
-        if (leftHandToggle.isOn)
+        setIsLeftHanded(leftHandToggle.isOn);
+        menuLeftHand.SetActive(leftHandToggle.isOn);
+        menuRightHand.SetActive(!leftHandToggle.isOn);
+        mapLeftHand.SetActive(leftHandToggle.isOn);
+        mapRightHand.SetActive(!leftHandToggle.isOn);
+    }
+    public void changeButtonSize()
+    {
+        for (int i = 0; i < buttonList.Count; i++)
         {
-            menuLeftHand.SetActive(true);
-            menuRightHand.SetActive(false);
-            mapLeftHand.SetActive(true);
-            mapRightHand.SetActive(false);
-
-        }
-        else
-        {
-            menuLeftHand.SetActive(false);
-            menuRightHand.SetActive(true);
-            mapLeftHand.SetActive(false);
-            mapRightHand.SetActive(true);
+            buttonList[i].transform.localScale = additionScaleVector + additionScaleVector * buttonSizeSlider.value;
         }
     }
 
+    public void checkMapSide()
+    {
+        mapLeftHand.SetActive(leftHandToggle);
+        mapRightHand.SetActive(!leftHandToggle);
+    }
     public void setButtonSize(int buttonSize){
         this.buttonSize = buttonSize;
     }
