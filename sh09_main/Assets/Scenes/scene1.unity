@@ -594,8 +594,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -3548,8 +3548,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -3967,7 +3967,6 @@ MonoBehaviour:
   - {fileID: 718506365}
   - {fileID: 891315414}
   - {fileID: 1829936448}
-  additionScaleVector: {x: 1, y: 1, z: 1}
 --- !u!1001 &1279437154
 PrefabInstance:
   m_ObjectHideFlags: 0
