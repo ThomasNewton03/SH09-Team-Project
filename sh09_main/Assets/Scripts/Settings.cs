@@ -18,7 +18,7 @@ public class Settings : MonoBehaviour {
 
     private float buttonSize;
     private float fontSize;
-    private bool isLeftHanded;
+    private bool isLeftHanded = false;
 
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
@@ -52,8 +52,8 @@ public class Settings : MonoBehaviour {
 
     public void checkMapSide()
     {
-        mapLeftHand.SetActive(leftHandToggle);
-        mapRightHand.SetActive(!leftHandToggle);
+        mapLeftHand.SetActive(isLeftHanded);
+        mapRightHand.SetActive(!isLeftHanded);
     }
     public void setButtonSize(int buttonSize){
         this.buttonSize = buttonSize;
