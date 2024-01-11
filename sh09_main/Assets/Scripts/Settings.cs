@@ -19,7 +19,6 @@ public class Settings : MonoBehaviour {
     private float buttonSize;
     private float fontSize;
     private bool isLeftHanded;
-    private Vector3 additionScaleVector = new Vector3 (1, 1, 1);
 
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
@@ -29,7 +28,7 @@ public class Settings : MonoBehaviour {
     }
 
     void Update(){
-        Debug.Log("button size : " + buttonSizeSlider.value);
+        //Debug.Log("button size : " + buttonSizeSlider.value);
     }
 
     public void toggleLeftHanded()
@@ -42,9 +41,12 @@ public class Settings : MonoBehaviour {
     }
     public void changeButtonSize()
     {
+        Vector3 additionScaleVector = Vector3.one;
         for (int i = 0; i < buttonList.Count; i++)
         {
-            buttonList[i].transform.localScale = additionScaleVector + additionScaleVector * buttonSizeSlider.value;
+            buttonList[i].transform.localScale = additionScaleVector + (additionScaleVector * buttonSizeSlider.value);
+            Debug.Log(buttonSizeSlider.value);
+            Debug.Log(additionScaleVector);
         }
     }
 
