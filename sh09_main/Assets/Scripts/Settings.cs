@@ -55,6 +55,11 @@ public class Settings : MonoBehaviour {
         mapLeftHand.SetActive(isLeftHanded);
         mapRightHand.SetActive(!isLeftHanded);
     }
+    public void checkMenuSide()
+    {
+        menuLeftHand.SetActive(isLeftHanded);
+        menuRightHand.SetActive(!isLeftHanded);
+    }
     public void setButtonSize(int buttonSize){
         this.buttonSize = buttonSize;
     }
