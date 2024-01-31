@@ -46,6 +46,14 @@ get-unity-version:
     - if: '$UNITY_LICENSE != null'
       when: always
 
+get-unity-license:
+  stage: prepare
+  script:
+    - echo "UNITY_LICENSE=$UNITY_LICENSE" >> $CI_ENVIRONMENT_FILE
+  rules:
+    - if: '$UNITY_LICENSE == null'
+      when: manual
+
 .unity_defaults: &unity_defaults
   <<:
     - *unity_before_script
@@ -61,6 +69,7 @@ get-activation-file:
       when: manual
   stage: prepare
   script:
+    - echo "UNITY_LICENSE=$UNITY_LICENSE" >> $CI_ENVIRONMENT_FILE
     - chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
   artifacts:
     paths:
