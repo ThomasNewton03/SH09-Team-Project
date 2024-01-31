@@ -47,13 +47,16 @@ public class Settings : MonoBehaviour {
     //if a new button is added please keep scale at 1,1,1 for this to work
     public void changeButtonSize()
     {
+        buttonSize = buttonSizeSlider.value;
+
         Vector3 additionScaleVector = Vector3.one;
         for (int i = 0; i < buttonList.Count; i++)
         {
             buttonList[i].transform.localScale = additionScaleVector + (additionScaleVector * buttonSizeSlider.value);
-            Debug.Log(buttonSizeSlider.value);
-            Debug.Log(additionScaleVector);
+            //Debug.Log(buttonSizeSlider.value);
+            //Debug.Log(additionScaleVector);
         }
+        saveButtonSize(buttonSize);
     }
 
     //checkMapSide() is there to be used as a check for which side map should be at and sets it active.
@@ -101,4 +104,23 @@ public class Settings : MonoBehaviour {
         return isLeftHanded;
     }
 
+    public void saveButtonSize(float saveButtonSize)
+    {
+        PlayerPrefs.SetFloat("buttonSize", saveButtonSize);
+    }
+
+    public void loadButtonSize()
+    {
+        buttonSize = PlayerPrefs.GetFloat("buttonSize");
+    }
+
+    public void saveFontSize(float saveFontSize)
+    {
+        PlayerPrefs.SetFloat("fontSize", saveFontSize);
+    }
+
+    public void loadFontSize()
+    {
+        fontSize = PlayerPrefs.GetFloat("fontSize");
+    }
 }
