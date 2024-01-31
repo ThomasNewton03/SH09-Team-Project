@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour {
     public TMP_Text quizAnswer2;
     public TMP_Text quizAnswer3;
     public TMP_Text quizAnswer4;
+    public GameObject quizContainer;
     public List<GundamRobot> inventory = new List<GundamRobot>();
     public int numFound;
 
@@ -42,5 +43,6 @@ public class Inventory : MonoBehaviour {
         quizAnswer2.text = answers[1];
         quizAnswer3.text = answers[2];
         quizAnswer4.text = answers[3];
+        quizContainer.GetComponent<CheckAnswer>().correctIndex = gundam.getQuizCorrectIndex();
     }
 }

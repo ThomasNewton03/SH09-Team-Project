@@ -13,6 +13,7 @@ public class GundamRobot : MonoBehaviour {
     public bool discovered = false;
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
+    public int quizCorrectIndex;
     //create coordinates for gundam- give a setter and getter
 
     public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
@@ -89,6 +90,14 @@ public class GundamRobot : MonoBehaviour {
             return timeDiscovered;
         }
         return DateTime.MinValue;
+    }
+
+    public void setQuizCorrectIndex(int index){
+        this.quizCorrectIndex = index;
+    }
+
+    public int getQuizCorrectIndex(){
+        return quizCorrectIndex;
     }
 
 }
