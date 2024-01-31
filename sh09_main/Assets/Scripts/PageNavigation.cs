@@ -8,9 +8,9 @@ public class PageNavigation : MonoBehaviour
 {
     [SerializeField] private TMP_Text _textBox;
     [TextArea(5,10)][SerializeField] private string FirstChunkOfText;
-    [TextArea(5,10)][SerializeField] private string SecondChunkOfText;
+    // [TextArea(5,10)][SerializeField] private string SecondChunkOfText;
 
-    private List<string> _textList => new List<string> {FirstChunkOfText, SecondChunkOfText};
+    private List<string> _textList => new List<string> {FirstChunkOfText}; // , SecondChunkOfText};
     private int _textindex  = 0;
     private int _currentTextPages => _textBox.textInfo.pageCount;
     private int _currentPage => _textBox.pageToDisplay;
