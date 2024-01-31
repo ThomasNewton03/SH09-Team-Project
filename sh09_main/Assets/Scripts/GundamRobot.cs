@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class GundamRobot : MonoBehaviour {
     public int id;
     public string gundamName;
     public string location;
-    public Quiz quiz;
+    public string quizQuestion;
+    public string[] quizAnswers = new string[4];
     public bool discovered = false;
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
@@ -19,7 +21,6 @@ public class GundamRobot : MonoBehaviour {
         this.id = id;
         this.gundamName = gundamName;
         this.location = location;
-        this.quiz = quiz;
         this.information = information;
     }
 
@@ -45,14 +46,6 @@ public class GundamRobot : MonoBehaviour {
 
     public string getLocation(){
         return location;
-    }
-
-    public void setQuiz(Quiz quiz){
-        this.quiz = quiz;
-    }
-
-    public Quiz GetQuiz(){
-        return quiz;
     }
 
     public void setDiscovered(bool discovered){

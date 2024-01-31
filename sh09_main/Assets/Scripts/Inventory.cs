@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Inventory : MonoBehaviour {
+
+    public TMP_Text infoText;
 
     public Dictionary<string, GundamRobot> inventory = new Dictionary<string, GundamRobot>();
     public int numFound;
@@ -40,5 +43,9 @@ public class Inventory : MonoBehaviour {
         }
         //inventory.Contains(gundamRobot.name, gundamRobot);
         //gundamRobot.setFound();
+    }
+
+    public void infoPageGundam(GundamRobot gundam){
+        infoText.text = gundam.getInformation();
     }
 }
