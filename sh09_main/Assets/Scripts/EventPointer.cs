@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class EventPointer : MonoBehaviour
 {
-    [SerializeField] float amplitude = 2.0f;
-    [SerializeField] float frequency = 0.50f;
-    [SerializeField] float rotateSpeed = 50f;
-
+    //LocationStatus playerLocation;
+    //public Vector2d eventPose;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +16,5 @@ public class EventPointer : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void rotateFloatPointer()
-    {
-        transform.Rotate(Vector3.up, rotateSpeed * Time.deltaTime);
-        transform.position = new Vector3();
     }
 }
