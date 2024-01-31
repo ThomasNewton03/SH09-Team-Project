@@ -13,8 +13,6 @@ public class GundamRobot : MonoBehaviour {
     public bool discovered = false;
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
-    public enum DisplayType {FOUND, CLOSE, NOTFOUND};
-    public DisplayType displayType = DisplayType.NOTFOUND;
     //create coordinates for gundam- give a setter and getter
 
     public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
@@ -64,6 +62,22 @@ public class GundamRobot : MonoBehaviour {
         return information;
     }
 
+    public void setQuizQuestion(string quizQuestion){
+        this.quizQuestion = quizQuestion;
+    }
+
+    public string getQuizQuestion(){
+        return quizQuestion;
+    }
+
+    public void setQuizAnswers(string[] quizAnswers){
+        this.quizAnswers = quizAnswers;
+    }
+
+    public string[] getQuizAnswers(){
+        return quizAnswers;
+    }
+
     public void setTimeDiscovered(DateTime timeDiscovered){
         if (!discovered){
             this.timeDiscovered = timeDiscovered;
@@ -75,30 +89,6 @@ public class GundamRobot : MonoBehaviour {
             return timeDiscovered;
         }
         return DateTime.MinValue;
-    }
-
-    public void setFound(){
-        this.displayType = DisplayType.FOUND;
-    }
-
-    public void setClose(){
-        this.displayType = DisplayType.CLOSE;
-    }
-
-    public void setNotFound(){
-        this.displayType = DisplayType.NOTFOUND;
-    }
-
-    public bool isFound(){
-        return displayType == DisplayType.FOUND;
-    }
-
-    public bool isNotFound(){
-        return displayType == DisplayType.NOTFOUND;
-    }
-
-    public bool isClose(){
-        return displayType == DisplayType.CLOSE;
     }
 
 }

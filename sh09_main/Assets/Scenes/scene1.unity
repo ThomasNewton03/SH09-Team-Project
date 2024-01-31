@@ -789,6 +789,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1150907223}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: quizPageGundam
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 74486849}
+          m_ObjectArgumentAssemblyTypeName: GundamRobot, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &74486847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,8 +854,12 @@ MonoBehaviour:
   id: 3
   gundamName: Gundam4
   location: 
-  quizQuestion: 
-  quizAnswers: []
+  quizQuestion: This is the question for gundam 4
+  quizAnswers:
+  - 4. This is the first answer
+  - 4. This is the second answer
+  - 4. This is the third answer
+  - 4. This is the fourth answer
   discovered: 0
   information: This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
@@ -856,7 +872,6 @@ MonoBehaviour:
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4
-  displayType: 0
 --- !u!1 &97539821
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2178,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1150907223}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: quizPageGundam
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 286228056}
+          m_ObjectArgumentAssemblyTypeName: GundamRobot, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &286228054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2216,8 +2243,12 @@ MonoBehaviour:
   id: 2
   gundamName: Gundam3
   location: 
-  quizQuestion: 
-  quizAnswers: []
+  quizQuestion: This is the question for Gundam 3
+  quizAnswers:
+  - 3. This is the first answer
+  - 3. This is the second answer
+  - 3. This is the third answer
+  - 3. This is the fourth answer
   discovered: 0
   information: This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
@@ -2229,7 +2260,6 @@ MonoBehaviour:
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3
-  displayType: 0
 --- !u!1 &318083688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,6 +5236,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1150907223}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: quizPageGundam
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 885021218}
+          m_ObjectArgumentAssemblyTypeName: GundamRobot, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &885021216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5259,8 +5301,12 @@ MonoBehaviour:
   id: 0
   gundamName: Gundam1
   location: 
-  quizQuestion: 
-  quizAnswers: []
+  quizQuestion: This is the Question for Gundam 1
+  quizAnswers:
+  - 1. This is the first answer
+  - 1. This is the second answer
+  - 1. This is the third answer
+  - 1. This is the fourth answer
   discovered: 0
   information: This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
@@ -5276,7 +5322,6 @@ MonoBehaviour:
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1
-  displayType: 0
 --- !u!224 &889115767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -6123,6 +6168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoText: {fileID: 1555072182}
+  quizQuestion: {fileID: 1366725234}
+  quizAnswer1: {fileID: 520794020}
+  quizAnswer2: {fileID: 1090698771}
+  quizAnswer3: {fileID: 1109690105}
+  quizAnswer4: {fileID: 534254255}
   inventory: []
   numFound: 0
 --- !u!224 &1157987414 stripped
@@ -6603,6 +6653,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1150907223}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: quizPageGundam
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1239011150}
+          m_ObjectArgumentAssemblyTypeName: GundamRobot, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1239011148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6656,8 +6718,12 @@ MonoBehaviour:
   id: 1
   gundamName: Gundam2
   location: 
-  quizQuestion: 
-  quizAnswers: []
+  quizQuestion: This is the question for Gundam 2
+  quizAnswers:
+  - 2. this is the first answer
+  - 2. this is the second answer
+  - 2. this is the third answer
+  - 2. this is the fourth answer
   discovered: 0
   information: This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
@@ -6669,7 +6735,6 @@ MonoBehaviour:
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2
-  displayType: 0
 --- !u!224 &1239570098 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -7746,8 +7811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.0000076294, y: 901.9999}
-  m_SizeDelta: {x: 780.008, y: 132.62201}
+  m_AnchoredPosition: {x: -8.2725, y: 950.9}
+  m_SizeDelta: {x: 1063.5, y: 111.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1366725234
 MonoBehaviour:
@@ -7832,7 +7897,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.866745, w: 0.00006482883}
+  m_margin: {x: 0, y: 0, z: 3.259507, w: 0.00006482883}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12097,7 +12162,6 @@ MonoBehaviour:
   quizAnswers: []
   discovered: 0
   information: 
-  displayType: 0
 --- !u!1 &2113129761
 GameObject:
   m_ObjectHideFlags: 0
