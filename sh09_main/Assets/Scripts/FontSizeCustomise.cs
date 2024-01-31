@@ -65,17 +65,32 @@ public class FontSizeCustomise : MonoBehaviour
     //
     // Gets the initial values of the styles to allow reset on app close
     // Issue of styles not resetting on close only present on pc
-    void Start()
-    {
+    //
+    // Will move this functionality to an always active element
+    // void Start()
+    // {
+        
+    // }
+
+    public void fontSizeSave(){
         length = styleNames.Length;
         originalSizes = new int[length];
         for (int i = 0; i<length ; i++)
         {
             TMP_Style style = _styleSheet.GetStyle(styleNames[i]);
-            string originalSizeString = Regex.Match(style.styleOpeningDefinition, @"<size=\d+>").Value;
-            int originalSize = Int32.Parse(Regex.Match(originalSizeString, @"\d+").Value);
-            originalSizes[i] = originalSize;
-            // Debug.Log(originalSize);
+            
+            string originalSizeString;
+            int originalSize;
+            // PlayerPrefs.DeleteAll();
+            if (PlayerPrefs.HasKey("defaultfontSize" + i)){
+                originalSizes[i] = PlayerPrefs.GetInt("defaultfontSize" + i);
+            }else{
+                originalSizeString= Regex.Match(style.styleOpeningDefinition, @"<size=\d+>").Value;
+                originalSize = Int32.Parse(Regex.Match(originalSizeString, @"\d+").Value);
+                originalSizes[i] = originalSize;
+                Debug.Log(originalSize);
+                PlayerPrefs.SetInt("defaultfontSize" + i, originalSizes[i]);
+            }
         }
     }
     
