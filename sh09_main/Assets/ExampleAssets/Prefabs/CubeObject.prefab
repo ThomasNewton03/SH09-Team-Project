@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7903700409619490002}
   - component: {fileID: 6485269435110501239}
   - component: {fileID: 9071579479618707389}
-  - component: {fileID: 1383400044508140097}
+  - component: {fileID: 1667940894413829369}
   m_Layer: 0
   m_Name: CubeObject
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1383400044508140097
+--- !u!114 &1667940894413829369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,6 +93,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7414126791596113512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4966091e252d48640a4d8025f8be1a9c, type: 3}
+  m_Script: {fileID: 11500000, guid: f997f8190638bdd449ae443fe69a41c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 50
+  amplitude: 2
+  frequency: 0.5
+  eventPose:
+    x: 0
+    y: 0

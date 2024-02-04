@@ -6,9 +6,9 @@
 	using Mapbox.Unity.MeshGeneration.Factories;
 	using Mapbox.Unity.Utilities;
 	using System.Collections.Generic;
+	using Mapbox.Examples;
 
-	public class SpawnOnMap : MonoBehaviour
-	{
+	public class SpawnOnMap : MonoBehaviour {
 		[SerializeField]
 		AbstractMap _map;
 
@@ -34,6 +34,7 @@
 				var locationString = _locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
 				var instance = Instantiate(_markerPrefab);
+				instance.GetComponent<EventPointer>().eventPose = _locations[i];
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 				_spawnedObjects.Add(instance);
