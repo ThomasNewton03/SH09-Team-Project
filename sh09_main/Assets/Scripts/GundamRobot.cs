@@ -3,23 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class GundamRobot : MonoBehaviour {
     public int id;
     public string gundamName;
     public string location;
-    public Quiz quiz;
+    public string quizQuestion;
+    public string[] quizAnswers = new string[4];
     public bool discovered = false;
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
-    public enum DisplayType {FOUND, CLOSE, NOTFOUND};
-    public DisplayType displayType = DisplayType.NOTFOUND;
+    public int quizCorrectIndex;
     //create coordinates for gundam- give a setter and getter
 
     public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
         this.id = id;
         this.gundamName = gundamName;
         this.location = location;
-        this.quiz = quiz;
         this.information = information;
     }
 
@@ -47,14 +47,6 @@ public class GundamRobot : MonoBehaviour {
         return location;
     }
 
-    public void setQuiz(Quiz quiz){
-        this.quiz = quiz;
-    }
-
-    public Quiz GetQuiz(){
-        return quiz;
-    }
-
     public void setDiscovered(bool discovered){
         this.discovered = discovered;
     }
@@ -71,6 +63,22 @@ public class GundamRobot : MonoBehaviour {
         return information;
     }
 
+    public void setQuizQuestion(string quizQuestion){
+        this.quizQuestion = quizQuestion;
+    }
+
+    public string getQuizQuestion(){
+        return quizQuestion;
+    }
+
+    public void setQuizAnswers(string[] quizAnswers){
+        this.quizAnswers = quizAnswers;
+    }
+
+    public string[] getQuizAnswers(){
+        return quizAnswers;
+    }
+
     public void setTimeDiscovered(DateTime timeDiscovered){
         if (!discovered){
             this.timeDiscovered = timeDiscovered;
@@ -84,28 +92,12 @@ public class GundamRobot : MonoBehaviour {
         return DateTime.MinValue;
     }
 
-    public void setFound(){
-        this.displayType = DisplayType.FOUND;
+    public void setQuizCorrectIndex(int index){
+        this.quizCorrectIndex = index;
     }
 
-    public void setClose(){
-        this.displayType = DisplayType.CLOSE;
-    }
-
-    public void setNotFound(){
-        this.displayType = DisplayType.NOTFOUND;
-    }
-
-    public bool isFound(){
-        return displayType == DisplayType.FOUND;
-    }
-
-    public bool isNotFound(){
-        return displayType == DisplayType.NOTFOUND;
-    }
-
-    public bool isClose(){
-        return displayType == DisplayType.CLOSE;
+    public int getQuizCorrectIndex(){
+        return quizCorrectIndex;
     }
 
 }
