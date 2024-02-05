@@ -7,6 +7,11 @@ using TMPro;
 public class PageNavigation : MonoBehaviour
 {
     [SerializeField] private TMP_Text _textBox;
+    public GameObject QuizContainer;
+    public GameObject InfoContainer;
+    // public GameObject RightButton;
+    // public GameObject LeftButton;
+    // public GameObject QuizButton;
     [TextArea(5,10)][SerializeField] private string FirstChunkOfText;
     // [TextArea(5,10)][SerializeField] private string SecondChunkOfText;
 
@@ -26,6 +31,10 @@ public class PageNavigation : MonoBehaviour
         if (_currentPage < _currentTextPages)
         {
             _textBox.pageToDisplay++;
+        }
+        else if (_currentPage == _currentTextPages){
+            InfoContainer.SetActive(false);
+            QuizContainer.SetActive(true);
         }
         else{
             _textindex++;
