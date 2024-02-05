@@ -6474,10 +6474,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1276246347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415.0001, y: -413.42}
-  m_SizeDelta: {x: 182.45, y: 162.63}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -91.225006, y: 81.315}
+  m_SizeDelta: {x: 182.45001, y: 162.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097237532
 MonoBehaviour:
@@ -9143,6 +9143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textBox: {fileID: 0}
+  QuizContainer: {fileID: 1276246346}
+  InfoContainer: {fileID: 271082641}
   FirstChunkOfText: "This is a chunk of text that would hopefully flow onto multiple
     pages as a placeholder to represent what the info display for a model would display
     as with extra words words and more words to be added onto words with additional
@@ -11333,10 +11335,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1276246347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415, y: -413.45}
-  m_SizeDelta: {x: 182.45, y: 158.275}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -91.225006, y: 79.1375}
+  m_SizeDelta: {x: 182.45001, y: 158.275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915095238
 MonoBehaviour:
