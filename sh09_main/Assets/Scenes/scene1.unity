@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 74486849}
   m_Layer: 5
   m_Name: Testing Get to Inventory Image 3
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -821,7 +821,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c0d13dfbfe74d4c4a93800de8329c425, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91b780dd292390c49b16e221bb745632, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -873,6 +873,7 @@ MonoBehaviour:
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4
   quizCorrectIndex: 3
+  gundamSprite: {fileID: 21300000, guid: c0d13dfbfe74d4c4a93800de8329c425, type: 3}
 --- !u!1 &97539821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1042,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 515}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149979996
 MonoBehaviour:
@@ -2360,7 +2361,7 @@ GameObject:
   - component: {fileID: 286228056}
   m_Layer: 5
   m_Name: Testing Get to Inventory Image 2
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2592,7 +2593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 356ee4f376bf5834a84e53ad6609b758, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91b780dd292390c49b16e221bb745632, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2631,7 +2632,7 @@ MonoBehaviour:
   - 3. This is the second answer
   - 3. This is the third answer
   - 3. This is the fourth answer
-  discovered: 0
+  discovered: 1
   information: This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
@@ -2643,6 +2644,7 @@ MonoBehaviour:
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3
   quizCorrectIndex: 2
+  gundamSprite: {fileID: 21300000, guid: 356ee4f376bf5834a84e53ad6609b758, type: 3}
 --- !u!1 &318083688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5594,7 +5596,7 @@ GameObject:
   - component: {fileID: 885021218}
   m_Layer: 5
   m_Name: Testing Get to Inventory
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5826,7 +5828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 315a5ca5e02ef824d9637335f3622dae, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91b780dd292390c49b16e221bb745632, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5881,6 +5883,7 @@ MonoBehaviour:
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1
   quizCorrectIndex: 0
+  gundamSprite: {fileID: 21300000, guid: 315a5ca5e02ef824d9637335f3622dae, type: 3}
 --- !u!224 &889115767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -6558,7 +6561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -91.225006, y: 81.315}
+  m_AnchoredPosition: {x: -91.225006, y: 110}
   m_SizeDelta: {x: 182.45001, y: 162.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097237532
@@ -6802,6 +6805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoText: {fileID: 1555072182}
+  imageArea: {fileID: 149979994}
   quizQuestion: {fileID: 1366725234}
   quizAnswer1: {fileID: 520794020}
   quizAnswer2: {fileID: 1090698771}
@@ -7088,7 +7092,7 @@ GameObject:
   - component: {fileID: 1239011150}
   m_Layer: 5
   m_Name: Testing Get to Inventory Image 1
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7320,7 +7324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 55fd84999b090dc4ba1a9605c5042a37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 91b780dd292390c49b16e221bb745632, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7371,6 +7375,7 @@ MonoBehaviour:
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2
   quizCorrectIndex: 1
+  gundamSprite: {fileID: 21300000, guid: 55fd84999b090dc4ba1a9605c5042a37, type: 3}
 --- !u!224 &1239570098 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -10244,7 +10249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.555, y: 89.871}
+  m_AnchoredPosition: {x: -1.555, y: 110}
   m_SizeDelta: {x: 607.65, y: 140.478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818454548
@@ -11213,7 +11218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -91.225006, y: 79.1375}
+  m_AnchoredPosition: {x: -91.225006, y: 110}
   m_SizeDelta: {x: 182.45001, y: 158.275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915095238
@@ -12982,6 +12987,7 @@ MonoBehaviour:
   discovered: 0
   information: 
   quizCorrectIndex: 0
+  gundamSprite: {fileID: 0}
 --- !u!1 &2113129761
 GameObject:
   m_ObjectHideFlags: 0
