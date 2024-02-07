@@ -6,6 +6,7 @@ using TMPro;
 public class Inventory : MonoBehaviour {
 
     public TMP_Text infoText;
+    public GameObject imageArea;
     public TMP_Text quizQuestion;
     public TMP_Text quizAnswer1;
     public TMP_Text quizAnswer2;
@@ -34,6 +35,7 @@ public class Inventory : MonoBehaviour {
 
     public void infoPageGundam(GundamRobot gundam){
         infoText.text = gundam.getInformation();
+        imageArea.GetComponent<Image>().sprite = gundam.getSprite();
     }
 
     public void quizPageGundam(GundamRobot gundam){

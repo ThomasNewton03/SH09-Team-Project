@@ -14,6 +14,7 @@ public class GundamRobot : MonoBehaviour {
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
     public int quizCorrectIndex;
+    public Sprite gundamSprite;
     //create coordinates for gundam- give a setter and getter
 
     public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
@@ -21,6 +22,10 @@ public class GundamRobot : MonoBehaviour {
         this.gundamName = gundamName;
         this.location = location;
         this.information = information;
+    }
+
+    void Awake(){
+        GetComponent<Image>().sprite = gundamSprite;
     }
 
     public void setId(int id){
@@ -98,6 +103,10 @@ public class GundamRobot : MonoBehaviour {
 
     public int getQuizCorrectIndex(){
         return quizCorrectIndex;
+    }
+
+    public Sprite getSprite(){
+        return gundamSprite;
     }
 
 }
