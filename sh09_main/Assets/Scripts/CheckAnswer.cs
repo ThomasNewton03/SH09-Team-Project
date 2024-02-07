@@ -23,4 +23,7 @@ public class CheckAnswer : MonoBehaviour
         }
     }
 
+    public void setCorrect(int index){
+        correctIndex = index;
+    }
 }
