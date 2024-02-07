@@ -7,8 +7,8 @@ public class Game : MonoBehaviour {
     Inventory inventory;
 
 
-    public void addGundamOnDiscovery(GundamRobot gundamRobot){
-        inventory.addToInventory(gundamRobot);
-    }
+    // public void addGundamOnDiscovery(GundamRobot gundamRobot){
+    //     inventory.addToInventory(gundamRobot);
+    // }
 
 }

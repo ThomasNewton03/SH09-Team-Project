@@ -13,15 +13,24 @@ public class Inventory : MonoBehaviour {
     public TMP_Text quizAnswer3;
     public TMP_Text quizAnswer4;
     public GameObject quizContainer;
-    public List<GundamRobot> inventory = new List<GundamRobot>();
+    public GameObject[] inventory;
     public int numFound;
 
+    void OnEnable(){
+
+        setInventory(GameObject.FindGameObjectsWithTag("item"));
+
+        foreach (GameObject item in inventory){
+            item.GetComponent<Button>().interactable = item.GetComponent<GundamRobot>().getDiscovered();
+        }
+
+    }
     public void setNumFound(int numFound){
         //initialise all gundam
         this.numFound = numFound;
     }
 
-    public void setInventory(List<GundamRobot> inventory){
+    public void setInventory(GameObject[] inventory){
         this.inventory = inventory;
     }
 
@@ -29,9 +38,9 @@ public class Inventory : MonoBehaviour {
         return numFound;
     }
 
-    public void addToInventory(GundamRobot gundamRobot){
-        inventory.Add(gundamRobot);
-    }
+    // public void addToInventory(GundamRobot gundamRobot){
+    //     inventory.Add(gundamRobot);
+    // }
 
     public void infoPageGundam(GundamRobot gundam){
         infoText.text = gundam.getInformation();

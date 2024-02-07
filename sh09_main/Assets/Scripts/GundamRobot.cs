@@ -10,7 +10,7 @@ public class GundamRobot : MonoBehaviour {
     public string location;
     public string quizQuestion;
     public string[] quizAnswers = new string[4];
-    public bool discovered = false;
+    public bool discovered;
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
     public int quizCorrectIndex;
@@ -26,6 +26,9 @@ public class GundamRobot : MonoBehaviour {
 
     void Awake(){
         GetComponent<Image>().sprite = gundamSprite;
+        if (!discovered){
+            GetComponent<Button>().interactable = discovered;
+        }
     }
 
     public void setId(int id){
