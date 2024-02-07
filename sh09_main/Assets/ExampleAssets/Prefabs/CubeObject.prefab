@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f997f8190638bdd449ae443fe69a41c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 50
-  amplitude: 2
-  frequency: 0.5
+  rotationSpeed: 20
+  amplitude: 0.1
+  frequency: 0.2
   eventPose:
     x: 0
     y: 0
