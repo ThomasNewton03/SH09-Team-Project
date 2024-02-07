@@ -13,16 +13,17 @@ public class GundamRobot : MonoBehaviour {
     public bool discovered;
     public string information;
     public DateTime timeDiscovered = DateTime.MinValue;
+    [Range(1,4)]
     public int quizCorrectIndex;
     public Sprite gundamSprite;
     //create coordinates for gundam- give a setter and getter
 
-    public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
-        this.id = id;
-        this.gundamName = gundamName;
-        this.location = location;
-        this.information = information;
-    }
+    // public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
+    //     this.id = id;
+    //     this.gundamName = gundamName;
+    //     this.location = location;
+    //     this.information = information;
+    // }
 
     void Awake(){
         GetComponent<Image>().sprite = gundamSprite;

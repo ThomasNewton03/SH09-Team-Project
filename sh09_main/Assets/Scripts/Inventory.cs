@@ -54,6 +54,6 @@ public class Inventory : MonoBehaviour {
         quizAnswer2.text = answers[1];
         quizAnswer3.text = answers[2];
         quizAnswer4.text = answers[3];
-        quizContainer.GetComponent<CheckAnswer>().correctIndex = gundam.getQuizCorrectIndex();
+        quizContainer.GetComponent<CheckAnswer>().setCorrect(gundam.getQuizCorrectIndex());
     }
 }

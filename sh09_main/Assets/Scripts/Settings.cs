@@ -22,6 +22,7 @@ public class Settings : MonoBehaviour {
     private float fontSize;
     private bool isLeftHanded = false;
 
+    
 
     public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
         this.buttonSize = buttonSize;
