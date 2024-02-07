@@ -88,7 +88,7 @@ public class FontSizeCustomise : MonoBehaviour
                 originalSizeString= Regex.Match(style.styleOpeningDefinition, @"<size=\d+>").Value;
                 originalSize = Int32.Parse(Regex.Match(originalSizeString, @"\d+").Value);
                 originalSizes[i] = originalSize;
-                Debug.Log(originalSize);
+                // Debug.Log(originalSize);
                 PlayerPrefs.SetInt("defaultfontSize" + i, originalSizes[i]);
             }
         }

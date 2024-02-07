@@ -18,37 +18,42 @@ public class Settings : MonoBehaviour {
     public GameObject infoExitLeftHand;
     public List<GameObject> buttonList;
 
-    private float buttonSize;
-    private float fontSize;
-    private bool isLeftHanded = false;
+    public GameObject introPage;
 
-    
+    // private float buttonSize;
+    // private float fontSize;
+    // private bool isLeftHanded = false;
 
-    public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
-        this.buttonSize = buttonSize;
-        this.fontSize = fontSize;
-        this.isLeftHanded = isLeftHanded;
-    }
 
-    void Update(){
-        //Debug.Log("button size : " + buttonSizeSlider.value);
-    }
+
+    // public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
+    //     this.buttonSize = buttonSize;
+    //     this.fontSize = fontSize;
+    //     this.isLeftHanded = isLeftHanded;
+    // }
+
+    // void Update(){
+    //     //Debug.Log("button size : " + buttonSizeSlider.value);
+    // }
 
     //toggleLeftHanded() is used in the toggle option, it will set leftHanded bool to true or false, and then set the menu and map buttons to right/left.
     public void toggleLeftHanded()
     {
-        setIsLeftHanded(leftHandToggle.isOn);
-        menuLeftHand.SetActive(leftHandToggle.isOn);
-        menuRightHand.SetActive(!leftHandToggle.isOn);
-        mapLeftHand.SetActive(leftHandToggle.isOn);
-        mapRightHand.SetActive(!leftHandToggle.isOn);
+        if (!introPage.active){
+            setIsLeftHanded(leftHandToggle.isOn);
+            menuLeftHand.SetActive(leftHandToggle.isOn);
+            menuRightHand.SetActive(!leftHandToggle.isOn);
+            mapLeftHand.SetActive(leftHandToggle.isOn);
+            mapRightHand.SetActive(!leftHandToggle.isOn);
+        }
+
     }
 
     //changeButtonSize() changes all the button sizes but using scale. All buttons are assumed to be on scale of 1,1,1. 
     //if a new button is added please keep scale at 1,1,1 for this to work
     public void changeButtonSize()
     {
-        buttonSize = buttonSizeSlider.value;
+        // buttonSize = buttonSizeSlider.value;
 
         Vector3 additionScaleVector = Vector3.one;
         for (int i = 0; i < buttonList.Count; i++)
@@ -57,40 +62,40 @@ public class Settings : MonoBehaviour {
             //Debug.Log(buttonSizeSlider.value);
             //Debug.Log(additionScaleVector);
         }
-        saveButtonSize(buttonSize);
+
     }
 
     //checkMapSide() is there to be used as a check for which side map should be at and sets it active.
     public void checkMapSide()
     {
-        mapLeftHand.SetActive(isLeftHanded);
-        mapRightHand.SetActive(!isLeftHanded);
+        mapLeftHand.SetActive(leftHandToggle.isOn);
+        mapRightHand.SetActive(!leftHandToggle.isOn);
     }
 
     //checkMenuSide() is there to be used as a check for which side menu button should be at and sets it as active.
     public void checkMenuSide()
     {
-        menuLeftHand.SetActive(isLeftHanded);
-        menuRightHand.SetActive(!isLeftHanded);
+        menuLeftHand.SetActive(leftHandToggle.isOn);
+        menuRightHand.SetActive(!leftHandToggle.isOn);
     }
 
     //checkInfoExitSide() is there to be used a check for which side the info exit button should be at and sets it as active.
     public void checkInfoExitSide()
     {
-        infoExitLeftHand.SetActive(isLeftHanded);
-        infoExitRightHand.SetActive(!isLeftHanded);
+        infoExitLeftHand.SetActive(leftHandToggle.isOn);
+        infoExitRightHand.SetActive(!leftHandToggle.isOn);
     }
 
-    public void setButtonSize(int buttonSize){
-        this.buttonSize = buttonSize;
+    public void setButtonSize(float buttonSize){
+        this.buttonSizeSlider.value = buttonSize;
     }
 
     public float getButtonSize(){
         return buttonSizeSlider.value;
     }
 
-    public void setFontSize(int fontSize){
-        this.fontSize = fontSize;
+    public void setFontSize(float fontSize){
+        this.fontSizeSlider.value = fontSize;
     }
 
     public float getFontSize(){
@@ -98,30 +103,55 @@ public class Settings : MonoBehaviour {
     }
 
     public void setIsLeftHanded(bool isLeftHanded){
-        this.isLeftHanded = isLeftHanded;
+        this.leftHandToggle.isOn = isLeftHanded;
     }
 
     public bool getIsLeftHanded(){
-        return isLeftHanded;
+        return leftHandToggle.isOn;
     }
 
     public void saveButtonSize(float saveButtonSize)
     {
-        PlayerPrefs.SetFloat("buttonSize", saveButtonSize);
+        PlayerPrefs.SetFloat("buttonSizeScalar", saveButtonSize);
     }
 
     public void loadButtonSize()
     {
-        buttonSize = PlayerPrefs.GetFloat("buttonSize");
+        if (PlayerPrefs.HasKey("buttonSizeScalar")){
+           setButtonSize(PlayerPrefs.GetFloat("buttonSizeScalar"));
+           changeButtonSize();
+        }else{
+            setButtonSize((float)0.125);
+        }
     }
 
     public void saveFontSize(float saveFontSize)
     {
-        PlayerPrefs.SetFloat("fontSize", saveFontSize);
+        PlayerPrefs.SetFloat("fontSizeScalar", saveFontSize);
     }
 
     public void loadFontSize()
     {
-        fontSize = PlayerPrefs.GetFloat("fontSize");
+        if (PlayerPrefs.HasKey("fontSizeScalar")){
+           setFontSize(PlayerPrefs.GetFloat("fontSizeScalar"));
+        }else{
+            setFontSize((float)1.3);
+        }
+    }
+
+    public void saveIsLeftHanded(int saveIsLeftHanded){
+        PlayerPrefs.SetInt("isLeftHanded", saveIsLeftHanded);
+    }
+
+    public void loadIsLeftHanded(){
+        if (PlayerPrefs.HasKey("isLeftHanded")){
+           setIsLeftHanded(PlayerPrefs.GetInt("isLeftHanded") == 1 ? true : false);
+        }else{
+            setIsLeftHanded(false);
+        }
+    }
+
+    public Slider getFontSizeSlider(){
+        return fontSizeSlider;
     }
 }
