@@ -872,7 +872,7 @@ MonoBehaviour:
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4
-  quizCorrectIndex: 3
+  quizCorrectIndex: 4
   gundamSprite: {fileID: 21300000, guid: c0d13dfbfe74d4c4a93800de8329c425, type: 3}
 --- !u!1 &97539821
 GameObject:
@@ -964,7 +964,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1127,6 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fontSizeSlider: {fileID: 2039154348}
+  buttonSizeSlider: {fileID: 1464380459}
 --- !u!1 &168606255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2644,7 @@ MonoBehaviour:
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3
-  quizCorrectIndex: 2
+  quizCorrectIndex: 3
   gundamSprite: {fileID: 21300000, guid: 356ee4f376bf5834a84e53ad6609b758, type: 3}
 --- !u!1 &318083688
 GameObject:
@@ -2870,7 +2871,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5366,7 +5367,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5882,7 +5883,7 @@ MonoBehaviour:
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
     is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1
-  quizCorrectIndex: 0
+  quizCorrectIndex: 1
   gundamSprite: {fileID: 21300000, guid: 315a5ca5e02ef824d9637335f3622dae, type: 3}
 --- !u!224 &889115767 stripped
 RectTransform:
@@ -7374,7 +7375,7 @@ MonoBehaviour:
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
     is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2
-  quizCorrectIndex: 1
+  quizCorrectIndex: 2
   gundamSprite: {fileID: 21300000, guid: 55fd84999b090dc4ba1a9605c5042a37, type: 3}
 --- !u!224 &1239570098 stripped
 RectTransform:
@@ -10480,6 +10481,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 885021218}
+        m_TargetAssemblyTypeName: GundamRobot, Assembly-CSharp
+        m_MethodName: setDiscovered
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1829936451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12264,7 +12277,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
