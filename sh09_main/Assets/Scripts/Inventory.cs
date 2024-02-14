@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 using TMPro;
 public class Inventory : MonoBehaviour {
 
@@ -16,12 +17,21 @@ public class Inventory : MonoBehaviour {
     public GameObject[] inventory;
     public int numFound;
 
-    void OnEnable(){
+    void Update(){
 
         setInventory(GameObject.FindGameObjectsWithTag("item"));
 
         foreach (GameObject item in inventory){
-            item.GetComponent<Button>().interactable = item.GetComponent<GundamRobot>().getDiscovered();
+            if (PlayerPrefs.HasKey(item.GetComponent<GundamRobot>().getGundamName())){
+                item.GetComponent<Button>().interactable = Convert.ToBoolean(PlayerPrefs.GetInt(item.GetComponent<GundamRobot>().getGundamName()));
+            } else {
+                item.GetComponent<Button>().interactable = false;
+            }
+            if (item.GetComponent<Button>().interactable == true){
+                PlayerPrefs.SetInt(item.GetComponent<GundamRobot>().getGundamName(), 1);
+            } else {
+                PlayerPrefs.SetInt(item.GetComponent<GundamRobot>().getGundamName(), 0);
+            }
         }
 
     }

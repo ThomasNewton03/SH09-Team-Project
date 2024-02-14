@@ -57,7 +57,11 @@ public class GundamRobot : MonoBehaviour {
     }
 
     public void setDiscovered(bool discovered){
-        this.discovered = discovered;
+        if (discovered == true){
+            PlayerPrefs.SetInt(this.getGundamName(), 1);
+        } else {
+            PlayerPrefs.SetInt(this.getGundamName(), 0);
+        }
     }
 
     public bool getDiscovered(){
