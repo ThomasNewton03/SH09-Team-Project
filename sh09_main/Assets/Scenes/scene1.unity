@@ -11124,7 +11124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: sh09
   userPassword: Password123
-  gundamCollected: 12
+  gundamCollected: 0
   settings: {fileID: 1258706726}
   inventory: {fileID: 1150907223}
   gundamCollectedNumber: {fileID: 1329944368}

@@ -30,8 +30,19 @@ public class user : MonoBehaviour {
         this.userPassword = password;
     }
 
-    void Start() {
+    void OnEnable(){
+
+        var inventory = GameObject.FindGameObjectsWithTag("item");
+
         gundamCollected = 0;
+        foreach (GameObject item in inventory){
+            if (item.GetComponent<Button>().interactable == true){
+                increaseGundamCount();
+            }
+        }
+    }
+
+    void Start() {
         usernameText.text = username;
     }
 
