@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour {
     public static MainManager Instance;
@@ -48,6 +49,9 @@ public class MainManager : MonoBehaviour {
             fontSize = data.fontSize;
         }
     }
+    public void LoadMapScene()
+    {
+        SceneManager.LoadScene("Location-basedGame");
+    }
 
-    
 }

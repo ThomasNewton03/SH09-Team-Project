@@ -2231,7 +2231,10 @@ MonoBehaviour:
 
     Please note that none of the GUNDAM you are looking for will
     be on roads or constructions sites so please make sure you are safe before using
-    the app.'
+    the app.
+
+    Note Location must be allowed to access full functionality of the
+    app.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2294,7 +2297,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -124.905304, y: 0, z: -175.45062, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11121,7 +11124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: sh09
   userPassword: Password123
-  gundamCollected: 12
+  gundamCollected: 0
   settings: {fileID: 1258706726}
   inventory: {fileID: 1150907223}
   gundamCollectedNumber: {fileID: 1329944368}
@@ -12409,8 +12412,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 2787367}
   m_HandleRect: {fileID: 943146819}
   m_Direction: 0
-  m_MinValue: 0.8
-  m_MaxValue: 1.8
+  m_MinValue: 0.9
+  m_MaxValue: 1.4
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
