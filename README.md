@@ -52,10 +52,12 @@ When you're ready to make this README your own, just edit this file and use the 
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
 ## Name
-Choose a self-explaining name for your project.
+Project GUNDAM
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Project GUNDAM is an augmented reality game developed for the University of Glasgow Games Lab and is available as an Android app.
+
+The application works by placing models across the local area, and the user must go to these set location in the real world, once there, a quiz is given and if the correct answer is given, you earn the model at that specific location. Augmented reality can be used to display he model in the real world.
 
 ## Badges
 On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
@@ -67,13 +69,16 @@ Depending on what you are making, it can be a good idea to include screenshots o
 Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+The application works similar to other AR games such as Pokémon Go, see screenshots below for the games usage.
 
 ## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+Any issues should be reported directly to the owner via the git repository.
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+The project code freeze takes place just shy of the end of March, from this point onwards the code is no longer required to be maintained or actively developed by the original team, however measure will be in place to ensure a stable app is released.
+
+This project will be demonstrated at the anime conference in Glasgow in July
 
 ## Contributing
 State if you are open to contributions and what your requirements are for accepting them.
@@ -83,10 +88,18 @@ For people who want to make changes to your project, it's helpful to have some d
 You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
 ## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+This was developed as a team project for third year students in the University of Glasgow. Developers include:
+
+Josh Duffy
+Connor Fallon
+Isabella Gard
+Maryam Al-Khulaifi
+Thomas Newton
+Aiden Smith
+
 
 ## License
 For open source projects, say how it is licensed.
 
 ## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+This project from April 2024 and beyond is no longer required to be maintained by the developers on this project, but further development may occur. Contributions may take place in the public repository and those wishing to work on further development should contact Timothy Peacock.
