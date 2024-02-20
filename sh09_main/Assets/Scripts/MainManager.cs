@@ -17,7 +17,7 @@ public class MainManager : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         LoadSettings();
     } 
@@ -51,7 +51,12 @@ public class MainManager : MonoBehaviour {
     }
     public void LoadMapScene()
     {
-        SceneManager.LoadScene("Location-basedGame");
+        SceneManager.LoadScene("Location-basedGame", LoadSceneMode.Single);
+    }
+
+    public void LoadAppScene()
+    {
+        SceneManager.LoadScene("scene1", LoadSceneMode.Single);
     }
 
 }
