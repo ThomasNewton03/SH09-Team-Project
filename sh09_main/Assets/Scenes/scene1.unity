@@ -873,7 +873,7 @@ MonoBehaviour:
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4
   quizCorrectIndex: 4
-  gundamSprite: {fileID: 21300000, guid: c0d13dfbfe74d4c4a93800de8329c425, type: 3}
+  gundamSprite: {fileID: 21300000, guid: e0dbbd81d39588a49924ddf3731602a1, type: 3}
 --- !u!1 &97539821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 515}
+  m_AnchoredPosition: {x: 0, y: 550}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149979996
@@ -2677,7 +2677,7 @@ MonoBehaviour:
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3
   quizCorrectIndex: 3
-  gundamSprite: {fileID: 21300000, guid: 356ee4f376bf5834a84e53ad6609b758, type: 3}
+  gundamSprite: {fileID: 21300000, guid: 40cdcb26876105547a4f414f6e024987, type: 3}
 --- !u!1 &318083688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,7 +2823,7 @@ PrefabInstance:
     - target: {fileID: 5798478837471224793, guid: 4b71795d27de1b0479b6ed266320ec6b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5798478837471224793, guid: 4b71795d27de1b0479b6ed266320ec6b,
         type: 3}
@@ -3555,6 +3555,85 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: 200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &589284742
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1720118262}
+    m_Modifications:
+    - target: {fileID: 3907172641919955110, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_Name
+      value: rx-93 nu gundam 28 web 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907172641919955110, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c35dcb205116c3345bbed2d90dafafd5, type: 3}
+--- !u!4 &589284743 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4427813029168753180, guid: c35dcb205116c3345bbed2d90dafafd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 589284742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &607187945 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -6056,31 +6135,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  gundamName: Gundam1
+  gundamName: RX-78-2 Gundam (Mobile Suit Gundam)
   location: 
-  quizQuestion: This is the Question for Gundam 1
+  quizQuestion: What innovation did the RX-78-2 Gundam bring to the robotic mecha
+    representation in anime?
   quizAnswers:
-  - 1. This is the first answer
-  - 1. This is the second answer
-  - 1. This is the third answer
-  - 1. This is the fourth answer
+  - A) Detachable space armour
+  - 'B) Truck-size design '
+  - 'C) Soft water-movement combat '
+  - 'D) Birth of the "Real Robot" genre '
   discovered: 0
-  information: This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1This
-    is Gundam 1This is Gundam 1This is Gundam 1This is Gundam 1
-  quizCorrectIndex: 1
-  gundamSprite: {fileID: 21300000, guid: 315a5ca5e02ef824d9637335f3622dae, type: 3}
+  information: "Imagine a world where giant robots are the ultimate tools of war,
+    and then meet the RX-78-2 Gundam, a towering machine that changed the game. This
+    isn't just any robot; it's the star of the \"Mobile Suit Gundam\" series from
+    1979. Rather than the indestructible, almost mythical titans of the previous
+    \u201CSuper Robot\u201D genre, Gundam marked the birth of a new \"Real Robot\"
+    genre; giant robots as complex machines built through science and engineering.
+    They could break down or run out of supplies, while their pilots had to grapple
+    with the horrors of war, desperate military strategies and personal dramas. Piloted
+    by the young and inexperienced Amuro Ray, this Gundam fights in the One Year
+    War between the space-based Principality of Zeon and the Earth Federation, showcasing
+    versatility in battle that had never been seen before. From wielding a beam sabre
+    (laser sword) to re-entering the atmosphere, the RX-78-2 is a significant anime
+    icon."
+  quizCorrectIndex: 4
+  gundamSprite: {fileID: 21300000, guid: d1eec056b660c3240b885215c5655473, type: 3}
 --- !u!224 &889115767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -6396,7 +6475,7 @@ PrefabInstance:
     - target: {fileID: 2423814729739527391, guid: d63ac55c4882c9545945f9d7a0c09291,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3091947690927046245, guid: d63ac55c4882c9545945f9d7a0c09291,
         type: 3}
@@ -6406,7 +6485,7 @@ PrefabInstance:
     - target: {fileID: 3091947690927046245, guid: d63ac55c4882c9545945f9d7a0c09291,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3091947690927046245, guid: d63ac55c4882c9545945f9d7a0c09291,
         type: 3}
@@ -7095,10 +7174,10 @@ MonoBehaviour:
   infoText: {fileID: 1555072182}
   imageArea: {fileID: 149979994}
   quizQuestion: {fileID: 1366725234}
-  quizAnswer1: {fileID: 520794020}
-  quizAnswer2: {fileID: 1090698771}
-  quizAnswer3: {fileID: 1109690105}
-  quizAnswer4: {fileID: 534254255}
+  quizAnswer1: {fileID: 1090698771}
+  quizAnswer2: {fileID: 520794020}
+  quizAnswer3: {fileID: 534254255}
+  quizAnswer4: {fileID: 1109690105}
   quizContainer: {fileID: 1276246346}
   inventory: []
   numFound: 0
@@ -7643,27 +7722,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  gundamName: Gundam2
+  gundamName: ASW-G-08 Gundam Barbatos 1st Form (Mobile Suit Gundam Iron-Blooded
+    Orphans)
   location: 
-  quizQuestion: This is the question for Gundam 2
+  quizQuestion: 'What special feature is the Gundam Barbatos known for? '
   quizAnswers:
-  - 2. this is the first answer
-  - 2. this is the second answer
-  - 2. this is the third answer
-  - 2. this is the fourth answer
+  - 'A) Sound-combat amplification '
+  - 'B) Shape-shifting weaponry '
+  - 'C) Pilot-machine neural interface '
+  - 'D) Invisibility cloaking '
   discovered: 0
-  information: This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This
-    is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2This is Gundam 2
-  quizCorrectIndex: 2
-  gundamSprite: {fileID: 21300000, guid: 55fd84999b090dc4ba1a9605c5042a37, type: 3}
+  information: "The Gundam Barbatos looks like it stepped out of a knight's tale,
+    but with a twist \u2013 it's from a far-future universe where giant robots are
+    key to survival. Rather than being a \u2018new\u2019 model, Barbatos had been
+    created 300 years before the series, during the Calamity War in which self-sustaining
+    Artificially Intelligent (AI) weapons threatened humanity. Barbatos features
+    a special system that links the pilot's nervous system directly to the machine,
+    making it an extension of their body. This allows for incredible feats of agility
+    and strength, making the Barbatos a formidable foe in the hands of Mikazuki Augus,
+    its pilot. This technology, known as the \"Alaya-Vijnana\" system, sets it apart
+    in the Gundam universe in allowing pilots unparalleled control of their machines.
+    However, in the series, this technology involves dangerous and invasive surgery
+    on children intended to operate other types of machines using the system, through
+    spine implants into their bodies which have severe risks."
+  quizCorrectIndex: 3
+  gundamSprite: {fileID: 21300000, guid: 94d8743bef8246146a707e835a8c6d9c, type: 3}
 --- !u!224 &1239570098 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5540604592100299532, guid: ff012922456728b4d94eed83c23f62d6,
@@ -7777,7 +7860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1276246347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10130,13 +10213,15 @@ Transform:
   m_GameObject: {fileID: 1720118261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 7}
+  m_LocalPosition: {x: 0, y: -1.6, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1092359093}
   - {fileID: 368590915}
   - {fileID: 2103776778}
+  - {fileID: 1790444440}
+  - {fileID: 589284743}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1732016367
@@ -10439,6 +10524,85 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff012922456728b4d94eed83c23f62d6, type: 3}
+--- !u!1001 &1790444439
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1720118262}
+    m_Modifications:
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682026341841091420, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_Name
+      value: Zaku 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682026341841091420, guid: 0bd773adc89711a4988e195c6414625e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bd773adc89711a4988e195c6414625e, type: 3}
+--- !u!4 &1790444440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5012871934080836070, guid: 0bd773adc89711a4988e195c6414625e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1790444439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792806935
 GameObject:
   m_ObjectHideFlags: 0
@@ -10626,7 +10790,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.85098046, g: 0.85098046, b: 0.85098046, a: 0}
+  m_BackGroundColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
