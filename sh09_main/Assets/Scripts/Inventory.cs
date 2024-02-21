@@ -35,18 +35,18 @@ public class Inventory : MonoBehaviour {
         }
 
     }
-    public void setNumFound(int numFound){
-        //initialise all gundam
-        this.numFound = numFound;
-    }
+    // public void setNumFound(int numFound){
+    //     //initialise all gundam
+    //     this.numFound = numFound;
+    // }
 
     public void setInventory(GameObject[] inventory){
         this.inventory = inventory;
     }
 
-    public int getNumFound(){
-        return numFound;
-    }
+    // public int getNumFound(){
+    //     return numFound;
+    // }
 
     // public void addToInventory(GundamRobot gundamRobot){
     //     inventory.Add(gundamRobot);
