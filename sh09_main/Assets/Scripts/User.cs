@@ -47,6 +47,11 @@ public class user : MonoBehaviour {
     }
 
     void Update(){
+        
+        if(PlayerPrefs.HasKey("username")){
+            usernameText.text = PlayerPrefs.GetString("username", username);
+        }
+
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
             gundamCollectedNumber.text = gundamCollected.ToString();
         }
@@ -59,6 +64,7 @@ public class user : MonoBehaviour {
         else {
             username = inputUsernameField.text;
             usernameText.text = username;
+            PlayerPrefs.SetString("username", username);
         }
     }
 
@@ -82,6 +88,7 @@ public class user : MonoBehaviour {
     public string getUsername(){
         return username;
     }
+    
 
     public void setPassword(string userPassword){
         this.userPassword = userPassword;
