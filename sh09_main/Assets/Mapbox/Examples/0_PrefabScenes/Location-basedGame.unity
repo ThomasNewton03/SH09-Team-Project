@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402185, g: 0.49316472, b: 0.57223153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1013,8 +1013,8 @@ MonoBehaviour:
   _map: {fileID: 843921209}
   _locationStrings:
   - 55.87142800813477, -4.29535670136756
-  _spawnScale: 100
-  _markerPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+  _spawnScale: 5
+  _markerPrefab: {fileID: 5682026341841091420, guid: 0bd773adc89711a4988e195c6414625e,
     type: 3}
 --- !u!4 &1336182695
 Transform:
@@ -1046,8 +1046,8 @@ MonoBehaviour:
   _map: {fileID: 843921209}
   _locationStrings:
   - 55.87289759556188, -4.287571401195754
-  _spawnScale: 100
-  _markerPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+  _spawnScale: 5
+  _markerPrefab: {fileID: 3907172641919955110, guid: c35dcb205116c3345bbed2d90dafafd5,
     type: 3}
 --- !u!114 &1336182697
 MonoBehaviour:
@@ -1064,8 +1064,8 @@ MonoBehaviour:
   _map: {fileID: 843921209}
   _locationStrings:
   - 55.871667081382064, -4.28910126321597
-  _spawnScale: 100
-  _markerPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+  _spawnScale: 5
+  _markerPrefab: {fileID: 2423814729739527391, guid: d63ac55c4882c9545945f9d7a0c09291,
     type: 3}
 --- !u!114 &1336182698
 MonoBehaviour:
@@ -1082,8 +1082,8 @@ MonoBehaviour:
   _map: {fileID: 843921209}
   _locationStrings:
   - 55.87216316449655, -4.2937078549130705
-  _spawnScale: 100
-  _markerPrefab: {fileID: 7414126791596113512, guid: fe573e7abb8af466791f07600c0785e3,
+  _spawnScale: 5
+  _markerPrefab: {fileID: 6571742977677850979, guid: 4b71795d27de1b0479b6ed266320ec6b,
     type: 3}
 --- !u!1 &1425877833
 GameObject:
