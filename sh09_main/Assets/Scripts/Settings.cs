@@ -92,11 +92,14 @@ public class Settings : MonoBehaviour {
         infoExitRightHand.SetActive(!leftHandToggle.isOn);
     }
     
+    //UICheck() is going to be used to check sides of main ui (Map and menu)
     public void UICheck()
     {
         checkMapSide();
         checkMenuSide();
     }
+
+    //closeUI() will close main ui buttons (menu buttons and map button)
     public void closeUI()
     {
         extendedButtonsLeftHand.SetActive(false);
@@ -107,6 +110,7 @@ public class Settings : MonoBehaviour {
         mapRightHand.SetActive(false);
     }
 
+    //these 4 swap buttons just swap to the page listed.
     public void swapToInfoPage()
     {
         checkInfoExitSide();
@@ -114,12 +118,12 @@ public class Settings : MonoBehaviour {
         InventoryPage.SetActive(false);
         ProfilePage.SetActive(false);
         SettingsPage.SetActive(false);
+
         closeUI();
     }
     public void swapToInventoryPage()
     {
-        checkMapSide();
-        checkMenuSide();
+        UICheck();
         InfoPage.SetActive(false);
         InventoryPage.SetActive(true);
         ProfilePage.SetActive(false);
@@ -128,8 +132,7 @@ public class Settings : MonoBehaviour {
     }
     public void swapToProfilePage()
     {
-        checkMapSide();
-        checkMenuSide();
+        UICheck();
         InfoPage.SetActive(false);
         InventoryPage.SetActive(false);
         ProfilePage.SetActive(true);
@@ -138,8 +141,7 @@ public class Settings : MonoBehaviour {
     }
     public void swapToSettingsPage()
     {
-        checkMapSide();
-        checkMenuSide();
+        UICheck();
         InfoPage.SetActive(false);
         InventoryPage.SetActive(false);
         ProfilePage.SetActive(false);
@@ -215,6 +217,7 @@ public class Settings : MonoBehaviour {
         return fontSizeSlider;
     }
 
+    //Uses closes AR session, so its not enabled while not in that page.
     public void closeAR()
     {
         Session.enabled = false;

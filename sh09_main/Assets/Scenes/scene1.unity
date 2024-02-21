@@ -7582,11 +7582,11 @@ MonoBehaviour:
   extendedButtonsLeftHand: {fileID: 573263322}
   infoExitRightHand: {fileID: 827247878}
   infoExitLeftHand: {fileID: 2078344330}
-  InfoPage: {fileID: 0}
-  InventoryPage: {fileID: 0}
-  ProfilePage: {fileID: 0}
-  SettingsPage: {fileID: 0}
-  Session: {fileID: 0}
+  InfoPage: {fileID: 892823235}
+  InventoryPage: {fileID: 1150907221}
+  ProfilePage: {fileID: 1890471103}
+  SettingsPage: {fileID: 1258706724}
+  Session: {fileID: 569513410}
   buttonList:
   - {fileID: 2124964422}
   - {fileID: 1666203742}
