@@ -12,7 +12,7 @@ public class AppManager : MonoBehaviour
     public GameObject settingsObject;
     Settings settings;
 
-    void Start(){
+    void Awake(){
         // PlayerPrefs.DeleteAll();
         settings = settingsObject.GetComponent<Settings>();
         settings.loadButtonSize();
