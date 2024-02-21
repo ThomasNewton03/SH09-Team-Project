@@ -21,7 +21,6 @@ public class AppManager : MonoBehaviour
         settings.loadFontSize();
 
         settings.loadIsLeftHanded();
-
     }
 
     void OnApplicationQuit()

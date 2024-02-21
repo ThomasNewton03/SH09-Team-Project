@@ -49,7 +49,8 @@ public class user : MonoBehaviour {
     void Update(){
         
         if(PlayerPrefs.HasKey("username")){
-            usernameText.text = PlayerPrefs.GetString("username", username);
+            username = PlayerPrefs.GetString("username", username);
+            usernameText.text = username;
         }
 
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
