@@ -1126,7 +1126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29bcab4bcff51e488d608bea2071f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fontSizeSlider: {fileID: 2039154348}
   settingsObject: {fileID: 1258706724}
 --- !u!1 &168606255
 GameObject:
@@ -9960,7 +9959,7 @@ GameObject:
   - component: {fileID: 1732016370}
   - component: {fileID: 1732016369}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ARPointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

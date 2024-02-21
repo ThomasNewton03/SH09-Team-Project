@@ -24,6 +24,8 @@ public class Settings : MonoBehaviour {
     public ARSession Session;
     public List<GameObject> buttonList;
 
+    public GameObject arPointer;
+
     public GameObject introPage;
 
     // private float buttonSize;
@@ -118,7 +120,6 @@ public class Settings : MonoBehaviour {
         InventoryPage.SetActive(false);
         ProfilePage.SetActive(false);
         SettingsPage.SetActive(false);
-
         closeUI();
     }
     public void swapToInventoryPage()
@@ -221,5 +222,6 @@ public class Settings : MonoBehaviour {
     public void closeAR()
     {
         Session.enabled = false;
+        arPointer.SetActive(false);
     }
 }
