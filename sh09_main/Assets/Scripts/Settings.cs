@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.ARFoundation;
 public class Settings : MonoBehaviour {
 
     public Slider buttonSizeSlider;
@@ -16,6 +17,11 @@ public class Settings : MonoBehaviour {
     public GameObject extendedButtonsLeftHand;
     public GameObject infoExitRightHand;
     public GameObject infoExitLeftHand;
+    public GameObject InfoPage;
+    public GameObject InventoryPage;
+    public GameObject ProfilePage;
+    public GameObject SettingsPage;
+    public ARSession Session;
     public List<GameObject> buttonList;
 
     public GameObject introPage;
@@ -39,7 +45,7 @@ public class Settings : MonoBehaviour {
     //toggleLeftHanded() is used in the toggle option, it will set leftHanded bool to true or false, and then set the menu and map buttons to right/left.
     public void toggleLeftHanded()
     {
-        if (!introPage.active){
+        if (!introPage.active || !InfoPage.active){
             setIsLeftHanded(leftHandToggle.isOn);
             menuLeftHand.SetActive(leftHandToggle.isOn);
             menuRightHand.SetActive(!leftHandToggle.isOn);
@@ -85,7 +91,61 @@ public class Settings : MonoBehaviour {
         infoExitLeftHand.SetActive(leftHandToggle.isOn);
         infoExitRightHand.SetActive(!leftHandToggle.isOn);
     }
+    
+    public void UICheck()
+    {
+        checkMapSide();
+        checkMenuSide();
+    }
+    public void closeUI()
+    {
+        extendedButtonsLeftHand.SetActive(false);
+        extendedButtonsRightHand.SetActive(false);
+        menuLeftHand.SetActive(false);
+        menuRightHand.SetActive(false);
+        mapLeftHand.SetActive(false);
+        mapRightHand.SetActive(false);
+    }
 
+    public void swapToInfoPage()
+    {
+        checkInfoExitSide();
+        InfoPage.SetActive(true);
+        InventoryPage.SetActive(false);
+        ProfilePage.SetActive(false);
+        SettingsPage.SetActive(false);
+        closeUI();
+    }
+    public void swapToInventoryPage()
+    {
+        checkMapSide();
+        checkMenuSide();
+        InfoPage.SetActive(false);
+        InventoryPage.SetActive(true);
+        ProfilePage.SetActive(false);
+        SettingsPage.SetActive(false);
+        closeAR();
+    }
+    public void swapToProfilePage()
+    {
+        checkMapSide();
+        checkMenuSide();
+        InfoPage.SetActive(false);
+        InventoryPage.SetActive(false);
+        ProfilePage.SetActive(true);
+        SettingsPage.SetActive(false);
+        closeAR();
+    }
+    public void swapToSettingsPage()
+    {
+        checkMapSide();
+        checkMenuSide();
+        InfoPage.SetActive(false);
+        InventoryPage.SetActive(false);
+        ProfilePage.SetActive(false);
+        SettingsPage.SetActive(true);
+        closeAR();
+    }
     public void setButtonSize(float buttonSize){
         this.buttonSizeSlider.value = buttonSize;
     }
@@ -153,5 +213,10 @@ public class Settings : MonoBehaviour {
 
     public Slider getFontSizeSlider(){
         return fontSizeSlider;
+    }
+
+    public void closeAR()
+    {
+        Session.enabled = false;
     }
 }
