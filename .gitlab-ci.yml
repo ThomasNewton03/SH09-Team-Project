@@ -6,10 +6,11 @@ stages:
 # If you are looking for a place where to add 'UNITY_LICENSE_FILE' and other secrets, please visit your project's gitlab page:
 # settings > CI/CD > Variables instead
 variables:
-  BUILD_NAME: GUNDAMTreasureHunt
+  BUILD_NAME: UofGTreasureHunt
   UNITY_ACTIVATION_FILE: ./unity3d.alf
   IMAGE: unityci/editor # https://hub.docker.com/r/unityci/editor
   IMAGE_VERSION: 2022.3.12f1 # 1 # This will automatically use latest v1.x.x, see https://github.com/game-ci/docker/releases
+  # maybs need to change UNITY_DIR to make more specific
   UNITY_DIR: $CI_PROJECT_DIR # this needs to be an absolute path. Defaults to the root of your tree.
   # You can expose this in Unity via Application.version
   VERSION_NUMBER_VAR: $CI_COMMIT_REF_SLUG-$CI_PIPELINE_ID-$CI_JOB_ID
@@ -64,6 +65,7 @@ get-unity-license:
 
 # run this job when you need to request a license
 # you may need to follow activation steps from documentation
+#maybe dont need anymore ? but has if so think should be fine
 get-activation-file:
   <<: *unity_before_script
   rules:
@@ -88,8 +90,13 @@ get-activation-file:
     expire_in: 2 weeks
   # https://gitlab.com/gableroux/unity3d-gitlab-ci-example/-/issues/83
   # you may need to remove or replace these to fit your need if you are using your own runners
+  # diff tag name perhaps im no sure if the number of our runners is the tag name itself?
   tags:
     - gitlab-org
+    - spremonitor
+    - sprebuild
+    - docker
+    - shell
   coverage: /<Linecoverage>(.*?)</Linecoverage>/
 
 # Tests without junit reporting results in GitLab
@@ -134,6 +141,10 @@ get-activation-file:
   # you may need to remove or replace these to fit your need if you are using your own runners
   tags:
     - gitlab-org
+    - spremonitor
+    - sprebuild
+    - docker
+    - shell
   coverage: /<Linecoverage>(.*?)</Linecoverage>/
 
 test-playmode-with-junit-reports:
@@ -160,6 +171,10 @@ test-editmode-with-junit-reports:
   # you may need to remove or replace these to fit your need if you are using your own runners
   tags:
     - gitlab-org
+    - spremonitor
+    - sprebuild
+    - docker
+    - shell
 
 # build-StandaloneLinux64:
 #   <<: *build
@@ -193,14 +208,14 @@ test-editmode-with-junit-reports:
 
 # For webgl support, you need to set Compression Format to Disabled for v0.9. See https://github.com/game-ci/docker/issues/75
 # build-WebGL:
-  <<: *build
-  image: $IMAGE:$UNITY_VERSION-webgl-$IMAGE_VERSION
-  # Temporary workaround for https://github.com/game-ci/docker/releases/tag/v0.9 and webgl support in current project to prevent errors with missing ffmpeg
-  before_script:
-    - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
-    - apt-get update && apt-get install ffmpeg -y
-  variables:
-    BUILD_TARGET: WebGL
+  # <<: *build
+  # image: $IMAGE:$UNITY_VERSION-webgl-$IMAGE_VERSION
+  # # Temporary workaround for https://github.com/game-ci/docker/releases/tag/v0.9 and webgl support in current project to prevent errors with missing ffmpeg
+  # before_script:
+  #   - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+  #   - apt-get update && apt-get install ffmpeg -y
+  # variables:
+  #   BUILD_TARGET: WebGL
 
 build-android:
   <<: *build
