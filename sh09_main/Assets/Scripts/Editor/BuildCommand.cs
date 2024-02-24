@@ -10,8 +10,8 @@ static class BuildCommand
     private const string KEY_ALIAS_NAME = "KEY_ALIAS_NAME";
     private const string KEYSTORE       = "keystore.keystore";
     private const string BUILD_OPTIONS_ENV_VAR = "BuildOptions";
-    private const string ANDROID_BUNDLE_VERSION_CODE = "VERSION_BUILD_VAR";
-    private const string ANDROID_APP_BUNDLE = "BUILD_APP_BUNDLE";
+    // private const string ANDROID_BUNDLE_VERSION_CODE = "VERSION_BUILD_VAR";
+    // private const string ANDROID_APP_BUNDLE = "BUILD_APP_BUNDLE";
     private const string SCRIPTING_BACKEND_ENV_VAR = "SCRIPTING_BACKEND";
     private const string VERSION_NUMBER_VAR = "VERSION_NUMBER_VAR";
     
@@ -89,12 +89,15 @@ static class BuildCommand
         if (buildTarget.ToString().ToLower().Contains("windows")) {
             buildName += ".exe";
         } else if (buildTarget == BuildTarget.Android) {
-#if UNITY_2018_3_OR_NEWER
-            buildName += EditorUserBuildSettings.buildAppBundle ? ".aab" : ".apk";
-#else
+            // i've added this in to avoid aab being built
             buildName += ".apk";
-#endif
         }
+// #if UNITY_2018_3_OR_NEWER
+//             buildName += EditorUserBuildSettings.buildAppBundle ? ".aab" : ".apk";
+// #else
+//             buildName += ".apk";
+// #endif
+//         }
         return buildPath + buildName;
     }
 
@@ -168,8 +171,8 @@ static class BuildCommand
         Console.WriteLine(":: Performing build");
 
         if (buildTarget == BuildTarget.Android) {
-            HandleAndroidAppBundle();
-            HandleAndroidBundleVersionCode();
+            // HandleAndroidAppBundle();
+            // HandleAndroidBundleVersionCode();
             HandleAndroidKeystore();
         }
 
@@ -188,39 +191,39 @@ static class BuildCommand
         Console.WriteLine(":: Done with build");
     }
 
-    private static void HandleAndroidAppBundle()
-    {
-        if (TryGetEnv(ANDROID_APP_BUNDLE, out string value))
-        {
-#if UNITY_2018_3_OR_NEWER
-            if (bool.TryParse(value, out bool buildAppBundle))
-            {
-                EditorUserBuildSettings.buildAppBundle = buildAppBundle;
-                Console.WriteLine($":: {ANDROID_APP_BUNDLE} env var detected, set buildAppBundle to {value}.");
-            }
-            else
-            {
-                Console.WriteLine($":: {ANDROID_APP_BUNDLE} env var detected but the value \"{value}\" is not a boolean.");
-            }
-#else
-            Console.WriteLine($":: {ANDROID_APP_BUNDLE} env var detected but does not work with lower Unity version than 2018.3");
-#endif
-        }
-    }
+//     private static void HandleAndroidAppBundle()
+//     {
+//         if (TryGetEnv(ANDROID_APP_BUNDLE, out string value))
+//         {
+// #if UNITY_2018_3_OR_NEWER
+//             if (bool.TryParse(value, out bool buildAppBundle))
+//             {
+//                 EditorUserBuildSettings.buildAppBundle = buildAppBundle;
+//                 Console.WriteLine($":: {ANDROID_APP_BUNDLE} env var detected, set buildAppBundle to {value}.");
+//             }
+//             else
+//             {
+//                 Console.WriteLine($":: {ANDROID_APP_BUNDLE} env var detected but the value \"{value}\" is not a boolean.");
+//             }
+// #else
+//             Console.WriteLine($":: {ANDROID_APP_BUNDLE} env var detected but does not work with lower Unity version than 2018.3");
+// #endif
+//         }
+//     }
 
-    private static void HandleAndroidBundleVersionCode()
-    {
-        if (TryGetEnv(ANDROID_BUNDLE_VERSION_CODE, out string value))
-        {
-            if (int.TryParse(value, out int version))
-            {
-                PlayerSettings.Android.bundleVersionCode = version;
-                Console.WriteLine($":: {ANDROID_BUNDLE_VERSION_CODE} env var detected, set the bundle version code to {value}.");
-            }
-            else
-                Console.WriteLine($":: {ANDROID_BUNDLE_VERSION_CODE} env var detected but the version value \"{value}\" is not an integer.");
-        }
-    }
+    // private static void HandleAndroidBundleVersionCode()
+    // {
+    //     if (TryGetEnv(ANDROID_BUNDLE_VERSION_CODE, out string value))
+    //     {
+    //         if (int.TryParse(value, out int version))
+    //         {
+    //             PlayerSettings.Android.bundleVersionCode = version;
+    //             Console.WriteLine($":: {ANDROID_BUNDLE_VERSION_CODE} env var detected, set the bundle version code to {value}.");
+    //         }
+    //         else
+    //             Console.WriteLine($":: {ANDROID_BUNDLE_VERSION_CODE} env var detected but the version value \"{value}\" is not an integer.");
+    //     }
+    // }
     private static void HandleAndroidKeystore()
     {
 #if UNITY_2019_1_OR_NEWER
