@@ -23,10 +23,9 @@ public class Settings : MonoBehaviour {
     public GameObject SettingsPage;
     public ARSession Session;
     public List<GameObject> buttonList;
+    private string activePage;
 
     public GameObject arPointer;
-
-    public GameObject introPage;
 
     // private float buttonSize;
     // private float fontSize;
@@ -47,14 +46,13 @@ public class Settings : MonoBehaviour {
     //toggleLeftHanded() is used in the toggle option, it will set leftHanded bool to true or false, and then set the menu and map buttons to right/left.
     public void toggleLeftHanded()
     {
-        if (!introPage.active || !InfoPage.active){
+        if (!InfoPage.active){
             setIsLeftHanded(leftHandToggle.isOn);
             menuLeftHand.SetActive(leftHandToggle.isOn);
             menuRightHand.SetActive(!leftHandToggle.isOn);
             mapLeftHand.SetActive(leftHandToggle.isOn);
             mapRightHand.SetActive(!leftHandToggle.isOn);
         }
-
     }
 
     //changeButtonSize() changes all the button sizes but using scale. All buttons are assumed to be on scale of 1,1,1. 
@@ -130,6 +128,7 @@ public class Settings : MonoBehaviour {
         ProfilePage.SetActive(false);
         SettingsPage.SetActive(false);
         closeAR();
+        setActivePage("inventory");
     }
     public void swapToProfilePage()
     {
@@ -139,6 +138,7 @@ public class Settings : MonoBehaviour {
         ProfilePage.SetActive(true);
         SettingsPage.SetActive(false);
         closeAR();
+        setActivePage("profile");
     }
     public void swapToSettingsPage()
     {
@@ -148,6 +148,7 @@ public class Settings : MonoBehaviour {
         ProfilePage.SetActive(false);
         SettingsPage.SetActive(true);
         closeAR();
+        setActivePage("settings");
     }
     public void setButtonSize(float buttonSize){
         this.buttonSizeSlider.value = buttonSize;
@@ -216,6 +217,15 @@ public class Settings : MonoBehaviour {
 
     public Slider getFontSizeSlider(){
         return fontSizeSlider;
+    }
+    
+    public string getActivePage()
+    {
+        return activePage;
+    }
+    public void setActivePage(string page)
+    {
+        activePage= page;
     }
 
     //Uses closes AR session, so its not enabled while not in that page.

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402185, g: 0.49316472, b: 0.57223153, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -342,27 +342,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 646003983}
-  - component: {fileID: 646003982}
+  - component: {fileID: 646003984}
   m_Layer: 0
-  m_Name: MainManager
+  m_Name: MapManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &646003982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 646003981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35d6e9c83d96bea438c8b753cb9a17c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fontSize: 0
 --- !u!4 &646003983
 Transform:
   m_ObjectHideFlags: 0
@@ -378,6 +365,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &646003984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646003981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f09736ee6288194498c6d26149cc7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &731090131
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1281,8 +1280,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 646003982}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+      - m_Target: {fileID: 646003984}
+        m_TargetAssemblyTypeName: MapManager, Assembly-CSharp
         m_MethodName: LoadAppScene
         m_Mode: 1
         m_Arguments:

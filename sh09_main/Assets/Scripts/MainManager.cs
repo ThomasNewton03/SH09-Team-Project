@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor.SearchService;
 
 public class MainManager : MonoBehaviour {
     public static MainManager Instance;
@@ -22,6 +23,7 @@ public class MainManager : MonoBehaviour {
         //DontDestroyOnLoad(gameObject);
 
         LoadSettings();
+        LoadPage();
     } 
 
     [System.Serializable]
@@ -57,16 +59,30 @@ public class MainManager : MonoBehaviour {
         settings.loadFontSize();
         settings.loadIsLeftHanded();
     }
+    
+    public void LoadPage()
+    {
+        if (PlayerPrefs.HasKey("LastActivePage"))
+        {
+            string activePage = PlayerPrefs.GetString("LastActivePage");
+            switch (activePage)
+            {
+                case "inventory":
+                    settings.swapToInventoryPage();
+                    break;
+                case "profile":
+                    settings.swapToProfilePage();
+                    break;
+                case "settings":
+                    settings.swapToSettingsPage();
+                    break;
+            }
+        }
+    }
     public void LoadMapScene()
     {
         SaveSettings();
         SceneManager.LoadScene("Location-basedGame", LoadSceneMode.Single);
+        PlayerPrefs.SetString("LastActivePage", settings.getActivePage());
     }
-
-    public void LoadAppScene()
-    {
-        SceneManager.LoadScene("scene1", LoadSceneMode.Single);
-        LoadSettings();
-    }
-
 }
