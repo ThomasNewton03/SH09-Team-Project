@@ -227,14 +227,18 @@ test-editmode-with-junit-reports:
 
 build-android:
   <<: *build
-  image: $IMAGE:$UNITY_VERSION-$IMAGE_VERSION
+  # image: $IMAGE:$UNITY_VERSION-android-$IMAGE_VERSION what it was from tutorial
+  image: 
+    name: "unityci/editor:2022.3.12f1-android-3"
   variables:
     BUILD_TARGET: Android
     BUILD_APP_BUNDLE: "false"
 
 build-android-il2cpp:
   <<: *build
-  image: $IMAGE:$UNITY_VERSION-$IMAGE_VERSION
+  # image: $IMAGE:$UNITY_VERSION-$IMAGE_VERSION
+  image: 
+    name: "unityci/editor:2022.3.12f1-android-3"
   variables:
     BUILD_TARGET: Android
     BUILD_APP_BUNDLE: "false"
