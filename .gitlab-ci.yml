@@ -101,10 +101,11 @@ get-activation-file:
   #   # - shell
   # coverage: /<Linecoverage>(.*?)</Linecoverage>/
 
-pull_docker_image:
-  stage: build_and_test
-  script:
-    - docker pull $IMAGE:$IMAGE_VERSION
+#unsure if necessary now image referencing is changed
+# pull_docker_image:
+#   stage: build_and_test
+#   script:
+#     - docker pull $IMAGE:$IMAGE_VERSION
 
 # Tests without junit reporting results in GitLab
 # test-playmode:
@@ -133,16 +134,16 @@ pull_docker_image:
     # previous job's artifacts
     - apt-get update && apt-get install -y default-jre libsaxonb-java
     - chmod +x ./sh09_main/ci/test.sh && ./sh09_main/ci/test.sh
-    - saxonb-xslt -s $UNITY_DIR/$TEST_PLATFORM-results.xml -xsl $CI_PROJECT_DIR/ci/nunit-transforms/nunit3-junit.xslt >$UNITY_DIR/$TEST_PLATFORM-junit-results.xml
+    - saxonb-xslt -s $UNITY_DIR/$TEST_PLATFORM-results.xml -xsl $CI_PROJECT_DIR/sh09_main/ci/nunit-transforms/nunit3-junit.xslt >$UNITY_DIR/$TEST_PLATFORM-junit-results.xml
   artifacts:
     when: always
     paths:
     # This is exported to allow viewing the Coverage Report in detail if needed
-    - $UNITY_DIR/$TEST_PLATFORM-coverage/
+    - $UNITY_DIR/sh09_main/$TEST_PLATFORM-coverage/
     reports:
       junit:
-        - $UNITY_DIR/$TEST_PLATFORM-junit-results.xml
-        - "$UNITY_DIR/$TEST_PLATFORM-coverage/coverage.xml"
+        - $UNITY_DIR/sh09_main/$TEST_PLATFORM-junit-results.xml
+        - "$UNITY_DIR/sh09_main/$TEST_PLATFORM-coverage/coverage.xml"
     expire_in: 2 weeks
   # https://gitlab.com/gableroux/unity3d-gitlab-ci-example/-/issues/83
   # you may need to remove or replace these to fit your need if you are using your own runners
@@ -173,7 +174,7 @@ test-editmode-with-junit-reports:
     - chmod +x ./sh09_main/ci/build.sh && ./sh09_main/ci/build.sh
   artifacts:
     paths:
-      - $UNITY_DIR/Builds/
+      - $UNITY_DIR/sh09_main/Builds/
   # https://gitlab.com/gableroux/unity3d-gitlab-ci-example/-/issues/83
   # you may need to remove or replace these to fit your need if you are using your own runners
   # dont need these i feel
@@ -248,7 +249,7 @@ deploy-android:
   stage: deploy
   image: ruby
   script:
-    - cd $UNITY_DIR/Builds/Android
+    - cd $UNITY_DIR/sh09_main/Builds/Android
     - echo $GPC_TOKEN > gpc_token.json
     - gem install bundler
     - bundle install
@@ -259,7 +260,7 @@ pages:
   image: alpine:latest
   stage: deploy
   script:
-    - mv "$UNITY_DIR/Builds/WebGL/${BUILD_NAME}" public
+    - mv "$UNITY_DIR/sh09_main/Builds/WebGL/${BUILD_NAME}" public
   artifacts:
     paths:
       - public
