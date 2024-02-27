@@ -227,14 +227,14 @@ test-editmode-with-junit-reports:
 
 build-android:
   <<: *build
-  image: $IMAGE:$UNITY_VERSION-android-$IMAGE_VERSION
+  image: $IMAGE:$UNITY_VERSION-$IMAGE_VERSION
   variables:
     BUILD_TARGET: Android
     BUILD_APP_BUNDLE: "false"
 
 build-android-il2cpp:
   <<: *build
-  image: $IMAGE:$UNITY_VERSION-android-$IMAGE_VERSION
+  image: $IMAGE:$UNITY_VERSION-$IMAGE_VERSION
   variables:
     BUILD_TARGET: Android
     BUILD_APP_BUNDLE: "false"
