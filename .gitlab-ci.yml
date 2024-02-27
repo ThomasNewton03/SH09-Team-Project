@@ -33,7 +33,7 @@ get-unity-version:
 
 .unity_before_script: &unity_before_script
   before_script:
-    - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+    - chmod +x ./sh09_main/ci/before_script.sh && ./sh09_main/ci/before_script.sh
   needs:
     - job: get-unity-version
       artifacts: true
@@ -76,7 +76,7 @@ get-activation-file:
   stage: prepare
   script:
     - echo "UNITY_LICENSE=$UNITY_LICENSE" >> $CI_ENVIRONMENT_FILE
-    - chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
+    - chmod +x ./sh09_main/ci/get_activation_file.sh && ./sh09_main/ci/get_activation_file.sh
   artifacts:
     paths:
       - $UNITY_ACTIVATION_FILE
@@ -86,7 +86,7 @@ get-activation-file:
   stage: build_and_test
   <<: *unity_defaults
   script:
-    - chmod +x ./ci/test.sh && ./ci/test.sh
+    - chmod +x ./sh09_main/ci/test.sh && ./sh09_main/ci/test.sh
   artifacts:
     when: always
     expire_in: 2 weeks
@@ -132,7 +132,7 @@ pull_docker_image:
     # We could use an image with these two depencencies only and only do the saxonb-xslt command on
     # previous job's artifacts
     - apt-get update && apt-get install -y default-jre libsaxonb-java
-    - chmod +x ./ci/test.sh && ./ci/test.sh
+    - chmod +x ./sh09_main/ci/test.sh && ./sh09_main/ci/test.sh
     - saxonb-xslt -s $UNITY_DIR/$TEST_PLATFORM-results.xml -xsl $CI_PROJECT_DIR/ci/nunit-transforms/nunit3-junit.xslt >$UNITY_DIR/$TEST_PLATFORM-junit-results.xml
   artifacts:
     when: always
@@ -170,7 +170,7 @@ test-editmode-with-junit-reports:
   stage: build_and_test
   <<: *unity_defaults
   script:
-    - chmod +x ./ci/build.sh && ./ci/build.sh
+    - chmod +x ./sh09_main/ci/build.sh && ./sh09_main/ci/build.sh
   artifacts:
     paths:
       - $UNITY_DIR/Builds/
