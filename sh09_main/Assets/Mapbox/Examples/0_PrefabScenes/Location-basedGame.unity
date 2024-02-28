@@ -573,7 +573,7 @@ PrefabInstance:
     - target: {fileID: 224835413515161394, guid: 98be219873e6d4dffb5949746f515a33,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 230.10242
+      value: 183.8162
       objectReference: {fileID: 0}
     - target: {fileID: 224835413515161394, guid: 98be219873e6d4dffb5949746f515a33,
         type: 3}
@@ -583,12 +583,12 @@ PrefabInstance:
     - target: {fileID: 224835413515161394, guid: 98be219873e6d4dffb5949746f515a33,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -125.05121
+      value: -101.9081
       objectReference: {fileID: 0}
     - target: {fileID: 224857786874416376, guid: 98be219873e6d4dffb5949746f515a33,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 250.10242
+      value: 203.8162
       objectReference: {fileID: 0}
     - target: {fileID: 224857786874416376, guid: 98be219873e6d4dffb5949746f515a33,
         type: 3}
@@ -623,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 224907993215804030, guid: 98be219873e6d4dffb5949746f515a33,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.20032758
+      value: 0.018723786
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 1220223452}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1019,6 +1019,8 @@ MonoBehaviour:
   _spawnScale: 5
   _markerPrefab: {fileID: 5682026341841091420, guid: 0bd773adc89711a4988e195c6414625e,
     type: 3}
+  _buttonPrefab: {fileID: 1731589081984505795, guid: ff012922456728b4d94eed83c23f62d6,
+    type: 3}
 --- !u!4 &1336182695
 Transform:
   m_ObjectHideFlags: 0
@@ -1052,6 +1054,8 @@ MonoBehaviour:
   _spawnScale: 5
   _markerPrefab: {fileID: 3907172641919955110, guid: c35dcb205116c3345bbed2d90dafafd5,
     type: 3}
+  _buttonPrefab: {fileID: 1731589081984505795, guid: ff012922456728b4d94eed83c23f62d6,
+    type: 3}
 --- !u!114 &1336182697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1074,8 @@ MonoBehaviour:
   _spawnScale: 5
   _markerPrefab: {fileID: 2423814729739527391, guid: d63ac55c4882c9545945f9d7a0c09291,
     type: 3}
+  _buttonPrefab: {fileID: 1731589081984505795, guid: ff012922456728b4d94eed83c23f62d6,
+    type: 3}
 --- !u!114 &1336182698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,6 +1093,8 @@ MonoBehaviour:
   - 55.873595242741914, -4.292197251237343
   _spawnScale: 5
   _markerPrefab: {fileID: 6571742977677850979, guid: 4b71795d27de1b0479b6ed266320ec6b,
+    type: 3}
+  _buttonPrefab: {fileID: 1731589081984505795, guid: ff012922456728b4d94eed83c23f62d6,
     type: 3}
 --- !u!1 &1425877833
 GameObject:
@@ -1166,7 +1174,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
