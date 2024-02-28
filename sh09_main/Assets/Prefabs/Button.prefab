@@ -134,6 +134,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Text (TMP)
       objectReference: {fileID: 0}
+    - target: {fileID: 2967699453841198502, guid: 5359c87f2baad7b4ea78ee25ade6577a,
+        type: 3}
+      propertyPath: m_text
+      value: Collect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967699453841198502, guid: 5359c87f2baad7b4ea78ee25ade6577a,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 3469301880348212496, guid: 5359c87f2baad7b4ea78ee25ade6577a,
         type: 3}
       propertyPath: m_Pivot.x

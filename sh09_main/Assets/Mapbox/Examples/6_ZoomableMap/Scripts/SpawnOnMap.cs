@@ -23,21 +23,38 @@
 		[SerializeField]
 		GameObject _markerPrefab;
 
+		[SerializeField]
+		GameObject _buttonPrefab;
+
+		GameObject canvas;
+
 		List<GameObject> _spawnedObjects;
 
 		void Start()
 		{
 			_locations = new Vector2d[_locationStrings.Length];
 			_spawnedObjects = new List<GameObject>();
+			canvas = GameObject.FindGameObjectWithTag("Canvas");
+
+			var button = Instantiate(_buttonPrefab);
+			button.transform.SetParent(canvas.transform);
+			button.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+			button.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
+
 			for (int i = 0; i < _locationStrings.Length; i++)
 			{
 				var locationString = _locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
 				var instance = Instantiate(_markerPrefab);
 				instance.GetComponent<EventPointer>().eventPose = _locations[i];
-				// instance.AddComponent<CheckModelDistances>();
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+
+				var distanceScript = instance.AddComponent<CheckModelDistance>();
+				distanceScript.button = button;
+				
+				// button.GetComponentInChildren<TMPPro>().text += i;
+
 				_spawnedObjects.Add(instance);
 			}
 		}
