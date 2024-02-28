@@ -468,7 +468,7 @@ RectTransform:
   m_Father: {fileID: 548678827}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.2857143, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
-  gundamName: Gundam4
+  gundamName: rx-93 nu gundam 28 web 1
   location: 
   quizQuestion: This is the question for gundam 4
   quizAnswers:
@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
-  gundamName: Gundam3
+  gundamName: Zaku 23
   location: 
   quizQuestion: This is the question for Gundam 3
   quizAnswers:
@@ -5571,7 +5571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  gundamName: RX-78-2 Gundam (Mobile Suit Gundam)
+  gundamName: "\u30AA\u30EA\u30B8\u30F3\u30AC\u30F3\u30C0\u30E0(2023-03-20)\u53EF\u52D5\u7248"
   location: 
   quizQuestion: What innovation did the RX-78-2 Gundam bring to the robotic mecha
     representation in anime?
@@ -7158,8 +7158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  gundamName: ASW-G-08 Gundam Barbatos 1st Form (Mobile Suit Gundam Iron-Blooded
-    Orphans)
+  gundamName: "\u7B2C1\u5F62\u614B(2022-08-08)"
   location: 
   quizQuestion: 'What special feature is the Gundam Barbatos known for? '
   quizAnswers:
@@ -8314,8 +8313,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1482318640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.2857143, y: 0}
+  m_AnchorMax: {x: 0.2857143, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

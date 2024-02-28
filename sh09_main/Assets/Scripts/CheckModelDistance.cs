@@ -45,6 +45,18 @@ public class CheckModelDistance : MonoBehaviour
         string name = this.name.Replace("(Clone)", "");
         Debug.Log(name);
         PlayerPrefs.SetString("TargetModel", name);
+        if (PlayerPrefs.GetInt(name) != 1)
+        {
+            PlayerPrefs.SetInt(name, 1);
+            if (PlayerPrefs.HasKey("GundamCollected") ) 
+            {
+                PlayerPrefs.SetInt("GundamCollected", PlayerPrefs.GetInt("GundamCollected") + 1);
+            }else
+            {
+                PlayerPrefs.SetInt("GundamCollected", 1);
+            }
+        }
+        
         mapManager.LoadAppScene();
     }
 }

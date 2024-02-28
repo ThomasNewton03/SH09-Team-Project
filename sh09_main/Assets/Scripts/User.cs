@@ -31,15 +31,8 @@ public class user : MonoBehaviour {
     }
 
     void OnEnable(){
-
-        var inventory = GameObject.FindGameObjectsWithTag("item");
-
-        gundamCollected = 0;
-        foreach (GameObject item in inventory){
-            if (item.GetComponent<Button>().interactable == true){
-                increaseGundamCount();
-            }
-        }
+        gundamCollected = getGundamCount();
+        Update();
     }
 
     void Start() {
@@ -70,12 +63,12 @@ public class user : MonoBehaviour {
     }
 
 
-    public void increaseGundamCount(){
-        gundamCollected+=1;
-    }
+    // public void increaseGundamCount(){
+    //     gundamCollected+=1;
+    // }
 
     public int getGundamCount(){
-        return gundamCollected;
+        return PlayerPrefs.GetInt("GundamCollected");
     }
 
     public Settings loadSettings(){

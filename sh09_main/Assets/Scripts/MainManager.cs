@@ -24,6 +24,7 @@ public class MainManager : MonoBehaviour {
 
         LoadSettings();
         LoadPage();
+        // PlayerPrefs.DeleteAll();
     } 
 
     [System.Serializable]

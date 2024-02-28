@@ -261,7 +261,7 @@ public class Settings : MonoBehaviour {
         if (PlayerPrefs.HasKey("TargetModel"))
         {
             string activeModel = PlayerPrefs.GetString("TargetModel");
-            Debug.Log(activeModel);
+            // Debug.Log(activeModel);
             GameObject model = modelContainer.transform.Find(activeModel).gameObject;
             if (model)
             {
