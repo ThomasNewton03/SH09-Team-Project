@@ -41,7 +41,6 @@ public class CheckModelDistance : MonoBehaviour
 
     void ButtonClicked()
     {
-        Debug.Log(PrefabUtility.GetCorrespondingObjectFromSource(this));
         PlayerPrefs.SetString("LastActivePage", "ar");
         string name = this.name.Replace("(Clone)", "");
         Debug.Log(name);
