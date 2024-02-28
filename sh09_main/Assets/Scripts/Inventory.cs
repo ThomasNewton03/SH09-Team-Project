@@ -20,10 +20,10 @@ public class Inventory : MonoBehaviour {
     void Update(){
 
         setInventory(GameObject.FindGameObjectsWithTag("item"));
-
         foreach (GameObject item in inventory){
             if (PlayerPrefs.HasKey(item.GetComponent<GundamRobot>().getGundamName())){
-                item.GetComponent<Button>().interactable = Convert.ToBoolean(PlayerPrefs.GetInt(item.GetComponent<GundamRobot>().getGundamName()));
+                item.GetComponent<Button>().interactable = true;
+                //item.GetComponent<Button>().interactable = Convert.ToBoolean(PlayerPrefs.GetInt(item.GetComponent<GundamRobot>().getGundamName()));
             } else {
                 item.GetComponent<Button>().interactable = false;
             }
