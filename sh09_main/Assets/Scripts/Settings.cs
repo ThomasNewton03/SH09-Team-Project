@@ -12,7 +12,6 @@ public class Settings : MonoBehaviour {
     public GameObject menuRightHand;
     public GameObject mapRightHand;
     public GameObject mapLeftHand;
-    public GameObject mapEventButton;
     public GameObject extendedButtonsRightHand;
     public GameObject extendedButtonsLeftHand;
     public GameObject infoExitRightHand;

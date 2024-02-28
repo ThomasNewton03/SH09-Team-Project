@@ -7254,7 +7254,6 @@ MonoBehaviour:
   menuRightHand: {fileID: 2124964422}
   mapRightHand: {fileID: 718506365}
   mapLeftHand: {fileID: 891315414}
-  mapEventButton: {fileID: 0}
   extendedButtonsRightHand: {fileID: 12406656}
   extendedButtonsLeftHand: {fileID: 573263322}
   infoExitRightHand: {fileID: 827247878}
@@ -7271,7 +7270,6 @@ MonoBehaviour:
   - {fileID: 573263322}
   - {fileID: 718506365}
   - {fileID: 891315414}
-  - {fileID: 0}
   - {fileID: 827247878}
   - {fileID: 2078344330}
   - {fileID: 654631333}
