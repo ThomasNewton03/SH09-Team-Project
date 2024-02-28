@@ -52,6 +52,9 @@
 
 				var distanceScript = instance.AddComponent<CheckModelDistance>();
 				distanceScript.button = button;
+
+				var mapManager = button.AddComponent<MapManager>();
+				distanceScript.mapManager = mapManager;
 				
 				// button.GetComponentInChildren<TMPPro>().text += i;
 

@@ -149,6 +149,16 @@ public class Settings : MonoBehaviour {
         closeAR();
         setActivePage("settings");
     }
+
+    public void swapToARPage()
+    {
+        UICheck();
+        InfoPage.SetActive(false);
+        InventoryPage.SetActive(false);
+        ProfilePage.SetActive(false);
+        SettingsPage.SetActive(false);
+        openAR();
+    }
     public void setButtonSize(float buttonSize){
         this.buttonSizeSlider.value = buttonSize;
     }
@@ -232,5 +242,11 @@ public class Settings : MonoBehaviour {
     {
         Session.enabled = false;
         arPointer.SetActive(false);
+    }
+
+    public void openAR()
+    {
+        Session.enabled = true;
+        arPointer.SetActive(true);
     }
 }

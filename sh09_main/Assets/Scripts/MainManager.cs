@@ -76,6 +76,10 @@ public class MainManager : MonoBehaviour {
                 case "settings":
                     settings.swapToSettingsPage();
                     break;
+                case "ar":
+                    settings.swapToARPage();
+                    break;
+                
             }
         }
     }
