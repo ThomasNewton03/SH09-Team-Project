@@ -22,6 +22,12 @@ public class MainManager : MonoBehaviour {
         Instance = this;
         //DontDestroyOnLoad(gameObject);
 
+        GameObject modelContainer = GameObject.Find("ModelContainer");
+        foreach (Transform child in modelContainer.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        
         LoadSettings();
         LoadPage();
         // PlayerPrefs.DeleteAll();
