@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class CheckModelDistance : MonoBehaviour
 {
@@ -40,7 +41,9 @@ public class CheckModelDistance : MonoBehaviour
 
     void ButtonClicked()
     {
+        Debug.Log(PrefabUtility.GetCorrespondingObjectFromSource(this));
         PlayerPrefs.SetString("LastActivePage", "ar");
+        PlayerPrefs.SetString("TargetModel", this.name);
         mapManager.LoadAppScene();
     }
 }

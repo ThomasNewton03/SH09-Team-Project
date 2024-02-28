@@ -26,6 +26,8 @@ public class Settings : MonoBehaviour {
 
     public GameObject arPointer;
 
+    public GameObject modelContainer;
+
     // private float buttonSize;
     // private float fontSize;
     // private bool isLeftHanded = false;
@@ -158,6 +160,7 @@ public class Settings : MonoBehaviour {
         ProfilePage.SetActive(false);
         SettingsPage.SetActive(false);
         openAR();
+        checkARModel();
     }
     public void setButtonSize(float buttonSize){
         this.buttonSizeSlider.value = buttonSize;
@@ -242,11 +245,27 @@ public class Settings : MonoBehaviour {
     {
         Session.enabled = false;
         arPointer.SetActive(false);
+        for(int i = 0; i < modelContainer.transform.childCount; ++i) {
+            modelContainer.transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     public void openAR()
     {
         Session.enabled = true;
         arPointer.SetActive(true);
+    }
+
+    public void checkARModel()
+    {
+        if (PlayerPrefs.HasKey("TargetModel"))
+        {
+            string activeModel = PlayerPrefs.GetString("TargetModel");
+            GameObject model = modelContainer.transform.Find(activeModel).gameObject;
+            if (model)
+            {
+                model.SetActive(true);
+            }
+        }
     }
 }

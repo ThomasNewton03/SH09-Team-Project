@@ -7277,6 +7277,7 @@ MonoBehaviour:
   - {fileID: 186883002}
   - {fileID: 2033470200}
   arPointer: {fileID: 1732016367}
+  modelContainer: {fileID: 1720118261}
 --- !u!1 &1276246346
 GameObject:
   m_ObjectHideFlags: 0
