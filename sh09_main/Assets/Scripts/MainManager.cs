@@ -80,6 +80,7 @@ public class MainManager : MonoBehaviour {
         if (PlayerPrefs.HasKey("LastActivePage"))
         {
             string activePage = PlayerPrefs.GetString("LastActivePage");
+            //Debug.Log(activePage);
             switch (activePage)
             {
                 case "inventory":
@@ -101,7 +102,7 @@ public class MainManager : MonoBehaviour {
     public void LoadMapScene()
     {
         SaveSettings();
+        PlayerPrefs.SetString("LastActivePage", settings.getActivePage());
         SceneManager.LoadScene("Location-basedGame", LoadSceneMode.Single);
-        //PlayerPrefs.SetString("LastActivePage", settings.getActivePage());
     }
 }
