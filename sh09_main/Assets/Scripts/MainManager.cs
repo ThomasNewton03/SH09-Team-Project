@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor.SearchService;
+// using UnityEditor.SearchService;
 
 public class MainManager : MonoBehaviour {
     public static MainManager Instance;
