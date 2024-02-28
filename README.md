@@ -100,12 +100,13 @@ This project from April 2024 and beyond is no longer required to be maintained b
 ## Authors and Acknowledgment
 This was developed as a team project for third year students in the University of Glasgow. Developers include:
 
-Josh Duffy
-Connor Fallon
-Isabella Gard
-Maryam Al-Khulaifi
-Thomas Newton
-Aiden Smith
+- Josh Duffy
+- Connor Fallon
+- Isabella Gard
+- Maryam Al-Khulaifi
+- Thomas Newton
+- Aiden Smith
+
 
 ## Referenced Materials
 tutorials or references used to 
