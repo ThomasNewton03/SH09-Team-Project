@@ -41,7 +41,7 @@ public class CheckModelDistance : MonoBehaviour
 
     void ButtonClicked()
     {
-        PlayerPrefs.SetString("LastActivePage", "ar");
+        PlayerPrefs.SetString("LastActivePage", "AR");
         string name = this.name.Replace("(Clone)", "");
         Debug.Log(name);
         PlayerPrefs.SetString("TargetModel", name);

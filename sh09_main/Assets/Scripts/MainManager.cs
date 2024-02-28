@@ -11,6 +11,14 @@ public class MainManager : MonoBehaviour {
     public GameObject settingsObject;
     Settings settings;
     // public int fontSize;
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("FirstLoad"))
+        {
+            settings.swapToProfilePage();
+            PlayerPrefs.SetInt("FirstLoad", 1);
+        }
+    }
 
     private void Awake() 
     {
@@ -94,6 +102,6 @@ public class MainManager : MonoBehaviour {
     {
         SaveSettings();
         SceneManager.LoadScene("Location-basedGame", LoadSceneMode.Single);
-        PlayerPrefs.SetString("LastActivePage", settings.getActivePage());
+        //PlayerPrefs.SetString("LastActivePage", settings.getActivePage());
     }
 }
