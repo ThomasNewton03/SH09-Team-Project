@@ -43,7 +43,9 @@ public class CheckModelDistance : MonoBehaviour
     {
         Debug.Log(PrefabUtility.GetCorrespondingObjectFromSource(this));
         PlayerPrefs.SetString("LastActivePage", "ar");
-        PlayerPrefs.SetString("TargetModel", this.name);
+        string name = this.name.Replace("(Clone)", "");
+        Debug.Log(name);
+        PlayerPrefs.SetString("TargetModel", name);
         mapManager.LoadAppScene();
     }
 }
