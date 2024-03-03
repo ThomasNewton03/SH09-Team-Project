@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 843921209}
   _locationStrings:
-  - 55.87229126749125, -4.292124338746845
+  - 55.86841753061402, -4.291301596689057
   _spawnScale: 5
   _markerPrefab: {fileID: 3907172641919955110, guid: c35dcb205116c3345bbed2d90dafafd5,
     type: 3}
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _map: {fileID: 843921209}
   _locationStrings:
-  - 55.87361547904196, -4.292176627382692
+  - 55.86014102247227, -4.287584032835911
   _spawnScale: 5
   _markerPrefab: {fileID: 6571742977677850979, guid: 4b71795d27de1b0479b6ed266320ec6b,
     type: 3}
