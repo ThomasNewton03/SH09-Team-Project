@@ -16,6 +16,8 @@ public class GundamRobot : MonoBehaviour {
     [Range(1,4)]
     public int quizCorrectIndex;
     public Sprite gundamSprite;
+    public Color32 quizCompleteColor; 
+    public GameObject star;
     //create coordinates for gundam- give a setter and getter
 
     // public GundamRobot(int id, string gundamName, string location, Quiz quiz, string information){
@@ -31,6 +33,17 @@ public class GundamRobot : MonoBehaviour {
             GetComponent<Button>().interactable = discovered;
         }
     }
+
+    void OnEnable(){
+        // image = GetComponent<Image>();
+        if (PlayerPrefs.HasKey(quizQuestion)){
+            // this.transform.parent.gameObject.GetComponent<Image>().color = quizCompleteColor;
+            star.SetActive(true);
+        } else{
+            star.SetActive(false);
+        }
+    }
+
 
     public void setId(int id){
         this.id = id;
