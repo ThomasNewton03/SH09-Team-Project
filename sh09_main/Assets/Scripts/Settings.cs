@@ -36,6 +36,8 @@ public class Settings : MonoBehaviour {
 
     public GameObject modelContainer;
 
+    public GameObject collectButton;
+
     // private float buttonSize;
     // private float fontSize;
     // private bool isLeftHanded = false;
@@ -177,7 +179,9 @@ public class Settings : MonoBehaviour {
         InventoryPage.SetActive(false);
         ProfilePage.SetActive(false);
         SettingsPage.SetActive(false);
+        collectButton.SetActive(true);
         openAR();
+        closeUI();
         checkARModel();
         setActivePage("ar");
         tutorialCheck();
@@ -263,6 +267,7 @@ public class Settings : MonoBehaviour {
     //Uses closes AR session, so its not enabled while not in that page.
     public void closeAR()
     {
+        collectButton.SetActive(false);
         Session.enabled = false;
         arPointer.SetActive(false);
         for(int i = 0; i < modelContainer.transform.childCount; ++i) {
