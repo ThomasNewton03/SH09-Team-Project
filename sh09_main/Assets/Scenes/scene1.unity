@@ -8858,6 +8858,7 @@ GameObject:
   - component: {fileID: 1366725233}
   - component: {fileID: 1366725235}
   - component: {fileID: 1366725234}
+  - component: {fileID: 1366725236}
   m_Layer: 5
   m_Name: Question
   m_TagString: Untagged
@@ -8882,7 +8883,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 990}
-  m_SizeDelta: {x: 1063.5, y: 111.48999}
+  m_SizeDelta: {x: 1063.5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1366725234
 MonoBehaviour:
@@ -8981,6 +8982,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366725232}
   m_CullTransparentMesh: 1
+--- !u!114 &1366725236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366725232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &1404436398
 GameObject:
   m_ObjectHideFlags: 0
@@ -9282,6 +9297,7 @@ GameObject:
   - component: {fileID: 1555072182}
   - component: {fileID: 1555072184}
   - component: {fileID: 1555072185}
+  - component: {fileID: 1555072186}
   m_Layer: 5
   m_Name: Text (TMP) for Info
   m_TagString: Untagged
@@ -9306,7 +9322,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -10, y: 447}
-  m_SizeDelta: {x: 200, y: -959.2616}
+  m_SizeDelta: {x: 200, y: -1266.8182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555072182
 MonoBehaviour:
@@ -9394,7 +9410,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -379.1229, y: 0, z: -396.70602, w: -685.7284}
+  m_margin: {x: -379.1229, y: -154.56157, z: -396.70602, w: -752.4429}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9439,6 +9455,20 @@ MonoBehaviour:
     pages as a placeholder to represent what the info display for a model would display
     as with extra words words and more words to be added onto words with additional
     words with more words \nThen in a new paragraph I've added even more words"
+--- !u!114 &1555072186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555072180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &1604624789
 GameObject:
   m_ObjectHideFlags: 0
@@ -11047,6 +11077,7 @@ GameObject:
   - component: {fileID: 1818454547}
   - component: {fileID: 1818454549}
   - component: {fileID: 1818454548}
+  - component: {fileID: 1818454550}
   m_Layer: 5
   m_Name: Feedback
   m_TagString: Untagged
@@ -11071,7 +11102,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -1.555, y: 142}
-  m_SizeDelta: {x: 607.65, y: 140.478}
+  m_SizeDelta: {x: 607.65, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818454548
 MonoBehaviour:
@@ -11156,7 +11187,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 7.481866, w: 0}
+  m_margin: {x: 0, y: -51.99664, z: 7.481866, w: -102.03098}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -11170,6 +11201,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818454546}
   m_CullTransparentMesh: 1
+--- !u!114 &1818454550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818454546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &1839545036
 GameObject:
   m_ObjectHideFlags: 0
