@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class AppManager : MonoBehaviour
 {
-    public Slider fontSizeSlider;  
+    // public Slider fontSizeSlider;  
     // public Slider buttonSizeSlider;  
 
     public GameObject settingsObject;
     Settings settings;
-    void Start(){
+
+    void Awake(){
         // PlayerPrefs.DeleteAll();
         settings = settingsObject.GetComponent<Settings>();
         settings.loadButtonSize();

@@ -30,12 +30,22 @@ public class user : MonoBehaviour {
         this.userPassword = password;
     }
 
+    void OnEnable(){
+        gundamCollected = getGundamCount();
+        Update();
+    }
+
     void Start() {
-        gundamCollected = 0;
         usernameText.text = username;
     }
 
     void Update(){
+        
+        if(PlayerPrefs.HasKey("username")){
+            username = PlayerPrefs.GetString("username", username);
+            usernameText.text = username;
+        }
+
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
             gundamCollectedNumber.text = gundamCollected.ToString();
         }
@@ -48,16 +58,17 @@ public class user : MonoBehaviour {
         else {
             username = inputUsernameField.text;
             usernameText.text = username;
+            PlayerPrefs.SetString("username", username);
         }
     }
 
 
-    public void increaseGundamCount(){
-        gundamCollected+=1;
-    }
+    // public void increaseGundamCount(){
+    //     gundamCollected+=1;
+    // }
 
     public int getGundamCount(){
-        return gundamCollected;
+        return PlayerPrefs.GetInt("GundamCollected");
     }
 
     public Settings loadSettings(){
@@ -71,6 +82,7 @@ public class user : MonoBehaviour {
     public string getUsername(){
         return username;
     }
+    
 
     public void setPassword(string userPassword){
         this.userPassword = userPassword;
