@@ -856,10 +856,10 @@ MonoBehaviour:
   location: 
   quizQuestion: This is the question for gundam 4
   quizAnswers:
-  - 4. This is the first answer
-  - 4. This is the second answer
-  - 4. This is the third answer
-  - 4. This is the fourth answer
+  - This is the first answer
+  - This is the second answer
+  - This is the third answer
+  - This is the fourth answer
   discovered: 0
   information: This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
     is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
@@ -2235,11 +2235,11 @@ MonoBehaviour:
   location: 
   quizQuestion: This is the question for Gundam 3
   quizAnswers:
-  - 3. This is the first answer
-  - 3. This is the second answer
-  - 3. This is the third answer
-  - 3. This is the fourth answer
-  discovered: 1
+  - This is the first answer
+  - This is the second answer
+  - This is the third answer
+  - This is the fourth answer
+  discovered: 0
   information: This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
     is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
@@ -6271,10 +6271,10 @@ MonoBehaviour:
   quizQuestion: What innovation did the RX-78-2 Gundam bring to the robotic mecha
     representation in anime?
   quizAnswers:
-  - A) Detachable space armour
-  - 'B) Truck-size design '
-  - 'C) Soft water-movement combat '
-  - 'D) Birth of the "Real Robot" genre '
+  - Detachable space armour
+  - Truck-size design
+  - Soft water-movement combat
+  - Birth of the "Real Robot" genre
   discovered: 0
   information: "Imagine a world where giant robots are the ultimate tools of war,
     and then meet the RX-78-2 Gundam, a towering machine that changed the game. This
@@ -8221,10 +8221,10 @@ MonoBehaviour:
   location: 
   quizQuestion: 'What special feature is the Gundam Barbatos known for? '
   quizAnswers:
-  - 'A) Sound-combat amplification '
-  - 'B) Shape-shifting weaponry '
-  - 'C) Pilot-machine neural interface '
-  - 'D) Invisibility cloaking '
+  - Sound-combat amplification
+  - Shape-shifting weaponry
+  - Pilot-machine neural interface
+  - Invisibility cloaking
   discovered: 0
   information: "The Gundam Barbatos looks like it stepped out of a knight's tale,
     but with a twist \u2013 it's from a far-future universe where giant robots are
@@ -12074,7 +12074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1890471104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12110,7 +12110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28203b4bba7c79348962f3c93a319a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  username: sh09
+  username: Username
   userPassword: Password123
   gundamCollected: 0
   settings: {fileID: 1258706726}
@@ -12175,7 +12175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 30a920144a8599a4fa53cf74f831adee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cffee7131c9b5404fbc6e0ba74483e98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
