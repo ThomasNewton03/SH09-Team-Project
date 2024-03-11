@@ -16,22 +16,19 @@ public class Inventory : MonoBehaviour {
     public GameObject quizContainer;
     public GameObject[] inventory;
     public int numFound;
+    public Color32 quizCompleteColor; 
 
     void Update(){
 
         setInventory(GameObject.FindGameObjectsWithTag("item"));
         foreach (GameObject item in inventory){
-            if (PlayerPrefs.HasKey(item.GetComponent<GundamRobot>().getGundamName())){
-                // item.GetComponent<Button>().interactable = true;
-                item.GetComponent<Button>().interactable = Convert.ToBoolean(PlayerPrefs.GetInt(item.GetComponent<GundamRobot>().getGundamName()));
+            String gundamName = item.GetComponent<GundamRobot>().getGundamName();
+            Button button = item.GetComponent<Button>();
+            if (PlayerPrefs.HasKey(gundamName)){
+                button.interactable = Convert.ToBoolean(PlayerPrefs.GetInt(gundamName));
             } else {
-                item.GetComponent<Button>().interactable = false;
+                button.interactable = false;
             }
-            // if (item.GetComponent<Button>().interactable == true){
-            //     PlayerPrefs.SetInt(item.GetComponent<GundamRobot>().getGundamName(), 1);
-            // } else {
-            //     PlayerPrefs.SetInt(item.GetComponent<GundamRobot>().getGundamName(), 0);
-            // }
         }
 
     }

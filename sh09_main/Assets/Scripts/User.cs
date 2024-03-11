@@ -18,9 +18,11 @@ public class user : MonoBehaviour {
     public string username;
     public string userPassword;
     public int gundamCollected;
+    public int quizCompleted;
     public Settings settings;
     public Inventory inventory;
     public TMP_Text gundamCollectedNumber;
+    public TMP_Text quizCompletedNumber;
     public TMP_Text usernameText;
     //public InputField inputUsernameField;
     public TMP_InputField inputUsernameField;
@@ -32,6 +34,7 @@ public class user : MonoBehaviour {
 
     void OnEnable(){
         gundamCollected = getGundamCount();
+        quizCompleted = getQuizCompleted();
         Update();
     }
 
@@ -48,6 +51,10 @@ public class user : MonoBehaviour {
 
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
             gundamCollectedNumber.text = gundamCollected.ToString();
+        }
+
+        if (quizCompletedNumber.text != quizCompleted.ToString()){
+            quizCompletedNumber.text = quizCompleted.ToString();
         }
     }
 
@@ -69,6 +76,10 @@ public class user : MonoBehaviour {
 
     public int getGundamCount(){
         return PlayerPrefs.GetInt("GundamCollected");
+    }
+
+    public int getQuizCompleted(){
+        return PlayerPrefs.GetInt("QuizCompleted");
     }
 
     public Settings loadSettings(){
