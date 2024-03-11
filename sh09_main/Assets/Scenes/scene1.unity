@@ -855,25 +855,25 @@ MonoBehaviour:
   id: 3
   gundamName: rx-93 nu gundam 28 web 1
   location: 
-  quizQuestion: This is the question for gundam 4
+  quizQuestion: "What is Nu Gundam\u2019s biggest link to the original series?"
   quizAnswers:
-  - This is the first answer
-  - This is the second answer
-  - This is the third answer
-  - This is the fourth answer
+  - It was piloted by Amuro Ray
+  - It was the rebuilt original prototype
+  - It was named after the first Gundam designer
+  - It was paid for by the Gundam corporation
   discovered: 0
-  information: This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4This
-    is gundam 4This is gundam 4This is gundam 4This is gundam 4This is gundam 4
-  quizCorrectIndex: 4
+  information: "Nu Gundam, piloted by the legendary Amuro Ray, lead protagonist of
+    the original series, appears in the \"Char's Counterattack\u201D movie in 1988,
+    set 14 years after Mobile Suit Gundam. It is designed to make full use of Amuro\u2019s
+    awakened psychic Newtype abilities, the revolutionary Psychoframe cockpit enabling
+    him control of the giant robot almost as an extension of his own limbs. This
+    control extends to weapons, including \u2018funnels\u2019, unique in size and
+    having onboard generators. Like metal feathers on Nu Gundam\u2019s back, these
+    detach, forming into \u2018u\u2019 shaped objects that fly around in space, firing
+    mega particle weapons and creating energy barriers, controlled by the pilot\u2019s
+    brainwaves. It is a powerful 1980s illustration of remote weapon systems and
+    philosophies around awakening new human abilities through life in space."
+  quizCorrectIndex: 1
   gundamSprite: {fileID: 21300000, guid: e0dbbd81d39588a49924ddf3731602a1, type: 3}
   quizCompleteColor:
     serializedVersion: 2
@@ -2239,24 +2239,23 @@ MonoBehaviour:
   id: 2
   gundamName: Zaku 23
   location: 
-  quizQuestion: This is the question for Gundam 3
+  quizQuestion: The Zaku II is most notable for which character-defining quality?
   quizAnswers:
-  - This is the first answer
-  - This is the second answer
-  - This is the third answer
-  - This is the fourth answer
+  - Its cuboid backpack, allowing battle flexibility
+  - Its aesthetic, influencing designs of other suits
+  - Its speed and manoeuvrability
+  - Its being able to operate underwater
   discovered: 0
-  information: This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This is Gundam 3This
-    is Gundam 3This is Gundam 3This is Gundam 3
-  quizCorrectIndex: 3
+  information: "While not the title mecha of Gundam, the Zaku II is the first mobile
+    suit seen on screen and the mass-produced backbone of Zeon military forces. This
+    giant robot is a common sight on battlefields on Earth or in Space, and its unique
+    aesthetic (particularly the head with a singular, cyclopean eye) has strongly
+    influenced the design of various other mobile suits in Zeon\u2019s forces and
+    in Gundam series beyond the original Universal Century. Zaku is also unique in
+    the number of different Gundam timelines it has appeared in. What makes the Zaku
+    II special isn't just its design, but its versatility, able to be equipped with
+    a wide range of weapons, making it adaptable to any combat situation."
+  quizCorrectIndex: 2
   gundamSprite: {fileID: 21300000, guid: 40cdcb26876105547a4f414f6e024987, type: 3}
   quizCompleteColor:
     serializedVersion: 2
