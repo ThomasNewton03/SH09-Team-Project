@@ -10,6 +10,8 @@ public class CheckBoundary : AbstractLocationProvider {
 
     //user location is assumed to be at a Gundam model
     public Vector2d userLocation;
+    public Settings settings;
+    public GameObject popup;
 
     void Start(){
 
@@ -27,7 +29,8 @@ public class CheckBoundary : AbstractLocationProvider {
         float distanceFromGundam = (float)Vector2d.Distance(userLocation, _currentLocation.LatitudeLongitude);
 
 		if (distanceFromGundam > maxDistance){
-			Debug.Log("You are out of bounds, please turn around!");
+			settings.swapToInventoryPage();
+            popup.SetActive(true);
 		}
     }
 
