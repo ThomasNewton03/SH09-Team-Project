@@ -144,25 +144,25 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 
 First to add the new model you need to move to the scene1 Scene. This is found in the Scenes folder in Assest. Once you are on this page you need to add the 3d Model into the ModelContainer (You must apply the textures).
 Then you would open the canvas, Inventory Menu, Scroll, Viewport, Content and copy and paste one of the items and name it item(next number) Then select it and on the inspector (Right of the screen) scroll down to the bottom until you see Gundam Robot (Script). There are field you can fill in on this script fill them in as follows:  
-Id: (item number - 1)  
-Gundam Name: Exact name of the model  
-Location: Ignore  
-Quiz Question: Question that the quiz will ask  
-Quiz Answers(Drop down menu): possible multiple choice answers  
-Discovered: Ignore  
-Information: The information that you want to show up on the information page  
-Quiz correct index: The index of the correct answer  
-Gundam Sprite: Sprite image of the GUNDAM. You must drag the sprite image into the field for it to update (See Making a Sprite)  
-Quiz Complete Color: Ignore  
-Star: Ignore  
+- Id: (item number - 1)  
+- Gundam Name: Exact name of the model  
+- Location: Ignore  
+- Quiz Question: Question that the quiz will ask  
+- Quiz Answers(Drop down menu): possible multiple choice answers  
+- Discovered: Ignore  
+- Information: The information that you want to show up on the information page  
+- Quiz correct index: The index of the correct answer  
+- Gundam Sprite: Sprite image of the GUNDAM. You must drag the sprite image into the field for it to update (See Making a Sprite)  
+- Quiz Complete Color: Ignore  
+- Star: Ignore  
 
 Next you will need to add the coordinates on the map. First you must open the Location-based-game scene which can be found Mapbox > Examples > PrefabScenes > Location-based-game.  
 Once you have opened the scene go to the event spawner object scroll down to add component add the script spawn on map (NOTE: A new script must be added for each new GUNDAM), this will contain multiple field to fill in, do it as follows:  
-Map: click on the circle to the right of it and select the script named Map  
-Location strings: open the drop down and enter the Latitude and longitude coordinates you want the model to be at.  
-Spawn Scale: 5  
-Marker Prefab: Drag the model you want to show up on the map into the field  
-Button Prefab: Click on the small circle next to the field and select the button with a Blue box next it (The blue box indicates a prefab in Unity).  
+- Map: click on the circle to the right of it and select the script named Map  
+- Location strings: open the drop down and enter the Latitude and longitude coordinates you want the model to be at.  
+- Spawn Scale: 5  
+- Marker Prefab: Drag the model you want to show up on the map into the field  
+- Button Prefab: Click on the small circle next to the field and select the button with a Blue box next it (The blue box indicates a prefab in Unity).  
 
 
 ## Making a Sprite
