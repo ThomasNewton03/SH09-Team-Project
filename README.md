@@ -1,5 +1,8 @@
 # SH09 Team Project - Project GUNDAM
 
+## Unity Version: 2022.3.12f1
+It is important to use the same version.
+
 ## Description
 Project GUNDAM is an augmented reality game developed for the University of Glasgow Games Lab and is available as an Android app.
 
@@ -17,10 +20,11 @@ Challenges faced and features to implement in the future:
 3. Usage
 4. Roadmap
 5. How to Run Tests
-6. Project status
-7. Authors and Acknowledgment
-8. Referenced Materials
-9. License
+6. How to add new models
+7. Project status
+8. Authors and Acknowledgment
+9. Referenced Materials
+10. License
 
 ## How to Install and Run the Project
 How to install:
@@ -93,6 +97,7 @@ This project will be demonstrated at the Science Fiction conference in Glasgow i
 - [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
 - [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
 - [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html) -->
+
 This project has a set of manual tasks that can be undertaken to ensure full current functionality:
 | Tasks | Expected output from task| Passed?| Extra Comments |
 | ------ | ----------------------- | ------ | -------------- |
@@ -135,6 +140,34 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 | Navigate to the Map page | The user should be able to see clear points on the map for each GUNDAM |  |  |
 | After having clicked on a GUNDAM icon when being in proximity and the camera has been brought up, click on click to collect button | You should be brought to the inventory page |  |  |
 
+## How to add new models
+
+First to add the new model you need to move to the scene1 Scene. This is found in the Scenes folder in Assest. Once you are on this page you need to add the 3d Model into the ModelContainer (You must apply the textures).
+Then you would open the canvas, Inventory Menu, Scroll, Viewport, Content and copy and paste one of the items and name it item(next number) Then select it and on the inspector (Right of the screen) scroll down to the bottom until you see Gundam Robot (Script). There are field you can fill in on this script fill them in as follows:
+Id: (item number - 1)
+Gundam Name: Exact name of the model
+Location: Ignore
+Quiz Question: Question that the quiz will ask
+Quiz Answers(Drop down menu): possible multiple choice answers
+Discovered: Ignore
+Information: The information that you want to show up on the information page
+Quiz correct index: The index of the correct answer
+Gundam Sprite: Sprite image of the GUNDAM. You must drag the sprite image into the field for it to update (See Making a Sprite)
+Quiz Complete Color: Ignore
+Star: Ignore
+
+Next you will need to add the coordinates on the map. First you must open the Location-based-game scene which can be found Mapbox > Examples > PrefabScenes > Location-based-game.
+Once you have opened the scene go to the event spawner object scroll down to add component add the script spawn on map (NOTE: A new script must be added for each new GUNDAM), this will contain multiple field to fill in, do it as follows:
+Map: click on the circle to the right of it and select the script named Map
+Location strings: open the drop down and enter the Latitude and longitude coordinates you want the model to be at.
+Spawn Scale: 5
+Marker Prefab: Drag the model you want to show up on the map into the field
+Button Prefab: Click on the small circle next to the field and select the button with a Blue box next it (The blue box indicates a prefab in Unity).
+
+
+## Making a Sprite
+
+First add an image into the Image folder of the assets next click on the image (This should open the inspector on the right side of the screen). At the top of the inspector there should be a field called Texture Type on this select Sprite (2D and UI). NOTE: You must click off of the image and agree to the change before it will change to the sprite.
 
 ## Project status
 
