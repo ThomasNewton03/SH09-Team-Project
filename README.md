@@ -12,22 +12,22 @@ Challenges faced and features to implement in the future:
 ## Table of Contents
 1. How to Install and Run the Project
 2. How to Contribute to the Project
-3. Badges
-4. Visuals
-5. Usage
-6. Roadmap
-7. How to Run Tests
-8. Project status
-9. Authors and Acknowledgment
-10. Referenced Materials
-11. License
+<!-- 3. Badges -->
+<!-- 3. Visuals -->
+3. Usage
+4. Roadmap
+5. How to Run Tests
+6. Project status
+7. Authors and Acknowledgment
+8. Referenced Materials
+9. License
 
 ## How to Install and Run the Project
 How to install:
 
 How to run the project:
 
-If you update the application, or decide to install the app again, please ensure that the previous version is uninstalled from the android device, otherwise the "black screen of death" may appear.
+If you update the application, or decide to install the app again, please ensure that the previous version is uninstalled from the android device, otherwise the "black screen of death" may appear. It may tell you that the source you are downloading from is not recognized, in this case you have to allow your phone to install apps from this source.
 
 ## How to Contribute to the Project
 ### On First Go, How to Clone
@@ -68,14 +68,15 @@ When you want your local changes to be put on the remote github repository, you 
 ```bash
 git push
 ```
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge. https://shields.io/badges
+<!-- ## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge. https://shields.io/badges -->
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+<!-- ## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method. -->
 
 ## Usage
 The application works similar to other AR games such as Pokémon Go, see screenshots below for the games usage.
+Screen shots here:
 
 ## Roadmap
 
@@ -83,19 +84,61 @@ The project code freeze takes place on the 15th of March, from this point onward
 
 This project can and will be developed upon by the UofG Games Lab after the original team members code freeze. This can be done on this GitHub.
 
-This project will be demonstrated at the Science Fiction conference in Glasgow.
+This project will be demonstrated at the Science Fiction conference in Glasgow in August.
 
 ## How to Run Tests
-Use the built-in continuous integration in GitLab.
+<!-- Use the built-in continuous integration in GitLab.
 - [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
 - [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
 - [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
 - [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html) -->
+This project has a set of manual tasks that can be undertaken to ensure full current functionality:
+| Tasks | Expected output from task| Passed?| Extra Comments |
+| ------ | ----------------------- | ------ | -------------- |
+| Load app up for the first time | It should load up on the main menu page with information and notices | Yes | No |
+| After loading app up for the first time, click on the arrow on the main menu page | You should be redirected to the profile page where the user can change their name | Yes | No |
+| After loading app up for the first time, click on the arrow on the main menu page, you should be redirected to the profile page | There will be a tutorial prompt explaining the profile and how to change your name | Yes | No |
+| After loading app up for the first time, click on the arrow on the main menu page, you should be redirected to the profile page, click done on the tutorial prompt explaining the profile and how to change your name | The pop up should disappear | Yes | No |
+| On the first go of the app, after being navigated to the profile page from the main menu page navigate to the settings page | There should be a tutorial explaining the settings page | Yes | No |
+| On the first go of the app, after being navigated to the profile page from the main menu page navigate to the settings page, click done on the tutorial explaining the settings page | The tutorial prompt should close | Yes | No |
+| On the first go of the app, after being navigated to the profile page from the main menu page navigate to the Inventory page | There should be a tutorial explaining the Inventory page | Yes | No |
+| On the first go of the app, after being navigated to the profile page from the main menu page navigate to the Inventory page, click done on the tutorial explaining the Inventory page | The tutorial prompt should close | Yes | No |
+| Click on Open button | Inventory, Profile and Settings pop out.| Yes | No |
+| Click on Close button | Buttons close down, only Open button showed.| Yes | No |
+| Click on Inventory button after clicking Open button | Inventory page loads up, with different models shown | Yes | No |
+| Click on Profile button after clicking Open button | Profile page loads up, with profile icon, name, way to change name and how many GUNDAM collected. | Yes | No |
+| Change name in Profile page, write new name in enter text box and click enter | Name displayed above box should change to name inputted. | Yes | No |
+| Click on Settings button after clicking Open button | Settings page should load up with button size slider, font size slider, left handed tick box and an option to reset the tutorial | Yes | No |
+| On Settings page slide Button Size slider | As slider goes more towards the right button size should get larger, as slider goes more towards the left button size should get smaller. | Yes | No |
+| On Settings page slide Font Size slider | As slider goes more towards the right font size should get larger, as slider goes more towards the left font size should get smaller | Yes | No |
+| On Settings page click on Left-Handed tick box | When Left-Handed tick box ticked buttons, including the button at the bottom and the Map button at the top, should change to the left, when unticked buttons should be on the right | Yes | No |
+| On Setting page click on reset tutorial button | The tutorial should be reset and a popup will appear explaining the setting page | Yes | No |
+| On Settings page click on reset tutorial button, then navigate to profile page | There should be a popup tutorial explaining what's on the profile page | Yes | No |
+| On Settings page click on reset tutorial button, then navigate to Inventory page | There should be a popup tutorial explaining what's on the Inventory page | Yes | No |
+| Click on Map button | Map should display user location as well as icons showing where the GUNDAM's are | Yes | No |
+| Click on Map button then travel to within proximity of a GUNDAM | Collect button should show where GUNDAM is | Yes | No |
+| Click on Map button then exit out | It should take you back to the page you were on before | Yes | No |
+| Given you're within proximity of a GUNDAM icon, click on the collect button by the GUNDAM icon | You should be taken to the camera where the GUNDAM is displayed in AR | Yes | No |
+| On Inventory page click on non greyed out GUNDAM | It should take you to the information page for the specific GUNDAM | Yes | No |
+| On Inventory page click on other non greyed out GUNDAM that you haven't already clicked on | It should take you to the information page for the specific GUNDAM, this information should be different to the other GUNDAM information | Yes | No |
+| After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow | It should take you to the next page for the information | Yes | No |
+| After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow, then click the left arrow | It should take you back to the first page for the information | Yes | No |
+| After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow until you can't click anymore | It should take you to the quiz page | Yes | No |
+| After navigating to an information page from a collected Gundam from the Inventory page, click on the skip to quiz button | It should take you to the quiz page | Yes | No |
+| After navigating to a quiz page click on one of the options | Either a you are correct with a green tick mark or a you are incorrect with a red cross will be displayed at the bottom of the page | Yes | No |
+| After navigating to a quiz page click on all of the options one after another and note what they display | Only one should display you are correct with a green tick mark and the rest a you are incorrect with a red cross at the bottom of the page | Yes | No |
+| After navigating to a quiz page navigate to another quiz page | The content on it should be different | Yes | No |
+| Given you're on the Map page and within proximity of the GUNDAM icon, click on the collect button by the GUNDAM icon, camera will pop up, move camera around to assess AR of GUNDAM model | Model should be directly on the floor, and preferably not having any occlusion problems with the environment (within reason) | Yes | No |
+| Navigate to the Map | The map should open at the correct location based on the user's current GPS location | Yes | No |
+| Navigate to the Map page, travel around | As the user moves around the real world, the in-game map should also move to that new GPS location of the user | Yes | No |
+| Navigate to the Map page | The user should be able to see clear points on the map for each GUNDAM | Yes | No |
+| After having clicked on a GUNDAM icon when being in proximity and the camera has been brought up, click on click to collect button | You should be brought to the inventory page | Yes | No |
+
 
 ## Project status
 
-This project from April 2024 and beyond is no longer required to be maintained by the developers on this project, but further development from the UofG Games Lab will occur. Contributions will take place in the public repository and those wishing to work on further development should contact Timothy Peacock.
+This project from April 2024 and beyond is no longer required to be maintained by the original developers on this project, but further development from the UofG Games Lab will occur. Contributions will take place in the public repository and those wishing to work on further development should contact Timothy Peacock.
 
 ## Authors and Acknowledgment
 This was developed as a team project for third year students in the University of Glasgow. Developers include:
