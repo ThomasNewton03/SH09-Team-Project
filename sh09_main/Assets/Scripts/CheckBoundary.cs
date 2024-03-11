@@ -9,8 +9,8 @@ using Mapbox.Utils;
 public class CheckBoundary : AbstractLocationProvider {
 
     //user location is assumed to be at a Gundam model
-    public Vector2d userLocation;
     public Settings settings;
+    public Vector2d userLocation;
     public GameObject popup;
 
     void Start(){
@@ -18,7 +18,6 @@ public class CheckBoundary : AbstractLocationProvider {
         OnLocationUpdated += OnLocationUpdatedHandler;
 
     }
-
 
 
     void OnLocationUpdatedHandler(Location location){
@@ -33,5 +32,36 @@ public class CheckBoundary : AbstractLocationProvider {
             popup.SetActive(true);
 		}
     }
+
+    
+    // void OnEnable(){
+    //     if (!Input.location.isEnabledByUser){
+    //         Debug.Log("Location not enabled on device or app does not have permission to access location");
+    //         return;
+    //     }
+        
+    //     Input.location.Start();
+
+    //     userLocation = new Vector2d(Input.location.lastData.latitude, Input.location.lastData.longitude);
+    // }
+
+
+
+    // void Update(){
+    //     //checks the distance of the coordinates and ensures the user is within range
+
+	// 	float maxDistance = 0.00030f;
+
+    //     public Vector2d _currentLocation = new Vector2d(Input.location.lastData.latitude, Input.location.lastData.longitude);
+
+    //     float distanceFromGundam = (float)Vector2d.Distance(userLocation, _currentLocation.LatitudeLongitude);
+
+	// 	if (distanceFromGundam > maxDistance){
+	// 		settings.swapToInventoryPage();
+    //         popup.SetActive(true);
+	// 	}
+
+    //     Debug.Log(distanceFromGundam);
+    // }
 
 }

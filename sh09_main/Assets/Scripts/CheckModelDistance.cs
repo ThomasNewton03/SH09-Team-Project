@@ -9,15 +9,15 @@ public class CheckModelDistance : MonoBehaviour
 
     private GameObject Player;
     private Vector3 PlayerPosition;
-    private float closeEnough;
+    public float closeEnough;
     public GameObject button;
     public MapManager mapManager;
 
     // // Start is called before the first frame update
     void Start()
     {
+        // Get the Player object on the map and add call to the ButtonClicked function on button click to the map button
         Player = GameObject.FindGameObjectWithTag("Player");
-        closeEnough = 20;
         button.GetComponent<Button>().onClick.AddListener(delegate () { this.ButtonClicked(); });
     }
 
@@ -37,15 +37,19 @@ public class CheckModelDistance : MonoBehaviour
         }
     }
 
+    // Method called when collect button clicked
     void ButtonClicked()
     {
+        // Set state of where you have been in the app and format the model name correctly
         PlayerPrefs.SetString("LastActivePage", "ar");
         string name = this.name.Replace("(Clone)", "");
-        Debug.Log(name);
         PlayerPrefs.SetString("TargetModel", name);
+        // If model hasn't been found already...
         if (PlayerPrefs.GetInt(name) != 1)
         {
+            // ...set found
             PlayerPrefs.SetInt(name, 1);
+            // Update count of how many models found
             if (PlayerPrefs.HasKey("GundamCollected") ) 
             {
                 PlayerPrefs.SetInt("GundamCollected", PlayerPrefs.GetInt("GundamCollected") + 1);
@@ -55,6 +59,7 @@ public class CheckModelDistance : MonoBehaviour
             }
         }
         
+        // Move from map to AR scene
         mapManager.LoadAppScene();
     }
 }
