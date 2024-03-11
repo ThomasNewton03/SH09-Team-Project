@@ -11,7 +11,6 @@ public class CheckModelDistance : MonoBehaviour
     private Vector3 PlayerPosition;
     private float closeEnough;
     public GameObject button;
-
     public MapManager mapManager;
 
     // // Start is called before the first frame update
@@ -25,11 +24,10 @@ public class CheckModelDistance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Get position of player marker and this models position in unity space
         PlayerPosition = Player.transform.position;
-        // Debug.Log(PlayerPosition);
-
         float distance = Vector3.Distance(PlayerPosition, this.transform.position);
-        // Debug.Log(distance);
+
         if (distance < closeEnough)
         {
             button.SetActive(true);
