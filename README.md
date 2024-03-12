@@ -9,7 +9,9 @@ Project GUNDAM is an augmented reality game developed for the University of Glas
 The application works by placing models across the local area, and the user must go to these set location in the real world, once there, a quiz is given and if the correct answer is given, you earn the model at that specific location. Augmented reality can be used to display he model in the real world.
 
 What the application does:
+
 The technologies used and why:
+
 Challenges faced and features to implement in the future:
 
 ## Table of Contents
@@ -139,6 +141,14 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 | Navigate to the Map page, travel around | As the user moves around the real world, the in-game map should also move to that new GPS location of the user |  |  |
 | Navigate to the Map page | The user should be able to see clear points on the map for each GUNDAM |  |  |
 | After having clicked on a GUNDAM icon when being in proximity and the camera has been brought up, click on click to collect button | You should be brought to the inventory page |  |  |
+
+
+## How to add map functionalities
+
+This project employs the Mapbox API for mapping and geolocation features. You are required to create a Mapbox account and acquire an API key in order to use this application. The account type you are recommended to use is Static Images API; it will provide you with 50,000 monthly requests free of cost. From then onwards it will cost USD $1 per 1000 requests.
+You can obtain the API key by creating an access token in your account. To enter this key into the application, go into Unity and head to Mapbox in the options bar at the top of your screen. Click on "setup", paste the key from your Mapbox account into the bar, and press submit. Once you have set up this key, you will be able to access the location-based map within the application.
+
+
 
 ## How to add new models
 
