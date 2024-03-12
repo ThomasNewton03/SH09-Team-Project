@@ -67,7 +67,7 @@ public class FontSizeCustomise : MonoBehaviour
     // Issue of styles not resetting on close only present on pc
     //
     // Will move this functionality to an always active element
-    // void Start()
+      // void Start()
     // {
         
     // }

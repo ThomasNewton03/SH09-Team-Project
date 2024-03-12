@@ -35,7 +35,5 @@ public class UpdateTextBoxStyle : MonoBehaviour
         int lastPage = _textBox.textInfo.pageCount - 1;
 
         if (_textBox.pageToDisplay > lastPage) _textBox.pageToDisplay = lastPage;
-
-        // Debug.Log($"Text needs {_textBox.textInfo.pageCount} pages to display. Current page is {_textBox.pageToDisplay}");
     }
 }

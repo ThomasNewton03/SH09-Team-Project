@@ -25,6 +25,7 @@ public class CheckBoundary : AbstractLocationProvider {
 		float maxDistance = 0.00030f;
         userLocation = location.LatitudeLongitude;
 
+        //calculate the distance from the user to the gundam
         float distanceFromGundam = (float)Vector2d.Distance(userLocation, _currentLocation.LatitudeLongitude);
 
 		if (distanceFromGundam > maxDistance){

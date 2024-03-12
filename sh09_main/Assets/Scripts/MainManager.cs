@@ -4,15 +4,14 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-// using UnityEditor.SearchService;
 
 public class MainManager : MonoBehaviour {
     public static MainManager Instance;
     public GameObject settingsObject;
     Settings settings;
-    // public int fontSize;
     private void Start()
     {
+        //When you first load the app it should take you to the profile page
         if (!PlayerPrefs.HasKey("FirstLoad"))
         {
             settings.swapToProfilePage();
@@ -28,17 +27,17 @@ public class MainManager : MonoBehaviour {
             return;
         }
         Instance = this;
-        //DontDestroyOnLoad(gameObject);
 
+        //Make sure that all GUNDAM are set to not show
         GameObject modelContainer = GameObject.Find("ModelContainer");
         foreach (Transform child in modelContainer.transform)
         {
             child.gameObject.SetActive(false);
         }
         
+        //Load the users preferred settings and the correct page
         LoadSettings();
         LoadPage();
-        // PlayerPrefs.DeleteAll();
     } 
 
     [System.Serializable]
@@ -49,12 +48,7 @@ public class MainManager : MonoBehaviour {
 
     public void SaveSettings()
     {
-        // SaveData data = new SaveData();
-        // data.fontSize = fontSize;
-
-        // string json = JsonUtility.ToJson(data);
-    
-        // File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+        //Save all the settings by calling the methods in settings
         settings.saveButtonSize(settings.getButtonSize());
         settings.saveFontSize(settings.getFontSize());
         settings.saveIsLeftHanded(settings.getIsLeftHanded() ? 1 : 0);
@@ -62,14 +56,7 @@ public class MainManager : MonoBehaviour {
 
     public void LoadSettings()
     {
-        // string path = Application.persistentDataPath + "/savefile.json";
-        // if (File.Exists(path))
-        // {
-        //     string json = File.ReadAllText(path);
-        //     SaveData data = JsonUtility.FromJson<SaveData>(json);
-
-        //     fontSize = data.fontSize;
-        // }
+        //Load all the settings by calling the methods in settings
         settings.loadButtonSize();
         settings.loadFontSize();
         settings.loadIsLeftHanded();
@@ -77,10 +64,11 @@ public class MainManager : MonoBehaviour {
     
     public void LoadPage()
     {
+        //Check if there is a player pref for the last active page
         if (PlayerPrefs.HasKey("LastActivePage"))
         {
+            //Use the function to go to the correct page
             string activePage = PlayerPrefs.GetString("LastActivePage");
-            //Debug.Log(activePage);
             switch (activePage)
             {
                 case "inventory":
@@ -101,8 +89,10 @@ public class MainManager : MonoBehaviour {
     }
     public void LoadMapScene()
     {
+        //save the settings and set the last active page
         SaveSettings();
         PlayerPrefs.SetString("LastActivePage", settings.getActivePage());
+        //loads the map scene
         SceneManager.LoadScene("Location-basedGame", LoadSceneMode.Single);
     }
 }
