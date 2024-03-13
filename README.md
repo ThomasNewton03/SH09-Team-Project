@@ -25,11 +25,11 @@ Challenges faced and features to implement in the future:
 6. [How to add new models](#how-to-add-new-models)
 7. [How to modify project settings](#how-to-modify-project-settings)
 8.[How to create an apk of the app](#how-to-create-an-apk-of-the-app)
-8. [Informations about Prefabs and Scenes](#information-about-prefabs-and-scenes)
-9. [Project status](#project-status)
-10. [Authors and Acknowledgment](#authors-and-acknowledgment)
-11. [Referenced Materials](#referenced-materials)
-12. [License](#license)
+9. [Informations about Prefabs and Scenes](#information-about-prefabs-and-scenes)
+10. [Project status](#project-status)
+11. [Authors and Acknowledgment](#authors-and-acknowledgment)
+12. [Referenced Materials](#referenced-materials)
+13. [License](#license)
 
 ## How to Install and Run the Project
 ### How to install Unity project:
