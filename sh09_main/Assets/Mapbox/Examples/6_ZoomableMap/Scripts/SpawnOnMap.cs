@@ -32,10 +32,12 @@
 
 		void Start()
 		{
+			
 			_locations = new Vector2d[_locationStrings.Length];
 			_spawnedObjects = new List<GameObject>();
 			canvas = GameObject.FindGameObjectWithTag("Canvas");
 
+			// Make button to link to the appropriate model
 			var button = Instantiate(_buttonPrefab);
 			button.transform.SetParent(canvas.transform);
 			button.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);

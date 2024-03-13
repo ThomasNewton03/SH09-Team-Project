@@ -9,7 +9,7 @@ public class CheckModelDistance : MonoBehaviour
 
     private GameObject Player;
     private Vector3 PlayerPosition;
-    public float closeEnough;
+    private float closeEnough;
     public GameObject button;
     public MapManager mapManager;
 
@@ -19,6 +19,7 @@ public class CheckModelDistance : MonoBehaviour
         // Get the Player object on the map and add call to the ButtonClicked function on button click to the map button
         Player = GameObject.FindGameObjectWithTag("Player");
         button.GetComponent<Button>().onClick.AddListener(delegate () { this.ButtonClicked(); });
+        closeEnough = 20;
     }
 
     // Update is called once per frame
@@ -61,5 +62,9 @@ public class CheckModelDistance : MonoBehaviour
         
         // Move from map to AR scene
         mapManager.LoadAppScene();
+    }
+
+    public void setDistance(float distance){
+        closeEnough = distance;
     }
 }
