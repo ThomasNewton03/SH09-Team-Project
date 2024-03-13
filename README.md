@@ -82,7 +82,7 @@ Depending on what you are making, it can be a good idea to include screenshots o
 
 ## Usage
 The application works similar to other AR games such as Pokémon Go, see screenshots below for the games usage.
-Screen shots here:
+screenshots here:
 
 ## Roadmap
 
@@ -127,8 +127,8 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 | Click on Map button then travel to within proximity of a GUNDAM | Collect button should show where GUNDAM is |  |  |
 | Click on Map button then exit out | It should take you back to the page you were on before |  |  |
 | Given you're within proximity of a GUNDAM icon, click on the collect button by the GUNDAM icon | You should be taken to the camera where the GUNDAM is displayed in AR |  |  |
-| On Inventory page click on n greyed out GUNDAM | It should take you to the information page for the specific GUNDAM |  |  |
-| On Inventory page click on other n greyed out GUNDAM that you haven't already clicked on | It should take you to the information page for the specific GUNDAM, this information should be different to the other GUNDAM information |  |  |
+| On Inventory page click on non greyed out GUNDAM | It should take you to the information page for the specific GUNDAM |  |  |
+| On Inventory page click on other non greyed out GUNDAM that you haven't already clicked on | It should take you to the information page for the specific GUNDAM, this information should be different to the other GUNDAM information |  |  |
 | After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow | It should take you to the next page for the information |  |  |
 | After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow, then click the left arrow | It should take you back to the first page for the information |  |  |
 | After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow until you can't click anymore | It should take you to the quiz page |  |  |
@@ -141,6 +141,9 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 | Navigate to the Map page, travel around | As the user moves around the real world, the in-game map should also move to that new GPS location of the user |  |  |
 | Navigate to the Map page | The user should be able to see clear points on the map for each GUNDAM |  |  |
 | After having clicked on a GUNDAM icon when being in proximity and the camera has been brought up, click on click to collect button | You should be brought to the inventory page |  |  |
+| Navigate to the Map page | There should be a zoom slider at the bottom |  |  |
+| Navigate to the Map page, slide the zoom slider at the bottom towards the plus sign | The map should zoom in |  |  |
+| Navigate to the Map page, slide the zoom slider at the bottom towards the minus sign | The map should zoom out |  |  |
 
 
 ## How to add map functionalities
@@ -192,7 +195,6 @@ This was developed as a team project for third year students in the University o
 - Maryam Al-Khulaifi
 - Thomas Newton
 - Aiden Smith
-
 
 ## Referenced Materials
 tutorials or references used to 
