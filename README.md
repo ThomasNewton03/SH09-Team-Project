@@ -80,6 +80,42 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 <!-- ## Visuals
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method. -->
 
+
+
+## Unity and Git Steps We Use
+When switching between branches in the project, make sure to use git switch instead of git checkout, as this is a newer command and focuses solely on switching branches:
+```bash
+git switch main
+```
+
+If at any point you are unsure as to which branch you are currently in, use git branch -a. This will display all the branches in the project and highlight the branch you are in currently in green:
+```bash
+git branch -a
+```
+
+If you want to delete a local branch, use git branch -d <branchname>. Git will only allow you to delete this branch with this command if it has been fully merged into the current branch. Otherwise, if you want to force delete a branch, use git branch -D <branchname>- make sure to be careful, as this will delete it even if it includes changes that haven't been merged. E.g.:
+```bash
+git branch -d Development
+```
+
+```bash
+git branch -D Development
+```
+
+If you want to reset the branch to a previous commit, removing any local changes made to the project, you can use git reset --hard:
+```bash
+git reset --hard
+```
+
+You can use git clean -df to delete untracked files in the working directory- these are files that are in the repository's directory but haven't yet been added to its index with git add *. Make sure to be careful with this command:
+```bash
+git clean -df
+```
+
+In Unity, you can use Debug.Log(message:object) to print a message in the console to validate the application's behaviour when the code is executed. 
+E.g.:
+Debug.Log(msg);
+
 ## Usage
 The application works similar to other AR games such as Pokémon Go, see screenshots below for the games usage.
 Screen shots here:
