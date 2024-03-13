@@ -198,5 +198,5 @@ This was developed as a team project for third year students in the University o
 tutorials or references used to 
 
 ## License
-For open source projects, say how it is licensed.
+This project uses an open-source software license, meaning that users can access, modify, and share the application content for free. With this license, it will allow third-party developers to make improvements and other changes to features, such as the models existing in the map and their spawnpoints, before the application is released. 
 
