@@ -60,6 +60,21 @@ For running on your android device, if you have a previous version of the app in
 
 <!-- If you update the application, or decide to install the app again, please ensure that the previous version is uninstalled from the android device, otherwise the "black screen of death" may appear. It may tell you that the source you are downloading from is not recognized, in this case you have to allow your phone to install apps from this source. -->
 
+### User guide to play the app:
+
+After [creating an apk](#how-to-create-an-apk-of-the-app) of the app, download the apk file and then install it.
+
+Once you open the app you will be presented with a final dialogue asking for permission to use the location which you MUST accept or you will not be able to play the app. After accpeting location services you will be presented with the intro page and be able to play the game!
+
+From the intro page you will be shown a text dialogue that gives users a brief introduction, safety guidelines and a notice about turning location on, along with the copyright status BANDAI has on the GUNDAM IP. Clicking on the arrow will take you to the profile page.
+
+Tutorials will be presented guiding you on how different aspects of the app work, such as the settings page, the profile page and the inventory page. From any of these pages you can go to the map, which you will be able to see your current position and the locations of collectable models on a map, which allows for zooming. When you get close enough to a model an icon will appear in the centre of the screen that takes you to an AR view of the model, showing the GUNDAM in real space.
+
+From the AR page you can click a button to collect the model, this will take you to the inventory page and show a new item has been added to your inventory, clicking on this element will allow you to go to the information and quiz page for the model you have collected. After reading the information, or immediately if wish to skip the reading, you can answer a question based on the model. The question can be taken as many times as wanted and once you have answered it successfully you will have completed the quiz and this completion will be shown in a change to the number in the profile page and a star appearing over the inventory item. 
+
+Work towards collecting all the models, good luck!
+
+
 ## How to Contribute to the Project
 ### On First Go, How to Clone
 Open up a terminal environment and navigate to where you would want to save the project. Navigate to the github remote repository and click on the Code button dropdown. Click on the HTTPS section and copy the link available it should be something like: https://github.com/username/sh09-main.git . From here you want to clone the project. Go into your terminal where you have naviagted to where you would like to save the project.
