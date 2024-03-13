@@ -24,7 +24,7 @@ Challenges faced and features to implement in the future:
 5. [How to Run Tests](#how-to-run-tests)
 6. [How to add new models](#how-to-add-new-models)
 7. [How to modify project settings](#how-to-modify-project-settings)
-8.[How to create an apk of the app](#how-to-create-an-apk-of-the-app)
+8. [How to create an apk of the app](#how-to-create-an-apk-of-the-app)
 9. [Informations about Prefabs and Scenes](#information-about-prefabs-and-scenes)
 10. [Project status](#project-status)
 11. [Authors and Acknowledgment](#authors-and-acknowledgment)
