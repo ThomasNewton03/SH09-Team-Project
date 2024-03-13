@@ -15,18 +15,18 @@ The technologies used and why:
 Challenges faced and features to implement in the future:
 
 ## Table of Contents
-1. How to Install and Run the Project
-2. How to Contribute to the Project
+1. [How to Install and Run the Project](#How-to-Install-and-Run-the-Project)
+2. [How to Contribute to the Project](#How-to-Contribute-to-the-Project)
 <!-- 3. Badges -->
 <!-- 3. Visuals -->
-3. Usage
-4. Roadmap
-5. How to Run Tests
-6. How to add new models
-7. Project status
-8. Authors and Acknowledgment
-9. Referenced Materials
-10. License
+3. [Usage](#Usage)
+4. [Roadmap](#Roadmap)
+5. [How to Run Tests](#how-to-run-tests)
+6. [How to add new models](#how-to-add-new-models)
+7. [Project status](#project-status)
+8. [Authors and Acknowledgment](#authors-and-acknowledgment)
+9. [Referenced Materials](#referenced-materials)
+10. [License](#license)
 
 ## How to Install and Run the Project
 How to install:
