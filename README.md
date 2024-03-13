@@ -29,11 +29,33 @@ Challenges faced and features to implement in the future:
 10. [License](#license)
 
 ## How to Install and Run the Project
-How to install:
+### How to install Unity project:
 
-How to run the project:
+1. Download Unity Hub from the [Unity website](https://unity.com/download).
+2. Once the download has completed, run the setup wizard and follow the instructions. Install in your folder of choice with at least 30 GB of free space. This is for the next step.
+3. Next you will want to install our Unity version, which is located [here](https://unity.com/releases/editor/archive). Find the 2022.3.12 version and click the Unity Hub button. This will prompt Unity Hub to be opened, allow this.
+4. When Unity Hub opens the install menu for the version, make sure that the following are enabled: Android Build Support with OpenJDK and Android SDK & NDK Tools. The rest are optional and can be installed if you plan on developing in future for these platforms or are required by other projects.
+5. Once fully installed, you can now clone the project into a folder of your choice, see the section How to Clone below for this.
+6. Once your project has been cloned, go back to the Unity Hub and in the Projects menu, on the top right click "Add", then find your cloned repository and slelect the folder inside the repository named "sh09-main". The directory path should be "~/sh09-main/sh09-main". Once done click open on the folder page and this will let Unity Hub recognise the project.
+7. Check that Unity Hub has recognised the project, and if so, attempt to open it. This will take a few minutes to load and should take you into the main project app once done.
 
-If you update the application, or decide to install the app again, please ensure that the previous version is uninstalled from the android device, otherwise the "black screen of death" may appear. It may tell you that the source you are downloading from is not recognized, in this case you have to allow your phone to install apps from this source.
+### How to install the app on to your Android Device:
+
+1. Open the Unity project (see above for how to do this).
+2. Click file on the top left of Unity, and then from the dropdown menu, click build settings.
+3. Ensure that scene1, Location-basedGame and Intro are all ticked in the "Scenes in Build" section. 
+4. Ensure that Android is the selected platform in the Platform section.
+5. None of the checkboxes in the right side of the Build settings window should be checked, and the following options should be set to the following: Texture Compression - Use Player Settings, ETC2 fallback - 32-bit, Create symbols.zip - Disabled, Run Device - Default device, Compression Method - LZ4.
+6. Finally click build, and store the apk wherever you wish to store it.
+7. Finally take the apk and install it on your android device (Note: each android device is different but you may need developer mode enabled).
+
+### How to run the project:
+
+For running in Unity, simply click the play button at the top of the application to run the game in Unity, this will run the game from the scene selected, so if you want to check the map scene, you will need to have that scene opened.
+
+For running on your android device, if you have a previous version of the app installed already, please delete this before installing the new apk file otherwise a black screen glitch may occur which will not allow the applciation to run. Once done, download the apk onto your device, and click on it. This will start the installation process. You may be asked if you give the app permission to install, in this case simply click yes.
+
+<!-- If you update the application, or decide to install the app again, please ensure that the previous version is uninstalled from the android device, otherwise the "black screen of death" may appear. It may tell you that the source you are downloading from is not recognized, in this case you have to allow your phone to install apps from this source. -->
 
 ## How to Contribute to the Project
 ### On First Go, How to Clone
@@ -80,9 +102,45 @@ On some READMEs, you may see small images that convey metadata, such as whether 
 <!-- ## Visuals
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method. -->
 
+
+
+## Unity and Git Steps We Use
+When switching between branches in the project, make sure to use git switch instead of git checkout, as this is a newer command and focuses solely on switching branches:
+```bash
+git switch main
+```
+
+If at any point you are unsure as to which branch you are currently in, use git branch -a. This will display all the branches in the project and highlight the branch you are in currently in green:
+```bash
+git branch -a
+```
+
+If you want to delete a local branch, use git branch -d <branchname>. Git will only allow you to delete this branch with this command if it has been fully merged into the current branch. Otherwise, if you want to force delete a branch, use git branch -D <branchname>- make sure to be careful, as this will delete it even if it includes changes that haven't been merged. E.g.:
+```bash
+git branch -d Development
+```
+
+```bash
+git branch -D Development
+```
+
+If you want to reset the branch to a previous commit, removing any local changes made to the project, you can use git reset --hard:
+```bash
+git reset --hard
+```
+
+You can use git clean -df to delete untracked files in the working directory- these are files that are in the repository's directory but haven't yet been added to its index with git add *. Make sure to be careful with this command:
+```bash
+git clean -df
+```
+
+In Unity, you can use Debug.Log(message:object) to print a message in the console to validate the application's behaviour when the code is executed. 
+E.g.:
+Debug.Log(msg);
+
 ## Usage
 The application works similar to other AR games such as Pokémon Go, see screenshots below for the games usage.
-Screen shots here:
+screenshots here:
 
 ## Roadmap
 
@@ -127,8 +185,8 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 | Click on Map button then travel to within proximity of a GUNDAM | Collect button should show where GUNDAM is |  |  |
 | Click on Map button then exit out | It should take you back to the page you were on before |  |  |
 | Given you're within proximity of a GUNDAM icon, click on the collect button by the GUNDAM icon | You should be taken to the camera where the GUNDAM is displayed in AR |  |  |
-| On Inventory page click on n greyed out GUNDAM | It should take you to the information page for the specific GUNDAM |  |  |
-| On Inventory page click on other n greyed out GUNDAM that you haven't already clicked on | It should take you to the information page for the specific GUNDAM, this information should be different to the other GUNDAM information |  |  |
+| On Inventory page click on non greyed out GUNDAM | It should take you to the information page for the specific GUNDAM |  |  |
+| On Inventory page click on other non greyed out GUNDAM that you haven't already clicked on | It should take you to the information page for the specific GUNDAM, this information should be different to the other GUNDAM information |  |  |
 | After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow | It should take you to the next page for the information |  |  |
 | After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow, then click the left arrow | It should take you back to the first page for the information |  |  |
 | After navigating to an information page from a collected Gundam from the Inventory page, click on the right arrow until you can't click anymore | It should take you to the quiz page |  |  |
@@ -141,6 +199,9 @@ This project has a set of manual tasks that can be undertaken to ensure full cur
 | Navigate to the Map page, travel around | As the user moves around the real world, the in-game map should also move to that new GPS location of the user |  |  |
 | Navigate to the Map page | The user should be able to see clear points on the map for each GUNDAM |  |  |
 | After having clicked on a GUNDAM icon when being in proximity and the camera has been brought up, click on click to collect button | You should be brought to the inventory page |  |  |
+| Navigate to the Map page | There should be a zoom slider at the bottom |  |  |
+| Navigate to the Map page, slide the zoom slider at the bottom towards the plus sign | The map should zoom in |  |  |
+| Navigate to the Map page, slide the zoom slider at the bottom towards the minus sign | The map should zoom out |  |  |
 
 
 ## How to add map functionalities
@@ -193,10 +254,9 @@ This was developed as a team project for third year students in the University o
 - Thomas Newton
 - Aiden Smith
 
-
 ## Referenced Materials
 tutorials or references used to 
 
 ## License
-For open source projects, say how it is licensed.
+This project uses an open-source software license, meaning that users can access, modify, and share the application content for free. With this license, it will allow third-party developers to make improvements and other changes to features, such as the models existing in the map and their spawnpoints, before the application is released. 
 
