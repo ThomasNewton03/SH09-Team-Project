@@ -23,10 +23,12 @@ Challenges faced and features to implement in the future:
 4. [Roadmap](#Roadmap)
 5. [How to Run Tests](#how-to-run-tests)
 6. [How to add new models](#how-to-add-new-models)
-7. [Project status](#project-status)
-8. [Authors and Acknowledgment](#authors-and-acknowledgment)
-9. [Referenced Materials](#referenced-materials)
-10. [License](#license)
+7. [How to modify project settings](#how-to-modify-project-settings)
+8. [Informations about Prefabs and Scenes](#information-about-prefabs-and-scenes)
+9. [Project status](#project-status)
+10. [Authors and Acknowledgment](#authors-and-acknowledgment)
+11. [Referenced Materials](#referenced-materials)
+12. [License](#license)
 
 ## How to Install and Run the Project
 ### How to install Unity project:
@@ -240,6 +242,17 @@ Once you have opened the scene go to the event spawner object scroll down to add
 
 First add an image into the Image folder of the assets next click on the image (This should open the inspector on the right side of the screen). At the top of the inspector there should be a field called Texture Type on this select Sprite (2D and UI). NOTE: You must click off of the image and agree to the change before it will change to the sprite.
 
+## How to modify project settings
+
+For changes such as the name of the app or icon, these can be changed by going into Edit then Project Settings then Player, once in Player you can see the product name, company name and version which can all be changed. The icon can be changed by going to Icon from Player, then expanding Adaptive (API 26) icons then change the icon by selecting and replacing the images labeled Background and Foreground in xxxhdpi (432x432px). To edit the Splash Logo which shows the icon after launching the app, you have to go from Player to Splash Image, then Logos, our logo is below the "made with unity logo", you can change the image or add other images as icons as well.
+
+## Information about Prefabs and Scenes
+
+Unity projects depend on [Scenes](https://docs.unity3d.com/Manual/CreatingScenes.html), each scene is a different environment where all the objects related to that scene are going to be. There can only be 1 one person (1 device) working on a scene at a time. For our project we have 3 scenes, the intro scene which holds the intro page, the main scene which holds the different pages and their UI, and lastly the map scene which handles the map.
+
+We also make use of [Prefabs](https://docs.unity3d.com/Manual/Prefabs.html) in our project. Prefabs are ready made objects that can be reused in the project, such as the GUNDAM models and the GUNDAM inventory objects.
+
+
 ## Project status
 
 This project from April 2024 and beyond is no longer required to be maintained by the original developers on this project, but further development from the UofG Games Lab will occur. Contributions will take place in the public repository and those wishing to work on further development should contact Timothy Peacock.
@@ -254,8 +267,11 @@ This was developed as a team project for third year students in the University o
 - Thomas Newton
 - Aiden Smith
 
-## Referenced Materials
-tutorials or references used to 
+## Referenced materials
+
+[Unity Scene Manual](https://docs.unity3d.com/Manual/CreatingScenes.html)
+
+[Unity Prefab Manual](https://docs.unity3d.com/Manual/Prefabs.html)
 
 ## License
 This project uses an open-source software license, meaning that users can access, modify, and share the application content for free. With this license, it will allow third-party developers to make improvements and other changes to features, such as the models existing in the map and their spawnpoints, before the application is released. 
