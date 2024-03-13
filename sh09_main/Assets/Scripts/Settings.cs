@@ -306,6 +306,10 @@ public class Settings : MonoBehaviour {
             }
             Tutorial.SetActive(true);
         }
+        else
+        {
+            Tutorial.SetActive(false);
+        }
     }
 
     //clear the tutorial for the page

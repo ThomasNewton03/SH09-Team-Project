@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -854,7 +854,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   gundamName: rx-93 nu gundam 28 web 1
-  location: 
   quizQuestion: "What is Nu Gundam\u2019s biggest link to the original series?"
   quizAnswers:
   - It was piloted by Amuro Ray
@@ -2313,7 +2312,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   gundamName: Zaku 23
-  location: 
   quizQuestion: The Zaku II is most notable for which character-defining quality?
   quizAnswers:
   - Its cuboid backpack, allowing battle flexibility
@@ -2722,6 +2720,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1258706726}
         m_TargetAssemblyTypeName: Settings, Assembly-CSharp
         m_MethodName: resetTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1258706726}
+        m_TargetAssemblyTypeName: Settings, Assembly-CSharp
+        m_MethodName: swapToSettingsPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6680,7 +6690,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   gundamName: "\u30AA\u30EA\u30B8\u30F3\u30AC\u30F3\u30C0\u30E0(2023-03-20)\u53EF\u52D5\u7248"
-  location: 
   quizQuestion: What innovation did the RX-78-2 Gundam bring to the robotic mecha
     representation in anime?
   quizAnswers:
@@ -8788,7 +8797,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   gundamName: "\u7B2C1\u5F62\u614B(2022-08-08)"
-  location: 
   quizQuestion: 'What special feature is the Gundam Barbatos known for? '
   quizAnswers:
   - Sound-combat amplification
@@ -13066,11 +13074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   username: Username
-  userPassword: Password123
   gundamCollected: 0
   quizCompleted: 0
-  settings: {fileID: 1258706726}
-  inventory: {fileID: 1150907223}
   gundamCollectedNumber: {fileID: 1329944368}
   quizCompletedNumber: {fileID: 293964325}
   usernameText: {fileID: 830751402}
