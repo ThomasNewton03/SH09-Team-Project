@@ -24,6 +24,7 @@ Challenges faced and features to implement in the future:
 5. [How to Run Tests](#how-to-run-tests)
 6. [How to add new models](#how-to-add-new-models)
 7. [How to modify project settings](#how-to-modify-project-settings)
+8.[How to create an apk of the app](#how-to-create-an-apk-of-the-app)
 8. [Informations about Prefabs and Scenes](#information-about-prefabs-and-scenes)
 9. [Project status](#project-status)
 10. [Authors and Acknowledgment](#authors-and-acknowledgment)
@@ -268,6 +269,10 @@ First add an image into the Image folder of the assets next click on the image (
 ## How to modify project settings
 
 For changes such as the name of the app or icon, these can be changed by going into Edit then Project Settings then Player, once in Player you can see the product name, company name and version which can all be changed. The icon can be changed by going to Icon from Player, then expanding Adaptive (API 26) icons then change the icon by selecting and replacing the images labeled Background and Foreground in xxxhdpi (432x432px). To edit the Splash Logo which shows the icon after launching the app, you have to go from Player to Splash Image, then Logos, our logo is below the "made with unity logo", you can change the image or add other images as icons as well.
+
+## How to create an apk of the app
+
+To create an apk, you need to go to file on the top left of the screen, then build settings. You have to make sure you are on the android build, which would show as highlighted in blue, then click on build. This will prompt you to name the file and place it wherever you want. This usually takes a moment to build this is normal.
 
 ## Information about Prefabs and Scenes
 
