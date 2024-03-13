@@ -8,6 +8,6 @@ public class MapManager : MonoBehaviour
     public void LoadAppScene()
     {
         //Load the main scene
-        SceneManager.LoadScene("scene1", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 }

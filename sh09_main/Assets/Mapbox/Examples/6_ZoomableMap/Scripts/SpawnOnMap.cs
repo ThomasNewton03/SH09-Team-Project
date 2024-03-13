@@ -37,14 +37,16 @@
 			_spawnedObjects = new List<GameObject>();
 			canvas = GameObject.FindGameObjectWithTag("Canvas");
 
-			// Make button to link to the appropriate model
+			// Make instance of prefab button on the canvas 
 			var button = Instantiate(_buttonPrefab);
 			button.transform.SetParent(canvas.transform);
 			button.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
 			button.transform.localPosition = _map.GeoToWorldPosition(_locations[0], true);
 
+			// For every model...
 			for (int i = 0; i < _locationStrings.Length; i++)
 			{
+				// ...make the model on the map in unity at correct positions and scale 
 				var locationString = _locationStrings[i];
 				_locations[i] = Conversions.StringToLatLon(locationString);
 				var instance = Instantiate(_markerPrefab);
@@ -52,9 +54,11 @@
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 
+				// and add a script to check if it can be collected
 				var distanceScript = instance.AddComponent<CheckModelDistance>();
 				distanceScript.button = button;
 
+				// 
 				var mapManager = button.AddComponent<MapManager>();
 				distanceScript.mapManager = mapManager;
 				

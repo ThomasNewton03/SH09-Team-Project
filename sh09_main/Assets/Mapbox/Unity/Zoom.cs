@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Zoom : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Zoom : MonoBehaviour
     }
     public void ZoomSlider(float value)
     {
+        value = Math.Abs(value);
         cam.transform.position = new Vector3(cam.transform.position.x, value, (value * (float) -0.587));
     }
 }
