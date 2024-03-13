@@ -16,52 +16,42 @@ using TMPro;
 public class user : MonoBehaviour {
 
     public string username;
-    public string userPassword;
     public int gundamCollected;
     public int quizCompleted;
-    public Settings settings;
-    public Inventory inventory;
     public TMP_Text gundamCollectedNumber;
     public TMP_Text quizCompletedNumber;
     public TMP_Text usernameText;
-    //public InputField inputUsernameField;
     public TMP_InputField inputUsernameField;
 
-    public user(string username, string password){
-        this.username = username;
-        this.userPassword = password;
-    }
-
     void OnEnable(){
+        //Update the number of gundam discovered and the number of quizzes completed every time you turn on the element
         gundamCollected = getGundamCount();
         quizCompleted = getQuizCompleted();
         Update();
     }
 
-    void Start() {
-        usernameText.text = username;
-    }
-
     void Update(){
-        
+        //update the username in the scene to the username stored in player prefs
         if(PlayerPrefs.HasKey("username")){
             username = PlayerPrefs.GetString("username", username);
             usernameText.text = username;
         }
-
+        //update the number of gundam collected in the scene to the number of gundam collected stored in player prefs
         if (gundamCollectedNumber.text != gundamCollected.ToString()){
             gundamCollectedNumber.text = gundamCollected.ToString();
         }
-
+        //update the number of quizzes completed in the scene to the number of quizzes completed stored in player prefs
         if (quizCompletedNumber.text != quizCompleted.ToString()){
             quizCompletedNumber.text = quizCompleted.ToString();
         }
     }
 
     public void UpdateUsername (){
+        //check if the string is empty
         if (inputUsernameField.text.Length == 0){
             return;
         }
+        //if its not empty then replace the stored username with the new one
         else {
             username = inputUsernameField.text;
             usernameText.text = username;
@@ -69,38 +59,13 @@ public class user : MonoBehaviour {
         }
     }
 
-
-    // public void increaseGundamCount(){
-    //     gundamCollected+=1;
-    // }
-
     public int getGundamCount(){
+        //get the number of gundam collected from player prefs
         return PlayerPrefs.GetInt("GundamCollected");
     }
 
     public int getQuizCompleted(){
+        //get the number of quizzes completed from player prefs
         return PlayerPrefs.GetInt("QuizCompleted");
     }
-
-    public Settings loadSettings(){
-        return settings;
-    }
-
-    public void setUsername(string username){
-        this.username = username;
-    }
-
-    public string getUsername(){
-        return username;
-    }
-    
-
-    public void setPassword(string userPassword){
-        this.userPassword = userPassword;
-    }
-
-    public string getPassword(){
-        return userPassword;
-    }
-
 }

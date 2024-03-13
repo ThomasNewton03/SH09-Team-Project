@@ -8,6 +8,6 @@ public class IntroButton : MonoBehaviour
     public void introButton()
     {
         //Loads the main Scene
-        SceneManager.LoadScene("scene1", LoadSceneMode.Single);
+        SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 }

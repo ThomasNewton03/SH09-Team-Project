@@ -31,28 +31,9 @@ public class Settings : MonoBehaviour {
     private string tutorialSettings = "Here is your settings, you can modify font and button size and if youre left handed or not. You can also request tutorial to play again.";
     private string tutorialInfo = "Here you can view information about the gundam and at the end attempt a quiz";
     private string tutorialAR = "Here you can view the gundams in the real world";
-
     public GameObject arPointer;
-
     public GameObject modelContainer;
-
     public GameObject collectButton;
-
-    // private float buttonSize;
-    // private float fontSize;
-    // private bool isLeftHanded = false;
-
-
-
-    // public Settings(int buttonSize, int fontSize, bool isLeftHanded) {
-    //     this.buttonSize = buttonSize;
-    //     this.fontSize = fontSize;
-    //     this.isLeftHanded = isLeftHanded;
-    // }
-
-    // void Update(){
-    //     //Debug.Log("button size : " + buttonSizeSlider.value);
-    // }
 
     //toggleLeftHanded() is used in the toggle option, it will set leftHanded bool to true or false, and then set the menu and map buttons to right/left.
     public void toggleLeftHanded()
@@ -70,14 +51,10 @@ public class Settings : MonoBehaviour {
     //if a new button is added please keep scale at 1,1,1 for this to work
     public void changeButtonSize()
     {
-        // buttonSize = buttonSizeSlider.value;
-
         Vector3 additionScaleVector = Vector3.one;
         for (int i = 0; i < buttonList.Count; i++)
         {
             buttonList[i].transform.localScale = additionScaleVector + (additionScaleVector * buttonSizeSlider.value);
-            //Debug.Log(buttonSizeSlider.value);
-            //Debug.Log(additionScaleVector);
         }
 
     }
@@ -210,26 +187,31 @@ public class Settings : MonoBehaviour {
         return leftHandToggle.isOn;
     }
 
+    //Save the button size player pref
     public void saveButtonSize(float saveButtonSize)
     {
         PlayerPrefs.SetFloat("buttonSizeScalar", saveButtonSize);
     }
 
+    //Load the button size player pref
     public void loadButtonSize()
     {
         if (PlayerPrefs.HasKey("buttonSizeScalar")){
            setButtonSize(PlayerPrefs.GetFloat("buttonSizeScalar"));
            changeButtonSize();
         }else{
+            //default button size
             setButtonSize((float)0.125);
         }
     }
 
+    //Save the font size player pref
     public void saveFontSize(float saveFontSize)
     {
         PlayerPrefs.SetFloat("fontSizeScalar", saveFontSize);
     }
 
+    //Load the font size player pref
     public void loadFontSize()
     {
         if (PlayerPrefs.HasKey("fontSizeScalar")){
@@ -239,10 +221,12 @@ public class Settings : MonoBehaviour {
         }
     }
 
+    //Save the left handed player pref
     public void saveIsLeftHanded(int saveIsLeftHanded){
         PlayerPrefs.SetInt("isLeftHanded", saveIsLeftHanded);
     }
 
+    //Load the left handed player pref
     public void loadIsLeftHanded(){
         if (PlayerPrefs.HasKey("isLeftHanded")){
            setIsLeftHanded(PlayerPrefs.GetInt("isLeftHanded") == 1 ? true : false);
@@ -275,18 +259,19 @@ public class Settings : MonoBehaviour {
         }
     }
 
+    //open the AR session
     public void openAR()
     {
         Session.enabled = true;
         arPointer.SetActive(true);
     }
 
+    //check which model you are going to display depending on what the target model player pref is
     public void checkARModel()
     {
         if (PlayerPrefs.HasKey("TargetModel"))
         {
             string activeModel = PlayerPrefs.GetString("TargetModel");
-            // Debug.Log(activeModel);
             GameObject model = modelContainer.transform.Find(activeModel).gameObject;
             if (model)
             {
@@ -294,10 +279,13 @@ public class Settings : MonoBehaviour {
             }
         }
     }
+
     public void tutorialCheck()
     {
+        //check if the player has already seen the tutorials
         if(!PlayerPrefs.HasKey(activePage) || PlayerPrefs.GetInt(activePage) == 0)
         {
+            //check which page you are on
             switch (activePage)
             {
                 case "inventory":
@@ -319,11 +307,15 @@ public class Settings : MonoBehaviour {
             Tutorial.SetActive(true);
         }
     }
+
+    //clear the tutorial for the page
     public void tutorialDone()
     {
         PlayerPrefs.SetInt(activePage, 1);
         Tutorial.SetActive(false);
     }
+
+    //reset the tutorials so that they show again
     public void resetTutorial()
     {
         PlayerPrefs.SetInt("settings", 0);
