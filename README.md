@@ -206,7 +206,7 @@ You can obtain the API key by creating an access token in your account. To enter
 First, drag your model folder into the unity project area, located at the bottom of the Unity application. This is where all of your assets for the game are stored. 
 Now, this model will not have any textures, so in order to have them go to the section about [texturing the models](#adding-textures-to-each-model).
 Next you are going to create a prefab variant of the fbx/obj 3d model. So, simply right click the file, then in the menu, go to create, and then find the option named "prefab variant", and click on that.
-Moving on add the new model you need to move to the scene1 Scene. This is found in the Scenes folder in Assets. Once you are on this page you need to add the 3d Model into the ModelContainer (You must apply the textures).
+Moving on add the new model you need to move to the MainScene scene. This is found in the Scenes folder in Assets. Once you are on this page you need to add the 3d Model into the ModelContainer (You must apply the textures).
 Then you would open the canvas, Inventory Menu, Scroll, Viewport, Content and copy and paste one of the items and name it item(next number) Then select it and on the inspector (Right of the screen) scroll down to the bottom until you see Gundam Robot (Script). There are field you can fill in on this script fill them in as follows:  
 - Id: (item number - 1)  
 - Gundam Name: Exact name of the model  
@@ -220,7 +220,7 @@ Then you would open the canvas, Inventory Menu, Scroll, Viewport, Content and co
 - Quiz Complete Color: Ignore  
 - Star: Ignore  
 
-Next you will need to add the coordinates on the map. First you must open the Location-based-game scene which can be found Mapbox > Examples > PrefabScenes > Location-based-game.  
+Next you will need to add the coordinates on the map. First you must open the Location-based-game scene which can be found Assets > Scenes > Location-basedGame.  
 Once you have opened the scene go to the event spawner object scroll down to add component add the script spawn on map (NOTE: A new script must be added for each new GUNDAM), this will contain multiple field to fill in, do it as follows:  
 - Map: click on the circle to the right of it and select the script named Map  
 - Location strings: open the drop down and enter the Latitude and longitude coordinates you want the model to be at.  
