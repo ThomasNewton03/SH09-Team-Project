@@ -17,8 +17,6 @@ Challenges faced and features to implement in the future:
 ## Table of Contents
 1. [How to Install and Run the Project](#How-to-Install-and-Run-the-Project)
 2. [How to Contribute to the Project](#How-to-Contribute-to-the-Project)
-<!-- 3. Badges -->
-<!-- 3. Visuals -->
 3. [Usage](#Usage)
 4. [Roadmap](#Roadmap)
 5. [How to Run Tests](#how-to-run-tests)
@@ -76,29 +74,13 @@ Work towards collecting all the models, good luck!
 
 
 ## How to Contribute to the Project
+
 ### On First Go, How to Clone
 Open up a terminal environment and navigate to where you would want to save the project. Navigate to the github remote repository and click on the Code button dropdown. Click on the HTTPS section and copy the link available it should be something like: https://github.com/username/sh09-main.git . From here you want to clone the project. Go into your terminal where you have naviagted to where you would like to save the project.
 ```bash
-git clone https://github.com/username/sh09-main.git 
+git clone url-of-repo 
 ```
-### Collaborate with your team
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-### Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-```
-cd existing_repo
-git remote add origin https://stgit.dcs.gla.ac.uk/team-project-h/2023/sh09/sh09-main.git
-git branch -M main
-git push -uf origin main
-```
 ### After Cloning
 Navigate to where you cloned the project to within your file directory, whilst in a terminal environment. Always make sure you are in the correct directory and folder. There is a sh09-main root repository and another sh09_main folder within that. Make sure you are in the one you want to be in.
 Pull to make sure you have the most up to date version before editing:
@@ -156,10 +138,6 @@ In Unity, you can use Debug.Log(message:object) to print a message in the consol
 E.g.:
 Debug.Log(msg);
 
-## Usage
-The application works similar to other AR games such as Pokémon Go, see screenshots below for the games usage.
-screenshots here:
-
 ## Roadmap
 
 The project code freeze takes place on the 15th of March, from this point onwards the code is no longer required to be maintained or actively developed by the original team, however measure will be in place to ensure a stable app is released.
@@ -169,12 +147,6 @@ This project can and will be developed upon by the UofG Games Lab after the orig
 This project will be demonstrated at the Science Fiction conference in Glasgow in August.
 
 ## How to Run Tests
-<!-- Use the built-in continuous integration in GitLab.
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html) -->
 
 This project has a set of manual tasks that can be undertaken to ensure full current functionality:
 | Tasks | Expected output from task| Passed?| Extra Comments |
